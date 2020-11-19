@@ -1,2 +1,2 @@
-# ProjectGeavanceerde
-Mijn eindproject voor geavanceerde programmeertechnieken
+# ProjectGevorderde
+Mijn eindproject voor geavorderde programmeertechnieken
