@@ -10,6 +10,7 @@ namespace ProjectGeavanceerde_DAL
 {
     public class Place
     {
+        [Key]
         public int PlaceID { get; set; }
         public string Name { get; set; }
         public string Ruler { get; set; }

@@ -8,6 +8,7 @@ namespace ProjectGeavanceerde_DAL
 {
     public class Character_Affiliation
     {
+        [Key]
         public int Character_AffiliationID { get; set; }
         public string Name { get; set; }
 

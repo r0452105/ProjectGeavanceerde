@@ -8,6 +8,7 @@ namespace ProjectGeavanceerde_DAL
 {
     public class Faction
     {
+        [Key]
         public int FactionID { get; set; }
         public string Name { get; set; }
     }
