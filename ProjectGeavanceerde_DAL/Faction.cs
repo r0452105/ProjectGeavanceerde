@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace ProjectGeavanceerde_DAL
 {
-    public class Class1
+    public class Faction
     {
+        public int FactionID { get; set; }
+        public string Name { get; set; }
     }
 }

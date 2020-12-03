@@ -55,9 +55,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Affiliation.cs" />
+    <Compile Include="Arc.cs" />
+    <Compile Include="Arc_Place.cs" />
     <Compile Include="BaseModels\Basisklasse.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="Bloodtype.cs" />
+    <Compile Include="Character.cs" />
+    <Compile Include="Character_Affiliation.cs" />
+    <Compile Include="Character_Arc.cs" />
+    <Compile Include="Character_Place.cs" />
+    <Compile Include="Event.cs" />
+    <Compile Include="Faction.cs" />
+    <Compile Include="Place.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Species.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
