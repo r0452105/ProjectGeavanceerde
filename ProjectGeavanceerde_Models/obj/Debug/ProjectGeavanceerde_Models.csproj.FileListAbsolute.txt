@@ -1,0 +1,6 @@
+C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_Models\bin\Debug\ProjectGeavanceerde_Models.dll
+C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_Models\bin\Debug\ProjectGeavanceerde_Models.pdb
+C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_Models\obj\Debug\ProjectGeavanceerde_Models.csprojAssemblyReference.cache
+C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_Models\obj\Debug\ProjectGeavanceerde_Models.csproj.CoreCompileInputs.cache
+C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_Models\obj\Debug\ProjectGeavanceerde_Models.dll
+C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_Models\obj\Debug\ProjectGeavanceerde_Models.pdb
