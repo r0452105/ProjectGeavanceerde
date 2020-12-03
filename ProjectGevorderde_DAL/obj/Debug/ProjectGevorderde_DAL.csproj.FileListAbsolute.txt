@@ -1,2 +1,0 @@
-C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGevorderde_DAL\obj\Debug\ProjectGevorderde_DAL.csprojAssemblyReference.cache
-C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGevorderde_DAL\obj\Debug\ProjectGevorderde_DAL.csproj.CoreCompileInputs.cache
