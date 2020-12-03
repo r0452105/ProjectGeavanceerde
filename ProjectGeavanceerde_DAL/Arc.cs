@@ -8,12 +8,21 @@ using System.Threading.Tasks;
 
 namespace ProjectGeavanceerde_DAL
 {
+    [Table("Arcs")]
     public class Arc
     {
         [Key]
         public int ArcID { get; set; }
+        [Required]
+        [MaxLength(75)]
         public string Name { get; set; }
-        public int startingchapter { get; set; }
-        public int Endingchapter { get; set; } // null allowed
+        [Required]
+        [MaxLength(5)]
+        public int Startingchapter { get; set; }
+        [MaxLength(5)]
+        public int? Endingchapter { get; set; }
+        public ICollection<Arc_Place> Arc_places { get; set; }
+        public ICollection<Character_Arc> Character_arcs { get; set; }
+
     }
 }

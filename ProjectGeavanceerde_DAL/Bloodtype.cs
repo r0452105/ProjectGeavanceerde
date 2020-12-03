@@ -8,10 +8,14 @@ using System.Threading.Tasks;
 
 namespace ProjectGeavanceerde_DAL
 {
+    [Table("Bloodtypes")]
     public class Bloodtype
     {
         [Key]
         public int BloodtypeID { get; set; }
+        [Required]
+        [MaxLength(75)]
         public string Name { get; set; }
+        public ICollection<Character> Characters { get; set; }
     }
 }

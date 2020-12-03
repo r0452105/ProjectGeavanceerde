@@ -8,14 +8,23 @@ using System.Threading.Tasks;
 
 namespace ProjectGeavanceerde_DAL
 {
+    [Table("Places")]
     public class Place
     {
         [Key]
         public int PlaceID { get; set; }
+        [Required]
+        [MaxLength(75)]
         public string Name { get; set; }
+        [MaxLength(75)]
         public string Ruler { get; set; }
+        [Required]
+        [MaxLength(40)]
         public string Location { get; set; }
+        [MaxLength(40)]
         public string Country { get; set; }
+        public ICollection<Character_Place> Character_places { get; set; }
+        public ICollection<Arc_Place> Arc_places { get; set; }
 
     }
 }

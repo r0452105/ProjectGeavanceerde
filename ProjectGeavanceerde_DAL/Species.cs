@@ -7,10 +7,14 @@ using System.Text;
 using System.Threading.Tasks;
 namespace ProjectGeavanceerde_DAL
 {
+    [Table("Species")]
     public class Species
     {
         [Key]
         public int SpeciesID { get; set; }
+        [Required]
+        [MaxLength(75)]
         public string Name { get; set; }
+        public ICollection<Character> Characters { get; set; }
     }
 }

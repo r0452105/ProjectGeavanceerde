@@ -8,18 +8,30 @@ using System.Threading.Tasks;
 
 namespace ProjectGeavanceerde_DAL
 {
+    [Table("Characters")]
     public class Character
     {
         [Key]
         public int CharacterID { get; set; }
+        [Required]
+        [MaxLength(75)]
         public string Name { get; set; }
+        [MaxLength(75)]
         public string DevilFruit { get; set; }
-        public int Bounty { get; set; }
-        public bool haki { get; set; } //maybe haki als aparte entity
-        public bool gender { get; set; }
-        public DateTime birthday { get; set; }
-        // bloodtype reference
-        // species reference
+        [MaxLength(15)]
+        public int? Bounty { get; set; }
+        [Required]
+        public bool Haki { get; set; } //maybe haki als aparte entity
+        [Required]
+        public bool Gender { get; set; }
+        public DateTime Birthday { get; set; }
+        [ForeignKey("BloodtypeID")]
+        public Bloodtype Bloodtype { get; set; }
+        [ForeignKey("SpeciesID")]
+        public Species Species { get; set; }
+        public ICollection<Character_Affiliation> Character_Affiliations { get; set; }
+        public ICollection<Character_Arc> Character_arcs { get; set; }
+        public ICollection<Character_Place> Character_places { get; set; }
     }
 }
 

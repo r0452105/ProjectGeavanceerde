@@ -8,12 +8,15 @@ using System.Threading.Tasks;
 
 namespace ProjectGeavanceerde_DAL
 {
+    [Table("Affiliations")]
     public class Affiliation
     {
         [Key]
         public int AffiliationID { get; set; }
+        [Required]
+        [MaxLength(75)]
         public string Name { get; set; }
-
-        //faction reference
+        [ForeignKey("FactionID")]
+        public Faction Faction { get; set; }
     }
 }

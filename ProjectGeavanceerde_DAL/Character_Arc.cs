@@ -8,12 +8,14 @@ using System.Threading.Tasks;
 
 namespace ProjectGeavanceerde_DAL
 {
+    [Table("Characters_Arcs")]
     public class Character_Arc
     {
         [Key]
         public int Character_ArcID { get; set; }
-
-        // character reference
-        // arc reference
+        [ForeignKey("CharacterID")]
+        public Character Character { get; set; }
+        [ForeignKey("ArcID")]
+        public Arc Arc { get; set; }
     }
 }

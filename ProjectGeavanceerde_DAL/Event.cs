@@ -8,10 +8,13 @@ using System.Threading.Tasks;
 
 namespace ProjectGeavanceerde_DAL
 {
+    [Table("Events")]
     public class Event
     {
         [Key]
         public int EventID { get; set; }
+        [Required]
+        [MaxLength(2500)]
         public string Omschrijving { get; set; }
         public DateTime Date { get; set; }
     }

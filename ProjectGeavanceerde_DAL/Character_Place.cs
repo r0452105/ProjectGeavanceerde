@@ -8,12 +8,14 @@ using System.Threading.Tasks;
 
 namespace ProjectGeavanceerde_DAL
 {
+    [Table("Characters_Places")]
     public class Character_Place
     {
         [Key]
         public int Character_PlaceID { get; set; }
-
-        // character reference
-        // place reference
+        [ForeignKey("CharacterID")]
+        public Character Character { get; set; }
+        [ForeignKey("PlaceID")]
+        public Place Place { get; set; }
     }
 }

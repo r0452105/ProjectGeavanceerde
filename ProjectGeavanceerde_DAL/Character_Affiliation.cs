@@ -1,21 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ProjectGeavanceerde_DAL
 {
+    [Table("Characters_Affiliations")]
     public class Character_Affiliation
     {
         [Key]
         public int Character_AffiliationID { get; set; }
+        [Required]
+        [MaxLength(75)]
         public string Name { get; set; }
-
-        public bool current { get; set; } //maybe haki als aparte entity
-        public bool leader { get; set; }
-
-        // character reference
-        //affiliation reference
+        [Required]
+        public bool Current { get; set; } //maybe haki als aparte entity
+        [Required]
+        [MaxLength(75)]
+        public bool Leader { get; set; }
+        [ForeignKey("CharacterID")]
+        public Character Character { get; set; }
+        [ForeignKey("AffiliationID")]
+        public Affiliation Affiliation { get; set; }
     }
 }
