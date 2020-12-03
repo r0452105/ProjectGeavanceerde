@@ -11,3 +11,5 @@ C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_DAL\
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_DAL\obj\Debug\ProjectGeavanceerde_DAL.dll
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_DAL\obj\Debug\ProjectGeavanceerde_DAL.pdb
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_DAL\obj\Debug\ProjectGeavanceerde_DAL.csproj.Fody.CopyLocal.cache
+C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_DAL\obj\Debug\ProjectGeavanceerde_DAL.Migrations.InitialCreate.resources
+C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_DAL\obj\Debug\ProjectGeavanceerde_DAL.csproj.GenerateResource.cache

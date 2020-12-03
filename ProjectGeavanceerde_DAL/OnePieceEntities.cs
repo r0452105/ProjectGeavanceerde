@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace ProjectGeavanceerde_DAL
 {
-    //class OnePieceEntities : DbContext
-    //{
-    //    public OnePieceEntities() : base("OnePieceDB")
-    //    {   
-    //       Database.SetInitializer(new MigrateDatabaseToLatestVersion<OnePieceEntities, Migrations.Configuration>());
-    //    }
-    //    public DbSet<Character> Characters { get; set; }
-    //}
+    class OnePieceEntities : DbContext
+    {
+        public OnePieceEntities() : base("OnePieceDB")
+        {   
+
+        }
+        public DbSet<Character> Characters { get; set; }
+    }
 }

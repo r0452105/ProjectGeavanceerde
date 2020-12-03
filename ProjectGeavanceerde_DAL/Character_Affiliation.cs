@@ -18,8 +18,9 @@ namespace ProjectGeavanceerde_DAL
         public string Name { get; set; }
         [Required]
         public bool Current { get; set; } //maybe haki als aparte entity
+        public int AffiliationID { get; set; }
+        public int CharacterID { get; set; }
         [Required]
-        [MaxLength(75)]
         public bool Leader { get; set; }
         [ForeignKey("CharacterID")]
         public Character Character { get; set; }

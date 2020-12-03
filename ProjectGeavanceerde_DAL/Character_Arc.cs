@@ -13,6 +13,8 @@ namespace ProjectGeavanceerde_DAL
     {
         [Key]
         public int Character_ArcID { get; set; }
+        public int CharacterID { get; set; }
+        public int ArcID { get; set; }
         [ForeignKey("CharacterID")]
         public Character Character { get; set; }
         [ForeignKey("ArcID")]

@@ -13,6 +13,7 @@ namespace ProjectGeavanceerde_DAL
     {
         [Key]
         public int AffiliationID { get; set; }
+        public int FactionID { get; set; }
         [Required]
         [MaxLength(75)]
         public string Name { get; set; }

@@ -13,6 +13,8 @@ namespace ProjectGeavanceerde_DAL
     {
         [Key]
         public int Arc_PlaceID { get; set; }
+        public int PlaceID { get; set; }
+        public int ArcID { get; set; }
         [ForeignKey("PlaceID")]
         public Place Place { get; set; }
         [ForeignKey("ArcID")]

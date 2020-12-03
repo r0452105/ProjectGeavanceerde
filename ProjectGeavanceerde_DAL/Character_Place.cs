@@ -13,6 +13,8 @@ namespace ProjectGeavanceerde_DAL
     {
         [Key]
         public int Character_PlaceID { get; set; }
+        public int PlaceID { get; set; }
+        public int CharacterID { get; set; }
         [ForeignKey("CharacterID")]
         public Character Character { get; set; }
         [ForeignKey("PlaceID")]

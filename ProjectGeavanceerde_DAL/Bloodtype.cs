@@ -13,6 +13,7 @@ namespace ProjectGeavanceerde_DAL
     {
         [Key]
         public int BloodtypeID { get; set; }
+
         [Required]
         [MaxLength(75)]
         public string Name { get; set; }

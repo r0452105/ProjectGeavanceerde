@@ -18,15 +18,18 @@ namespace ProjectGeavanceerde_DAL
         public string Name { get; set; }
         [MaxLength(75)]
         public string DevilFruit { get; set; }
-        [MaxLength(15)]
         public int? Bounty { get; set; }
         [Required]
         public bool Haki { get; set; } //maybe haki als aparte entity
         [Required]
         public bool Gender { get; set; }
         public DateTime Birthday { get; set; }
+        public int BloodtypeID { get; set; }
+        public int SpeciesID { get; set; }
+
         [ForeignKey("BloodtypeID")]
         public Bloodtype Bloodtype { get; set; }
+
         [ForeignKey("SpeciesID")]
         public Species Species { get; set; }
         public ICollection<Character_Affiliation> Character_Affiliations { get; set; }
