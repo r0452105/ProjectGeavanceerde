@@ -9,10 +9,9 @@
         Title="MainView" Height="253.744" Width="800">
     <Grid>
         <StackPanel>
-            <Button Content="Basics Aanmaken Startscherm" Margin="5" Command="{Binding}" CommandParameter="Voorbeeld1"/>
-            <Button Content="Just some testing" Margin="5" Command="{Binding}" CommandParameter="Voorbeeld2"/>
-            <Label Content="Under Construction" HorizontalAlignment="Center" FontSize="50" Margin="20"></Label>
-            <Label Content="Made by Aaron" HorizontalAlignment="Right"></Label>
+            <Label Content="One Piece Database" HorizontalAlignment="Center" FontSize="50" Margin="28,20,18,20" Width="746" HorizontalContentAlignment="Center" Height="99"></Label>
+            <Button Content="Let's go" Margin="20,5" Command="{Binding}" CommandParameter="Characters"/>
+            <Label Content="Made by Aaron" HorizontalAlignment="Right" RenderTransformOrigin="0.3,0.544" Height="44" VerticalContentAlignment="Bottom"/>
         </StackPanel>
     </Grid>
 </Window>

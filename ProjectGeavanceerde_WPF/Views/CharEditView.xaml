@@ -1,0 +1,69 @@
+﻿<Window x:Class="ProjectGeavanceerde_WPF.Views.CharEditView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectGeavanceerde_WPF.Views"
+        mc:Ignorable="d"
+        x:Name="CharEditWindow"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="CharEditView" Height="750" Width="800">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="56*" />
+            <RowDefinition Height="56*" />
+            <RowDefinition Height="56*" />
+            <RowDefinition Height="56*" />
+            <RowDefinition Height="56*" />
+            <RowDefinition Height="56*" />
+            <RowDefinition Height="56*" />
+            <RowDefinition Height="56*" />
+            <RowDefinition Height="56*" />
+            <RowDefinition Height="56*" />
+        </Grid.RowDefinitions>
+        <TextBox Text="{Binding SelectedCharacter.Name, ValidatesOnDataErrors=True}"
+                   materialDesign:HintAssist.Hint="Naam"
+                   Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                   Grid.Row="0" Grid.Column="0"  />
+        <ComboBox ItemsSource="{Binding Genders, ValidatesOnDataErrors=True}"
+                  SelectedValue="{Binding SelectedCharacter.GenderID, ValidatesOnDataErrors=True}" 
+                  SelectedValuePath="GenderID"
+                  materialDesign:HintAssist.Hint="Gender"
+                  Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                  Grid.Row="1" Height="50" Margin="0,10"/>
+        <TextBox Text="{Binding SelectedCharacter.Birthday, StringFormat='m', ValidatesOnDataErrors=True}"
+                   materialDesign:HintAssist.Hint="Verjaardag"
+                   Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                   Grid.Row="2" Grid.Column="0" />
+        <TextBox Text="{Binding SelectedCharacter.Bounty, StringFormat={}{0:N0}, ValidatesOnDataErrors=True}"
+                   materialDesign:HintAssist.Hint="Bounty"
+                   Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                   Grid.Row="3" Grid.Column="0"  />
+        <TextBox Text="{Binding SelectedCharacter.DevilFruit, StringFormat='m', ValidatesOnDataErrors=True}"
+                   materialDesign:HintAssist.Hint="DevilFruit"
+                   Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                   Grid.Row="4" Grid.Column="0" />
+        <ComboBox ItemsSource="{Binding Hakis, ValidatesOnDataErrors=True}"
+                  SelectedValue="{Binding SelectedCharacter.HakiID, ValidatesOnDataErrors=True}" 
+                  SelectedValuePath="HakiID"
+                  materialDesign:HintAssist.Hint="Haki"
+                  Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                  Grid.Row="5" Height="50" Margin="0,10"/>
+        <ComboBox ItemsSource="{Binding Bloodtypes, ValidatesOnDataErrors=True}"
+                  SelectedValue="{Binding SelectedCharacter.BloodtypeID, ValidatesOnDataErrors=True}" 
+                  SelectedValuePath="BloodtypeID"
+                  materialDesign:HintAssist.Hint="Bloodtype"
+                  Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                  Grid.Row="6" Height="50" Margin="0,10"/>
+        <ComboBox ItemsSource="{Binding Soorten, ValidatesOnDataErrors=True}"
+                  SelectedValue="{Binding SelectedCharacter.SpeciesID, ValidatesOnDataErrors=True}" 
+                  SelectedValuePath="SpeciesID"
+                  materialDesign:HintAssist.Hint="Species"
+                  Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                  Grid.Row="7" Height="50" Margin="0,10"/>
+        <Button  Content="Character Bewerken" Grid.Row="9" BorderBrush="Black" BorderThickness="2" Margin="5" Command="{Binding CloseWindowCommandCharEdit, Mode=OneWay}"  CommandParameter="{Binding ElementName=CharEditWindow}" Height="Auto"/>
+    </Grid>
+</Window>

@@ -17,8 +17,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             //returnwaarde false -> methode mag niet uitgevoerd worden
             switch (parameter.ToString())
             {
-                case "Voorbeeld1": return true;
-                case "Voorbeeld2": return true;
+                case "Characters": return true;
             }
             return true;
         }
@@ -28,22 +27,16 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             //instelling via CommandParameter in xaml
             switch (parameter.ToString())
             {
-                case "Voorbeeld1": OpenVoorbeeld1(); break;
-                case "Voorbeeld2": OpenVoorbeeld2(); break;
+                case "Characters": OpenCharacters(); break;
             }
         }
-
-        public void OpenVoorbeeld1()
+        public void OpenCharacters()
         {
-            Voorbeeld1View view = new Voorbeeld1View();
-            view.Show();
+            CharacterView characterView = new CharacterView();
+            CharacterViewModel characterViewModel = new CharacterViewModel();
+            characterView.DataContext = characterViewModel;
+            characterView.Show();
         }
-        public void OpenVoorbeeld2()
-        {
-            Voorbeeld2View view = new Voorbeeld2View();
-            view.Show();
-        }
-
     }
 }
 

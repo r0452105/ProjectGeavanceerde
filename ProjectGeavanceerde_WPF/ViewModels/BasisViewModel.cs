@@ -6,11 +6,15 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using ProjectGeavanceerde_DAL;
+using ProjectGeavanceerde_DAL.Data;
+using ProjectGeavanceerde_DAL.Data.unitOfWork;
 
 namespace ProjectGeavanceerde_WPF.ViewModels
 {
     public abstract class BasisViewModel : IDataErrorInfo, INotifyPropertyChanged, ICommand
     {
+        public IUnitOfWork unitOfWork = new UnitOfWork(new OnePieceEntities());
 
         #region ICommand
         public event EventHandler CanExecuteChanged

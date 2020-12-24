@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\ProjectGeavanceerde_WPF\packages\PropertyChanged.Fody.3.3.1\build\PropertyChanged.Fody.props" Condition="Exists('..\ProjectGeavanceerde_WPF\packages\PropertyChanged.Fody.3.3.1\build\PropertyChanged.Fody.props')" />
   <Import Project="..\ProjectGeavanceerde_WPF\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\ProjectGeavanceerde_WPF\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -41,9 +40,6 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\ProjectGeavanceerde_WPF\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="PropertyChanged, Version=3.3.1.0, Culture=neutral, PublicKeyToken=ee3ee20bcf148ddd, processorArchitecture=MSIL">
-      <HintPath>..\ProjectGeavanceerde_WPF\packages\PropertyChanged.Fody.3.3.1\lib\net40\PropertyChanged.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -55,26 +51,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Affiliation.cs" />
-    <Compile Include="Arc.cs" />
-    <Compile Include="Arc_Place.cs" />
-    <Compile Include="BaseModels\Basisklasse.cs" />
-    <Compile Include="Bloodtype.cs" />
-    <Compile Include="Character.cs" />
-    <Compile Include="Character_Affiliation.cs" />
-    <Compile Include="Character_Arc.cs" />
-    <Compile Include="Character_Place.cs" />
-    <Compile Include="Event.cs" />
-    <Compile Include="Faction.cs" />
-    <Compile Include="Migrations\202012032135252_InitialCreate.cs" />
-    <Compile Include="Migrations\202012032135252_InitialCreate.designer.cs">
-      <DependentUpon>202012032135252_InitialCreate.cs</DependentUpon>
+    <Compile Include="Data\Repositories\IRepository.cs" />
+    <Compile Include="Data\Repositories\Repository.cs" />
+    <Compile Include="Data\unitOfWork\IUnitOfWork.cs" />
+    <Compile Include="Data\unitOfWork\UnitOfWork.cs" />
+    <Compile Include="DomainFolders\Affiliation.cs" />
+    <Compile Include="DomainFolders\Arc.cs" />
+    <Compile Include="DomainFolders\Arc_Place.cs" />
+    <Compile Include="DomainFolders\Character.cs" />
+    <Compile Include="DomainFolders\Gender.cs" />
+    <Compile Include="DomainFolders\Haki.cs" />
+    <Compile Include="Migrations\202012241843324_InitialCreate.cs" />
+    <Compile Include="Migrations\202012241843324_InitialCreate.designer.cs">
+      <DependentUpon>202012241843324_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="OnePieceEntities.cs" />
-    <Compile Include="Place.cs" />
+    <Compile Include="partials\Basisklasse.cs" />
+    <Compile Include="DomainFolders\Bloodtype.cs" />
+    <Compile Include="DomainFolders\Character_Affiliation.cs" />
+    <Compile Include="DomainFolders\Character_Arc.cs" />
+    <Compile Include="DomainFolders\Character_Place.cs" />
+    <Compile Include="DomainFolders\Event.cs" />
+    <Compile Include="DomainFolders\Faction.cs" />
+    <Compile Include="Data\OnePieceEntities.cs" />
+    <Compile Include="DomainFolders\Place.cs" />
+    <Compile Include="partials\Bloodtype.cs" />
+    <Compile Include="partials\Character.cs" />
+    <Compile Include="partials\Event.cs" />
+    <Compile Include="partials\Gender.cs" />
+    <Compile Include="partials\Haki.cs" />
+    <Compile Include="partials\Species.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Species.cs" />
+    <Compile Include="DomainFolders\Species.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -84,8 +92,8 @@
     <Content Include="FodyWeavers.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202012032135252_InitialCreate.resx">
-      <DependentUpon>202012032135252_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202012241843324_InitialCreate.resx">
+      <DependentUpon>202012241843324_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
@@ -95,9 +103,6 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\ProjectGeavanceerde_WPF\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\ProjectGeavanceerde_WPF\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
     <Error Condition="!Exists('..\ProjectGeavanceerde_WPF\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\ProjectGeavanceerde_WPF\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
-    <Error Condition="!Exists('..\ProjectGeavanceerde_WPF\packages\Fody.6.3.0\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\ProjectGeavanceerde_WPF\packages\Fody.6.3.0\build\Fody.targets'))" />
-    <Error Condition="!Exists('..\ProjectGeavanceerde_WPF\packages\PropertyChanged.Fody.3.3.1\build\PropertyChanged.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', '..\ProjectGeavanceerde_WPF\packages\PropertyChanged.Fody.3.3.1\build\PropertyChanged.Fody.props'))" />
   </Target>
   <Import Project="..\ProjectGeavanceerde_WPF\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\ProjectGeavanceerde_WPF\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
-  <Import Project="..\ProjectGeavanceerde_WPF\packages\Fody.6.3.0\build\Fody.targets" Condition="Exists('..\ProjectGeavanceerde_WPF\packages\Fody.6.3.0\build\Fody.targets')" />
 </Project>
