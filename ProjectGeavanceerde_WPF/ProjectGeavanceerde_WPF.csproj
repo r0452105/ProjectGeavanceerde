@@ -95,6 +95,7 @@
     <Compile Include="ViewModels\ArcViewModel.cs" />
     <Compile Include="ViewModels\BasisViewModel.cs" />
     <Compile Include="ViewModels\CharacterViewModel.cs" />
+    <Compile Include="ViewModels\CharAddViewModel.cs" />
     <Compile Include="ViewModels\CharEditViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\PlaceViewModel.cs" />
@@ -107,6 +108,9 @@
     </Compile>
     <Compile Include="Views\CharacterView.xaml.cs">
       <DependentUpon>CharacterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CharAddView.xaml.cs">
+      <DependentUpon>CharAddView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\CharEditView.xaml.cs">
       <DependentUpon>CharEditView.xaml</DependentUpon>
@@ -162,6 +166,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\CharacterView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CharAddView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

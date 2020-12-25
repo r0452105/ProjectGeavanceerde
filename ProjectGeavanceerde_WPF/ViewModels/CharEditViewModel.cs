@@ -17,8 +17,6 @@ namespace ProjectGeavanceerde_WPF.ViewModels
     public class CharEditViewModel : BasisViewModel, IDisposable
     {
         #region getters and setters
-        public bool CharacterIDcheck { get; set; }
-        public string visibilitycheck { get; set; }
         public ObservableCollection<Character> Characters { get; set; }
         public ObservableCollection<Species> Soorten { get; set; }
         public ObservableCollection<Bloodtype> Bloodtypes { get; set; }

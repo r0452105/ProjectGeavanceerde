@@ -24,7 +24,6 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
-
         </Grid.ColumnDefinitions>
         <DataGrid x:Name="datagridEvents" AutoGenerateColumns="False" Grid.Row="1" Grid.Column="0" 
                   ItemsSource="{Binding Events, ValidatesOnDataErrors=True}"

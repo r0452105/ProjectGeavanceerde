@@ -144,7 +144,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             {
                 case "Verwijderen": Verwijderen(); break;
                 //case "Aanpassen": Aanpassen(); break;
-                case "Toevoegen": ToevoegenInAnderScherm(); break;
+                //case "Toevoegen": ToevoegenInAnderScherm(); break;
             }
         }
         public void Dispose()
@@ -155,6 +155,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         #region WindowCommands
         public RelayCommand<Window> CloseWindowCommandChar { get; private set; }
         public RelayCommand<Window> CloseWindowCommandCharEdit { get; private set; }
+        public RelayCommand<Window> CloseWindowCommandCharAdd { get; private set; }
         public RelayCommand<Window> CloseWindowCommandAff { get; private set; }
         public RelayCommand<Window> CloseWindowCommandArc { get; private set; }
         public RelayCommand<Window> CloseWindowCommandPlace { get; private set; }
@@ -246,23 +247,27 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             }
             
         }
+        public void CloseWindowCharAdd(Window window)
+        {
+                CharAddView charAddView = new CharAddView();
+                CharAddViewModel charAddViewModel = new CharAddViewModel();
+                charAddView.DataContext = charAddViewModel;
+                charAddView.Show();
+
+                if (window != null)
+                {
+                    window.Close();
+                }
+        }
         public void WindowCommanding()
         {
             this.CloseWindowCommandChar = new RelayCommand<Window>(this.CloseWindowChar);
             this.CloseWindowCommandCharEdit = new RelayCommand<Window>(this.CloseWindowCharEdit);
+            this.CloseWindowCommandCharAdd = new RelayCommand<Window>(this.CloseWindowCharAdd);
             this.CloseWindowCommandAff = new RelayCommand<Window>(this.CloseWindowAff);
             this.CloseWindowCommandArc = new RelayCommand<Window>(this.CloseWindowArc);
             this.CloseWindowCommandPlace = new RelayCommand<Window>(this.CloseWindowPlace);
             this.CloseWindowCommandWT = new RelayCommand<Window>(this.CloseWindowWT);
-        }
-
-
-        public void ToevoegenInAnderScherm()
-        {
-            CharEditView charEditView = new CharEditView();
-            CharEditViewModel charEditViewModel = new CharEditViewModel();
-            charEditView.DataContext = charEditViewModel;
-            charEditView.Show();
         }
 
         #endregion
