@@ -91,6 +91,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ViewModels\AffAddViewModel.cs" />
     <Compile Include="ViewModels\AffEditViewModel.cs" />
     <Compile Include="ViewModels\AffiliationViewModel.cs" />
     <Compile Include="ViewModels\ArcViewModel.cs" />
@@ -113,13 +114,13 @@
     <Compile Include="Views\ArcView.xaml.cs">
       <DependentUpon>ArcView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\CharacterView.xaml.cs">
+    <Compile Include="Views\CharacterViews\CharacterView.xaml.cs">
       <DependentUpon>CharacterView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\CharAddView.xaml.cs">
+    <Compile Include="Views\CharacterViews\CharAddView.xaml.cs">
       <DependentUpon>CharAddView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\CharEditView.xaml.cs">
+    <Compile Include="Views\CharacterViews\CharEditView.xaml.cs">
       <DependentUpon>CharEditView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainView.xaml.cs">
@@ -180,15 +181,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\CharacterView.xaml">
+    <Page Include="Views\CharacterViews\CharacterView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\CharAddView.xaml">
+    <Page Include="Views\CharacterViews\CharAddView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\CharEditView.xaml">
+    <Page Include="Views\CharacterViews\CharEditView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

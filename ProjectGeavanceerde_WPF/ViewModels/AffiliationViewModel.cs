@@ -140,6 +140,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         public RelayCommand<Window> CloseWindowCommandChar { get; private set; }
         public RelayCommand<Window> CloseWindowCommandAff { get; private set; }
         public RelayCommand<Window> CloseWindowCommandAffEdit { get; private set; }
+        public RelayCommand<Window> CloseWindowCommandAffAdd { get; private set; }
         public RelayCommand<Window> CloseWindowCommandArc { get; private set; }
         public RelayCommand<Window> CloseWindowCommandPlace { get; private set; }
         public RelayCommand<Window> CloseWindowCommandWT { get; private set; }
@@ -190,6 +191,18 @@ namespace ProjectGeavanceerde_WPF.ViewModels
                 Foutmelding = "Selecteer een character !";
             }
         }
+        public void CloseWindowAffAdd(Window window)
+        {
+                AffAddView affAddView = new AffAddView();
+                AffAddViewModel affAddViewModel = new AffAddViewModel();
+                affAddView.DataContext = affAddViewModel;
+                affAddView.Show();
+
+                if (window != null)
+                {
+                    window.Close();
+                }
+        }
 
         public void CloseWindowArc(Window window)
         {
@@ -234,6 +247,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             this.CloseWindowCommandChar = new RelayCommand<Window>(this.CloseWindowChar);
             this.CloseWindowCommandAff = new RelayCommand<Window>(this.CloseWindowAff);
             this.CloseWindowCommandAffEdit = new RelayCommand<Window>(this.CloseWindowAffEdit);
+            this.CloseWindowCommandAffAdd = new RelayCommand<Window>(this.CloseWindowAffAdd);
             this.CloseWindowCommandArc = new RelayCommand<Window>(this.CloseWindowArc);
             this.CloseWindowCommandPlace = new RelayCommand<Window>(this.CloseWindowPlace);
             this.CloseWindowCommandWT = new RelayCommand<Window>(this.CloseWindowWT);

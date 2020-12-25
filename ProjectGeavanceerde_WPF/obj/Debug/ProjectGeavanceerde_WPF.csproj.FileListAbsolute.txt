@@ -23,8 +23,6 @@ C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\MainView.baml
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\ProjectGeavanceerde_WPF.csproj.CopyComplete
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\App.baml
-C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\CharacterView.g.cs
-C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\CharacterView.baml
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\ProjectGeavanceerde_WPF.csprojAssemblyReference.cache
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\bin\Debug\ProjectGeavanceerde_DAL.dll
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\bin\Debug\ProjectGeavanceerde_DAL.pdb
@@ -49,11 +47,13 @@ C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\PlaceView.baml
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\WorldTimelineView.baml
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\ProjectGeavanceerde_WPF.csproj.Fody.CopyLocal.cache
-C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\CharEditView.g.cs
-C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\CharEditView.baml
-C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\CharAddView.g.cs
-C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\CharAddView.baml
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\AffAddView.g.cs
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\AffEditView.g.cs
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\AffAddView.baml
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\AffEditView.baml
+C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\CharacterViews\CharacterView.g.cs
+C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\CharacterViews\CharAddView.g.cs
+C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\CharacterViews\CharEditView.g.cs
+C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\CharacterViews\CharacterView.baml
+C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\CharacterViews\CharAddView.baml
+C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\CharacterViews\CharEditView.baml

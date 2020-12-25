@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\App.xaml
-10-934798995
+101100177820
 
-24-770376897
+25-213605590
 128278314210
-Views\AffAddView.xaml;Views\AffEditView.xaml;Views\AffiliationView.xaml;Views\ArcView.xaml;Views\CharacterView.xaml;Views\CharAddView.xaml;Views\CharEditView.xaml;Views\MainView.xaml;Views\PlaceView.xaml;Views\WorldTimelineView.xaml;
+Views\AffAddView.xaml;Views\AffEditView.xaml;Views\AffiliationView.xaml;Views\ArcView.xaml;Views\CharacterViews\CharacterView.xaml;Views\CharacterViews\CharAddView.xaml;Views\CharacterViews\CharEditView.xaml;Views\MainView.xaml;Views\PlaceView.xaml;Views\WorldTimelineView.xaml;
 
 False
 

@@ -22,7 +22,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
     public ObservableCollection<Bloodtype> Bloodtypes { get; set; }
     public ObservableCollection<Gender> Genders { get; set; }
     public ObservableCollection<Haki> Hakis { get; set; }
-        public Character CharacterRecord = new Character();
+    public Character CharacterRecord = new Character();
     public string Foutmelding { get; set; }
     public string Name { get; set; }
     public DateTime Birthday { get; set; }
@@ -121,8 +121,9 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             CharacterRecord.HakiID = HakiID;
             CharacterRecord.SpeciesID = SpeciesID;
 
-            if (!CharacterRecord.IsGeldig())
+            if (!CharacterRecord.IsGeldig()) //problem needs to be solved
             {
+
                 unitOfWork.CharacterRepo.Toevoegen(CharacterRecord);
                 int ok = unitOfWork.Save();
                 FoutmeldingInstellenNaSave(ok, "Character is niet toegevoegd");
