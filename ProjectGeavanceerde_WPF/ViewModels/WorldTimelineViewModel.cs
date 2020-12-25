@@ -43,6 +43,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             this.CloseWindowCommandPlace = new RelayCommand<Window>(this.CloseWindowPlace);
             this.CloseWindowCommandWT = new RelayCommand<Window>(this.CloseWindowWT);
             this.CloseWindowCommandWTEdit = new RelayCommand<Window>(this.CloseWindowWTEdit);
+            this.CloseWindowCommandWTAdd = new RelayCommand<Window>(this.CloseWindowWTAdd);
         }
         public override string this[string columnName]
         {
@@ -169,6 +170,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         public RelayCommand<Window> CloseWindowCommandPlace { get; private set; }
         public RelayCommand<Window> CloseWindowCommandWT { get; private set; }
         public RelayCommand<Window> CloseWindowCommandWTEdit { get; private set; }
+        public RelayCommand<Window> CloseWindowCommandWTAdd { get; private set; }
 
 
         public void CloseWindowChar(Window window)
@@ -242,6 +244,18 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             wTEditViewModel.SelectedEvent=SelectedEvent;
             wTEditView.DataContext = wTEditViewModel;
             wTEditView.Show();
+
+            if (window != null)
+            {
+                window.Close();
+            }
+        }
+        public void CloseWindowWTAdd(Window window)
+        {
+            WTAddView wTAddView = new WTAddView();
+            WTAddViewModel wTAddViewModel = new WTAddViewModel();
+            wTAddView.DataContext = wTAddViewModel;
+            wTAddView.Show();
 
             if (window != null)
             {

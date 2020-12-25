@@ -1,0 +1,38 @@
+﻿<Window x:Class="ProjectGeavanceerde_WPF.Views.WTAddView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectGeavanceerde_WPF.Views"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        x:Name="WTAddWindow"
+        Title="WTAddView" Height="750" Width="800">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*" />
+            <RowDefinition Height="50*" />
+            <RowDefinition Height="50*" />
+            <RowDefinition Height="50*" />
+            <RowDefinition Height="50*" />
+            <RowDefinition Height="50*" />
+            <RowDefinition Height="50*" />
+            <RowDefinition Height="50*" />
+            <RowDefinition Height="50*" />
+        </Grid.RowDefinitions>
+        <TextBox Text="{Binding Omschrijving, ValidatesOnDataErrors=True}"
+                 materialDesign:HintAssist.Hint="Omschrijving"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                 Grid.Row="0" Grid.Column="0"  />
+        <TextBox Text="{Binding Date, ValidatesOnDataErrors=True}"
+                 materialDesign:HintAssist.Hint="Date"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                 Grid.Row="1" Grid.Column="0"  />
+      
+        <Label Content="{Binding Foutmelding}" Grid.Row="7" FontSize="30"></Label>
+        <Button  Content="Event Aanmaken" Grid.Row="8" BorderBrush="Black" BorderThickness="2" Margin="5" Command="{Binding CloseWindowCommandWTAdd, Mode=OneWay}"  CommandParameter="{Binding ElementName=WTAddWindow}" Height="Auto"/>
+    </Grid>
+</Window>
