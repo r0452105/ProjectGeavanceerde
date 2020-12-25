@@ -104,6 +104,7 @@
     <Compile Include="ViewModels\PlaceEditViewModel.cs" />
     <Compile Include="ViewModels\PlaceViewModel.cs" />
     <Compile Include="ViewModels\WorldTimelineViewModel.cs" />
+    <Compile Include="ViewModels\WTEditViewModel.cs" />
     <Compile Include="Views\AffiliationViews\AffAddView.xaml.cs">
       <DependentUpon>AffAddView.xaml</DependentUpon>
     </Compile>
@@ -136,6 +137,9 @@
     </Compile>
     <Compile Include="Views\PlaceView.xaml.cs">
       <DependentUpon>PlaceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WTEditView.xaml.cs">
+      <DependentUpon>WTEditView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\WorldTimelineView.xaml.cs">
       <DependentUpon>WorldTimelineView.xaml</DependentUpon>
@@ -214,6 +218,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\PlaceView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WTEditView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

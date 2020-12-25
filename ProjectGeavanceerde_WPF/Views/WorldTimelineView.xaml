@@ -5,9 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectGeavanceerde_WPF.Views"
         mc:Ignorable="d"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         x:Name="WTWindow"
-        Title="WorldTimelineView" Height="450" Width="800">
+        Title="WorldTimelineView" Height="526.5" Width="1319">
     <Grid ShowGridLines="False">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" MinHeight="40"/>
@@ -37,21 +36,22 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <TextBox Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="1" Text="{Binding EventRecord.Omschrijving, ValidatesOnDataErrors=True}" BorderBrush="Black" BorderThickness="1" Margin="5,5" materialDesign:HintAssist.Hint="Omschrijving"
-                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
-        <TextBox Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="1" Text="{Binding EventRecord.Date, ValidatesOnDataErrors=True}" BorderBrush="Black" BorderThickness="1" Margin="5,5" materialDesign:HintAssist.Hint="Hoeveel jaar geleden"
-                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
-        <Label Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="1" Content="{Binding Foutmelding}" Foreground="Red" Margin="5,24,5,7" BorderBrush="Black" BorderThickness="1" materialDesign:HintAssist.Hint="Foutmelding"></Label>
+        <StackPanel Orientation="Vertical" Grid.Column="4" Grid.Row="1" Grid.RowSpan="5">
+            <CheckBox Content="ID" FontSize="15"/>
+            <CheckBox Content="Omschrijving" FontSize="15"/>
+            <CheckBox Content="Date" FontSize="15"/>
+        </StackPanel>
+
+        <Button  Content="Nieuw Event Aanmaken" Grid.Row="4" Grid.Column="4" BorderBrush="Black" BorderThickness="2" Margin="5" Command="{Binding CloseWindowCommandWTAdd, Mode=OneWay}"  CommandParameter="{Binding ElementName=WTWindow}" Height="Auto"/>
+        <Button  Content="Event Bewerken" Grid.Row="5" Grid.Column="4" BorderBrush="Black" BorderThickness="2" Margin="5" Command="{Binding CloseWindowCommandWTEdit, Mode=OneWay}"  CommandParameter="{Binding ElementName=WTWindow}" Height="Auto"/>
+        <Button  Content="Event Verwijderen" Grid.Row="6" Grid.Column="4" BorderBrush="Black" BorderThickness="2" Margin="5" Height="Auto" Command="{Binding}" CommandParameter="Verwijderen"/>
+        <Label  Content="{Binding Foutmelding}" Grid.Row="6" Grid.ColumnSpan="4" FontSize="30" Margin="0,5" Height="Auto" HorizontalAlignment="Center" Width="1049" />
 
         <Button  Content="Characters" Grid.Row="0" Grid.Column="0"  BorderBrush="Black" BorderThickness="2"  Command="{Binding CloseWindowCommandChar, Mode=OneWay}"  CommandParameter="{Binding ElementName=WTWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
         <Button  Content="Affiliations" Grid.Row="0" Grid.Column="1" BorderBrush="Black" BorderThickness="2"  Command="{Binding CloseWindowCommandAff, Mode=OneWay}"  CommandParameter="{Binding ElementName=WTWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
         <Button  Content="Arcs" Grid.Row="0" Grid.Column="2" BorderBrush="Black" BorderThickness="2"  Command="{Binding CloseWindowCommandArc, Mode=OneWay}"  CommandParameter="{Binding ElementName=WTWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
         <Button  Content="Places" Grid.Row="0" Grid.Column="3" BorderBrush="Black" BorderThickness="2" Command="{Binding CloseWindowCommandPlace, Mode=OneWay}"  CommandParameter="{Binding ElementName=WTWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
         <Button  Content="World Timeline" Grid.Row="0" Grid.Column="4" BorderBrush="Black" BorderThickness="2" Command="{Binding CloseWindowCommandWT, Mode=OneWay}"  CommandParameter="{Binding ElementName=WTWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
-
-        <Button  Content="Add" Grid.Row="2" Grid.Column="4" BorderBrush="Black" BorderThickness="2" Margin="5" Command="{Binding}" CommandParameter="Toevoegen" Height="Auto"/>
-        <Button  Content="Edit" Grid.Row="4" Grid.Column="4" BorderBrush="Black" BorderThickness="2" Margin="5" Command="{Binding}" CommandParameter="Aanpassen" Height="Auto"/>
-        <Button  Content="Delete" Grid.Row="6" Grid.Column="4" BorderBrush="Black" BorderThickness="2" Margin="5" Height="Auto" Command="{Binding}" CommandParameter="Verwijderen"/>
 
     </Grid>
 </Window>

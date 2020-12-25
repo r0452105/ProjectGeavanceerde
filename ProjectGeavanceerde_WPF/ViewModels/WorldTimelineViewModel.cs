@@ -29,7 +29,6 @@ namespace ProjectGeavanceerde_WPF.ViewModels
                 _selectedEvent = value;
                 EventRecordInstellen();
                 NotifyPropertyChanged("SelectedEvent");
-               //NotifyPropertyChanged(); //omdat er gewerkt wordt met nuget package Propertychanged.Fody hoeft dit niet meer
 
             }
         }
@@ -43,6 +42,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             this.CloseWindowCommandArc = new RelayCommand<Window>(this.CloseWindowArc);
             this.CloseWindowCommandPlace = new RelayCommand<Window>(this.CloseWindowPlace);
             this.CloseWindowCommandWT = new RelayCommand<Window>(this.CloseWindowWT);
+            this.CloseWindowCommandWTEdit = new RelayCommand<Window>(this.CloseWindowWTEdit);
         }
         public override string this[string columnName]
         {
@@ -168,6 +168,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         public RelayCommand<Window> CloseWindowCommandArc { get; private set; }
         public RelayCommand<Window> CloseWindowCommandPlace { get; private set; }
         public RelayCommand<Window> CloseWindowCommandWT { get; private set; }
+        public RelayCommand<Window> CloseWindowCommandWTEdit { get; private set; }
 
 
         public void CloseWindowChar(Window window)
@@ -228,6 +229,19 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             WorldTimelineViewModel worldTimelineViewModel = new WorldTimelineViewModel();
             worldTimelineView.DataContext = worldTimelineViewModel;
             worldTimelineView.Show();
+
+            if (window != null)
+            {
+                window.Close();
+            }
+        }
+        public void CloseWindowWTEdit(Window window)
+        {
+            WTEditView wTEditView = new WTEditView();
+            WTEditViewModel wTEditViewModel = new WTEditViewModel();
+            wTEditViewModel.SelectedEvent=SelectedEvent;
+            wTEditView.DataContext = wTEditViewModel;
+            wTEditView.Show();
 
             if (window != null)
             {
