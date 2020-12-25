@@ -37,6 +37,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             this.CloseWindowCommandAff = new RelayCommand<Window>(this.CloseWindowAff);
             this.CloseWindowCommandArc = new RelayCommand<Window>(this.CloseWindowArc);
             this.CloseWindowCommandArcEdit = new RelayCommand<Window>(this.CloseWindowArcEdit);
+            this.CloseWindowCommandArcAdd = new RelayCommand<Window>(this.CloseWindowArcAdd);
             this.CloseWindowCommandPlace = new RelayCommand<Window>(this.CloseWindowPlace);
             this.CloseWindowCommandWT = new RelayCommand<Window>(this.CloseWindowWT);
         }
@@ -147,6 +148,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         public RelayCommand<Window> CloseWindowCommandAff { get; private set; }
         public RelayCommand<Window> CloseWindowCommandArc { get; private set; }
         public RelayCommand<Window> CloseWindowCommandArcEdit { get; private set; }
+        public RelayCommand<Window> CloseWindowCommandArcAdd { get; private set; }
         public RelayCommand<Window> CloseWindowCommandPlace { get; private set; }
         public RelayCommand<Window> CloseWindowCommandWT { get; private set; }
 
@@ -196,6 +198,18 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             arcEditViewModel.SelectedArc = SelectedArc;
             arcEditView.DataContext = arcEditViewModel;
             arcEditView.Show();
+
+            if (window != null)
+            {
+                window.Close();
+            }
+        }
+        public void CloseWindowArcAdd(Window window)
+        {
+            ArcAddView arcAddView = new ArcAddView();
+            ArcAddViewModel arcAddViewModel = new ArcAddViewModel();
+            arcAddView.DataContext = arcAddViewModel;
+            arcAddView.Show();
 
             if (window != null)
             {

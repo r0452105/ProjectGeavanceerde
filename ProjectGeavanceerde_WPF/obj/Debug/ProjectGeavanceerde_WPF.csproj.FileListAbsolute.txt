@@ -63,3 +63,5 @@ C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\PlaceEditView.baml
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\WTEditView.g.cs
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\WTEditView.baml
+C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\ArcAddView.g.cs
+C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\ArcAddView.baml

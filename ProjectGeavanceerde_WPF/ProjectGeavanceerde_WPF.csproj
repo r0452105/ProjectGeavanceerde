@@ -94,6 +94,7 @@
     <Compile Include="ViewModels\AffiliationViewModels\AffAddViewModel.cs" />
     <Compile Include="ViewModels\AffiliationViewModels\AffEditViewModel.cs" />
     <Compile Include="ViewModels\AffiliationViewModels\AffiliationViewModel.cs" />
+    <Compile Include="ViewModels\ArcAddViewModel.cs" />
     <Compile Include="ViewModels\ArcEditViewModel.cs" />
     <Compile Include="ViewModels\ArcViewModel.cs" />
     <Compile Include="ViewModels\BasisViewModel.cs" />
@@ -113,6 +114,9 @@
     </Compile>
     <Compile Include="Views\AffiliationViews\AffiliationView.xaml.cs">
       <DependentUpon>AffiliationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ArcAddView.xaml.cs">
+      <DependentUpon>ArcAddView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ArcEditView.xaml.cs">
       <DependentUpon>ArcEditView.xaml</DependentUpon>
@@ -186,6 +190,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\AffiliationViews\AffiliationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ArcAddView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
