@@ -94,16 +94,17 @@
     <Compile Include="ViewModels\AffiliationViewModels\AffAddViewModel.cs" />
     <Compile Include="ViewModels\AffiliationViewModels\AffEditViewModel.cs" />
     <Compile Include="ViewModels\AffiliationViewModels\AffiliationViewModel.cs" />
-    <Compile Include="ViewModels\ArcAddViewModel.cs" />
-    <Compile Include="ViewModels\ArcEditViewModel.cs" />
-    <Compile Include="ViewModels\ArcViewModel.cs" />
+    <Compile Include="ViewModels\ArcViewModels\ArcAddViewModel.cs" />
+    <Compile Include="ViewModels\ArcViewModels\ArcViewModel.cs" />
+    <Compile Include="ViewModels\ArcViewModels\ArcEditViewModel.cs" />
     <Compile Include="ViewModels\BasisViewModel.cs" />
     <Compile Include="ViewModels\CharacterViewModels\CharacterViewModel.cs" />
     <Compile Include="ViewModels\CharacterViewModels\CharAddViewModel.cs" />
     <Compile Include="ViewModels\CharacterViewModels\CharEditViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
-    <Compile Include="ViewModels\PlaceEditViewModel.cs" />
-    <Compile Include="ViewModels\PlaceViewModel.cs" />
+    <Compile Include="ViewModels\PlaceViewModels\PlaceAddViewModel.cs" />
+    <Compile Include="ViewModels\PlaceViewModels\PlaceEditViewModel.cs" />
+    <Compile Include="ViewModels\PlaceViewModels\PlaceViewModel.cs" />
     <Compile Include="ViewModels\WorldTimelineViewModel.cs" />
     <Compile Include="ViewModels\WTEditViewModel.cs" />
     <Compile Include="Views\AffiliationViews\AffAddView.xaml.cs">
@@ -115,13 +116,13 @@
     <Compile Include="Views\AffiliationViews\AffiliationView.xaml.cs">
       <DependentUpon>AffiliationView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ArcAddView.xaml.cs">
+    <Compile Include="Views\ArcViews\ArcAddView.xaml.cs">
       <DependentUpon>ArcAddView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ArcEditView.xaml.cs">
+    <Compile Include="Views\ArcViews\ArcEditView.xaml.cs">
       <DependentUpon>ArcEditView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ArcView.xaml.cs">
+    <Compile Include="Views\ArcViews\ArcView.xaml.cs">
       <DependentUpon>ArcView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\CharacterViews\CharacterView.xaml.cs">
@@ -136,10 +137,13 @@
     <Compile Include="Views\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\PlaceEditView.xaml.cs">
+    <Compile Include="Views\PlaceViews\PlaceAddView.xaml.cs">
+      <DependentUpon>PlaceAddView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PlaceViews\PlaceEditView.xaml.cs">
       <DependentUpon>PlaceEditView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\PlaceView.xaml.cs">
+    <Compile Include="Views\PlaceViews\PlaceView.xaml.cs">
       <DependentUpon>PlaceView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\WTEditView.xaml.cs">
@@ -193,15 +197,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ArcAddView.xaml">
+    <Page Include="Views\ArcViews\ArcAddView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ArcEditView.xaml">
+    <Page Include="Views\ArcViews\ArcEditView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ArcView.xaml">
+    <Page Include="Views\ArcViews\ArcView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -221,11 +225,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\PlaceEditView.xaml">
+    <Page Include="Views\PlaceViews\PlaceAddView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\PlaceView.xaml">
+    <Page Include="Views\PlaceViews\PlaceEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PlaceViews\PlaceView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

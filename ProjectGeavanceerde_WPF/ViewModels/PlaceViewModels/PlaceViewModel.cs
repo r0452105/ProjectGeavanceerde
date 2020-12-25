@@ -38,6 +38,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             this.CloseWindowCommandArc = new RelayCommand<Window>(this.CloseWindowArc);
             this.CloseWindowCommandPlace = new RelayCommand<Window>(this.CloseWindowPlace);
             this.CloseWindowCommandPlaceEdit = new RelayCommand<Window>(this.CloseWindowPlaceEdit);
+            this.CloseWindowCommandPlaceAdd = new RelayCommand<Window>(this.CloseWindowPlaceAdd);
             this.CloseWindowCommandWT = new RelayCommand<Window>(this.CloseWindowWT);
         }
         public override string this[string columnName]
@@ -150,6 +151,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         public RelayCommand<Window> CloseWindowCommandArc { get; private set; }
         public RelayCommand<Window> CloseWindowCommandPlace { get; private set; }
         public RelayCommand<Window> CloseWindowCommandPlaceEdit { get; private set; }
+        public RelayCommand<Window> CloseWindowCommandPlaceAdd { get; private set; }
         public RelayCommand<Window> CloseWindowCommandWT { get; private set; }
 
 
@@ -212,6 +214,18 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             placeEditViewModel.SelectedPlace = SelectedPlace;
             placeEditView.DataContext = placeEditViewModel;
             placeEditView.Show();
+
+            if (window != null)
+            {
+                window.Close();
+            }
+        }
+        public void CloseWindowPlaceAdd(Window window)
+        {
+            PlaceAddView placeAddView = new PlaceAddView();
+            PlaceAddViewModel placeAddViewModel = new PlaceAddViewModel();
+            placeAddView.DataContext = placeAddViewModel;
+            placeAddView.Show();
 
             if (window != null)
             {
