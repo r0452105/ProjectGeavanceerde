@@ -91,6 +91,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ViewModels\AffEditViewModel.cs" />
     <Compile Include="ViewModels\AffiliationViewModel.cs" />
     <Compile Include="ViewModels\ArcViewModel.cs" />
     <Compile Include="ViewModels\BasisViewModel.cs" />
@@ -100,6 +101,12 @@
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\PlaceViewModel.cs" />
     <Compile Include="ViewModels\WorldTimelineViewModel.cs" />
+    <Compile Include="Views\AffAddView.xaml.cs">
+      <DependentUpon>AffAddView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AffEditView.xaml.cs">
+      <DependentUpon>AffEditView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\AffiliationView.xaml.cs">
       <DependentUpon>AffiliationView.xaml</DependentUpon>
     </Compile>
@@ -157,6 +164,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Views\AffAddView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AffEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\AffiliationView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

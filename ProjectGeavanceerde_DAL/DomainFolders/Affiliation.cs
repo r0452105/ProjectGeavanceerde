@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace ProjectGeavanceerde_DAL
 {
     [Table("Affiliations")]
-    public class Affiliation
+    public partial class Affiliation
     {
         [Key]
         public int AffiliationID { get; set; }

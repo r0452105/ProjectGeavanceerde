@@ -29,9 +29,6 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             {
                 _selectedAffiliation = value;
                 AffiliationRecordInstellen();
-                //NotifyPropertyChanged("SelectedOrderlijn");
-                //NotifyPropertyChanged(); //omdat er gewerkt wordt met nuget package Propertychanged.Fody hoeft dit niet meer
-
             }
         }
 
@@ -142,6 +139,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         #region WindowCommands
         public RelayCommand<Window> CloseWindowCommandChar { get; private set; }
         public RelayCommand<Window> CloseWindowCommandAff { get; private set; }
+        public RelayCommand<Window> CloseWindowCommandAffEdit { get; private set; }
         public RelayCommand<Window> CloseWindowCommandArc { get; private set; }
         public RelayCommand<Window> CloseWindowCommandPlace { get; private set; }
         public RelayCommand<Window> CloseWindowCommandWT { get; private set; }
@@ -170,6 +168,26 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             if (window != null)
             {
                 window.Close();
+            }
+        }
+        public void CloseWindowAffEdit(Window window)
+        {
+            if (SelectedAffiliation != null)
+            {
+                AffEditView affEditView = new AffEditView();
+                AffEditViewModel affEditViewModel = new AffEditViewModel();
+                affEditViewModel.SelectedAffiliation = SelectedAffiliation;
+                affEditView.DataContext = affEditViewModel;
+                affEditView.Show();
+
+                if (window != null)
+                {
+                    window.Close();
+                }
+            }
+            else
+            {
+                Foutmelding = "Selecteer een character !";
             }
         }
 
@@ -215,6 +233,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         {
             this.CloseWindowCommandChar = new RelayCommand<Window>(this.CloseWindowChar);
             this.CloseWindowCommandAff = new RelayCommand<Window>(this.CloseWindowAff);
+            this.CloseWindowCommandAffEdit = new RelayCommand<Window>(this.CloseWindowAffEdit);
             this.CloseWindowCommandArc = new RelayCommand<Window>(this.CloseWindowArc);
             this.CloseWindowCommandPlace = new RelayCommand<Window>(this.CloseWindowPlace);
             this.CloseWindowCommandWT = new RelayCommand<Window>(this.CloseWindowWT);

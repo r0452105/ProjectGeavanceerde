@@ -1,0 +1,38 @@
+﻿<Window x:Class="ProjectGeavanceerde_WPF.Views.AffEditView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectGeavanceerde_WPF.Views"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        x:Name="AffEditWindow"
+        Title="AffEditView" Height="750" Width="800">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*" />
+            <RowDefinition Height="50*" />
+            <RowDefinition Height="50*" />
+            <RowDefinition Height="50*" />
+            <RowDefinition Height="50*" />
+            <RowDefinition Height="50*" />
+            <RowDefinition Height="50*" />
+            <RowDefinition Height="50*" />
+            <RowDefinition Height="50*" />
+        </Grid.RowDefinitions>
+        <TextBox Text="{Binding SelectedAffiliation.Name, ValidatesOnDataErrors=True}"
+                 materialDesign:HintAssist.Hint="Naam"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                 Grid.Row="0" Grid.Column="0"  />
+        <ComboBox ItemsSource="{Binding Factions, ValidatesOnDataErrors=True}"
+                  SelectedValue="{Binding SelectedAffiliation.FactionID, ValidatesOnDataErrors=True}" 
+                  SelectedValuePath="FactionID"
+                  materialDesign:HintAssist.Hint="Faction"
+                  Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                  Grid.Row="1" Height="50" Margin="0,10"/>
+        <Button  Content="Affiliation Bewerken" Grid.Row="8" BorderBrush="Black" BorderThickness="2" Margin="5" Command="{Binding CloseWindowCommandAffEdit, Mode=OneWay}"  CommandParameter="{Binding ElementName=AffEditWindow}" Height="Auto"/>
+    </Grid>
+</Window>

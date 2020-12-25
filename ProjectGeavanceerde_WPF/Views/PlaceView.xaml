@@ -53,10 +53,11 @@
         <Button  Content="Edit" Grid.Row="6" Grid.Column="1" BorderBrush="Black" BorderThickness="2" Margin="5" Command="{Binding}" CommandParameter="Aanpassen" Height="Auto"/>
         <Button  Content="Delete" Grid.Row="6" Grid.Column="2" BorderBrush="Black" BorderThickness="2" Margin="5" Height="Auto" Command="{Binding}" CommandParameter="Verwijderen"/>
 
-        <Button  Content="Characters" Grid.Row="0" Grid.Column="0"  BorderBrush="Black" BorderThickness="2" Margin="1,1,158,1" Command="{Binding CloseWindowCommandChar, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceWindow}" Height="Auto" Grid.ColumnSpan="2"/>
-        <Button  Content="Affiliations" Grid.Row="0" Grid.Column="1" BorderBrush="Black" BorderThickness="2" Margin="1,1,157,1" Command="{Binding CloseWindowCommandAff, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceWindow}" Height="Auto" Grid.ColumnSpan="2"/>
-        <Button  Content="Arcs" Grid.Row="0" Grid.Column="2" BorderBrush="Black" BorderThickness="2" Margin="1" Command="{Binding CloseWindowCommandArc, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceWindow}" Height="Auto"/>
-        <Button  Content="Places" Grid.Row="0" Grid.Column="2" BorderBrush="Black" BorderThickness="2" Margin="157,1,1,1" Command="{Binding CloseWindowCommandPlace, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceWindow}" Height="Auto" Grid.ColumnSpan="2"/>
-        <Button  Content="World Timeline" Grid.Row="0" Grid.Column="3" BorderBrush="Black" BorderThickness="2" Margin="158,1,1,1" Command="{Binding CloseWindowCommandWT, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceWindow}" Height="Auto" Grid.ColumnSpan="2"/>
+        <Button  Content="Characters" Grid.Row="0" Grid.Column="0"  BorderBrush="Black" BorderThickness="2"  Command="{Binding CloseWindowCommandChar, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
+        <Button  Content="Affiliations" Grid.Row="0" Grid.Column="1" BorderBrush="Black" BorderThickness="2"  Command="{Binding CloseWindowCommandAff, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
+        <Button  Content="Arcs" Grid.Row="0" Grid.Column="2" BorderBrush="Black" BorderThickness="2"  Command="{Binding CloseWindowCommandArc, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
+        <Button  Content="Places" Grid.Row="0" Grid.Column="3" BorderBrush="Black" BorderThickness="2" Command="{Binding CloseWindowCommandPlace, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
+        <Button  Content="World Timeline" Grid.Row="0" Grid.Column="4" BorderBrush="Black" BorderThickness="2" Command="{Binding CloseWindowCommandWT, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
+   
     </Grid>
 </Window>

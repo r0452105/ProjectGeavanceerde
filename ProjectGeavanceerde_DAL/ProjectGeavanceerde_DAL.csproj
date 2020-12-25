@@ -65,7 +65,12 @@
     <Compile Include="Migrations\202012241843324_InitialCreate.designer.cs">
       <DependentUpon>202012241843324_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012250736231_EndGame1.cs" />
+    <Compile Include="Migrations\202012250736231_EndGame1.designer.cs">
+      <DependentUpon>202012250736231_EndGame1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="partials\Affiliation.cs" />
     <Compile Include="partials\Basisklasse.cs" />
     <Compile Include="DomainFolders\Bloodtype.cs" />
     <Compile Include="DomainFolders\Character_Affiliation.cs" />
@@ -78,6 +83,7 @@
     <Compile Include="partials\Bloodtype.cs" />
     <Compile Include="partials\Character.cs" />
     <Compile Include="partials\Event.cs" />
+    <Compile Include="partials\Faction.cs" />
     <Compile Include="partials\Gender.cs" />
     <Compile Include="partials\Haki.cs" />
     <Compile Include="partials\Species.cs" />
@@ -94,6 +100,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202012241843324_InitialCreate.resx">
       <DependentUpon>202012241843324_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012250736231_EndGame1.resx">
+      <DependentUpon>202012250736231_EndGame1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
