@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace ProjectGeavanceerde_DAL
 {
     [Table("Arcs")]
-    public class Arc
+    public partial class Arc
     {
         [Key]
         public int ArcID { get; set; }

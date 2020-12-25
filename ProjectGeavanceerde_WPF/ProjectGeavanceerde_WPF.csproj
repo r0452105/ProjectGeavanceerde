@@ -91,25 +91,29 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ViewModels\AffAddViewModel.cs" />
-    <Compile Include="ViewModels\AffEditViewModel.cs" />
-    <Compile Include="ViewModels\AffiliationViewModel.cs" />
+    <Compile Include="ViewModels\AffiliationViewModels\AffAddViewModel.cs" />
+    <Compile Include="ViewModels\AffiliationViewModels\AffEditViewModel.cs" />
+    <Compile Include="ViewModels\AffiliationViewModels\AffiliationViewModel.cs" />
+    <Compile Include="ViewModels\ArcEditViewModel.cs" />
     <Compile Include="ViewModels\ArcViewModel.cs" />
     <Compile Include="ViewModels\BasisViewModel.cs" />
-    <Compile Include="ViewModels\CharacterViewModel.cs" />
-    <Compile Include="ViewModels\CharAddViewModel.cs" />
-    <Compile Include="ViewModels\CharEditViewModel.cs" />
+    <Compile Include="ViewModels\CharacterViewModels\CharacterViewModel.cs" />
+    <Compile Include="ViewModels\CharacterViewModels\CharAddViewModel.cs" />
+    <Compile Include="ViewModels\CharacterViewModels\CharEditViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\PlaceViewModel.cs" />
     <Compile Include="ViewModels\WorldTimelineViewModel.cs" />
-    <Compile Include="Views\AffAddView.xaml.cs">
+    <Compile Include="Views\AffiliationViews\AffAddView.xaml.cs">
       <DependentUpon>AffAddView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\AffEditView.xaml.cs">
+    <Compile Include="Views\AffiliationViews\AffEditView.xaml.cs">
       <DependentUpon>AffEditView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\AffiliationView.xaml.cs">
+    <Compile Include="Views\AffiliationViews\AffiliationView.xaml.cs">
       <DependentUpon>AffiliationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ArcEditView.xaml.cs">
+      <DependentUpon>ArcEditView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ArcView.xaml.cs">
       <DependentUpon>ArcView.xaml</DependentUpon>
@@ -165,15 +169,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Views\AffAddView.xaml">
+    <Page Include="Views\AffiliationViews\AffAddView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\AffEditView.xaml">
+    <Page Include="Views\AffiliationViews\AffEditView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\AffiliationView.xaml">
+    <Page Include="Views\AffiliationViews\AffiliationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ArcEditView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -46,8 +46,8 @@
             <CheckBox Content="Ending Chapter" FontSize="15"/>
         </StackPanel>
 
-        <Button  Content="Nieuwe Affiliation Aanmaken" Grid.Row="4" Grid.Column="4" BorderBrush="Black" BorderThickness="2" Margin="5" Command="{Binding CloseWindowCommandAffAdd, Mode=OneWay}"  CommandParameter="{Binding ElementName=ArcWindow}" Height="Auto"/>
-        <Button  Content="Affiliation Bewerken" Grid.Row="5" Grid.Column="4" BorderBrush="Black" BorderThickness="2" Margin="5" Command="{Binding CloseWindowCommandAffEdit, Mode=OneWay}"  CommandParameter="{Binding ElementName=ArcWindow}" Height="Auto"/>
+        <Button  Content="Nieuwe Affiliation Aanmaken" Grid.Row="4" Grid.Column="4" BorderBrush="Black" BorderThickness="2" Margin="5" Command="{Binding CloseWindowCommandArcAdd, Mode=OneWay}"  CommandParameter="{Binding ElementName=ArcWindow}" Height="Auto"/>
+        <Button  Content="Affiliation Bewerken" Grid.Row="5" Grid.Column="4" BorderBrush="Black" BorderThickness="2" Margin="5" Command="{Binding CloseWindowCommandArcEdit, Mode=OneWay}"  CommandParameter="{Binding ElementName=ArcWindow}" Height="Auto"/>
         <Button  Content="Affiliation Verwijderen" Grid.Row="6" Grid.Column="4" BorderBrush="Black" BorderThickness="2" Margin="5" Height="Auto" Command="{Binding}" CommandParameter="Verwijderen"/>
         <Label  Content="{Binding Foutmelding}" Grid.Row="6" Grid.ColumnSpan="4" FontSize="30" Margin="5" Height="Auto" HorizontalAlignment="Center" />
 

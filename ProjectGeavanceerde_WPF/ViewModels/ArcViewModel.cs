@@ -27,8 +27,6 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             {
                 _selectedArc = value;
                 ArcRecordInstellen();
-                //NotifyPropertyChanged("SelectedOrderlijn");
-                //NotifyPropertyChanged(); //omdat er gewerkt wordt met nuget package Propertychanged.Fody hoeft dit niet meer
 
             }
         }
@@ -38,6 +36,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             this.CloseWindowCommandChar = new RelayCommand<Window>(this.CloseWindowChar);
             this.CloseWindowCommandAff = new RelayCommand<Window>(this.CloseWindowAff);
             this.CloseWindowCommandArc = new RelayCommand<Window>(this.CloseWindowArc);
+            this.CloseWindowCommandArcEdit = new RelayCommand<Window>(this.CloseWindowArcEdit);
             this.CloseWindowCommandPlace = new RelayCommand<Window>(this.CloseWindowPlace);
             this.CloseWindowCommandWT = new RelayCommand<Window>(this.CloseWindowWT);
         }
@@ -147,6 +146,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         public RelayCommand<Window> CloseWindowCommandChar { get; private set; }
         public RelayCommand<Window> CloseWindowCommandAff { get; private set; }
         public RelayCommand<Window> CloseWindowCommandArc { get; private set; }
+        public RelayCommand<Window> CloseWindowCommandArcEdit { get; private set; }
         public RelayCommand<Window> CloseWindowCommandPlace { get; private set; }
         public RelayCommand<Window> CloseWindowCommandWT { get; private set; }
 
@@ -183,6 +183,19 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             ArcViewModel arcViewModel = new ArcViewModel();
             arcView.DataContext = arcViewModel;
             arcView.Show();
+
+            if (window != null)
+            {
+                window.Close();
+            }
+        }
+        public void CloseWindowArcEdit(Window window)
+        {
+            ArcEditView arcEditView = new ArcEditView();
+            ArcEditViewModel arcEditViewModel = new ArcEditViewModel();
+            arcEditViewModel.SelectedArc = SelectedArc;
+            arcEditView.DataContext = arcEditViewModel;
+            arcEditView.Show();
 
             if (window != null)
             {

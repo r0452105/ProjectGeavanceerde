@@ -71,6 +71,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="partials\Affiliation.cs" />
+    <Compile Include="partials\Arc.cs" />
     <Compile Include="partials\Basisklasse.cs" />
     <Compile Include="DomainFolders\Bloodtype.cs" />
     <Compile Include="DomainFolders\Character_Affiliation.cs" />
