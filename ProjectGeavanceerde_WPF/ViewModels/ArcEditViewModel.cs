@@ -43,23 +43,6 @@ namespace ProjectGeavanceerde_WPF.ViewModels
                 return "";
             }
         }
-        public void Aanpassen()
-        {
-            if (SelectedArc != null)
-            {
-                unitOfWork.ArcRepo.ToevoegenOfAanpassen(ArcRecord);
-
-                int ok = unitOfWork.Save();
-                RefreshArcs();
-
-                FoutmeldingInstellenNaSave(ok, "Orderlijn is niet aangepast");
-            }
-            else
-            {
-                Foutmelding = "Selecteer een orderlijn!";
-                NotifyPropertyChanged("Foutmelding");
-            }
-        }
         private void RefreshArcs()
         {
             List<Arc> listArc = unitOfWork.ArcRepo.Ophalen().ToList();

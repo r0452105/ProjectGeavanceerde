@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace ProjectGeavanceerde_DAL
 {
     [Table("Places")]
-    public class Place
+    public partial class Place
     {
         [Key]
         public int PlaceID { get; set; }

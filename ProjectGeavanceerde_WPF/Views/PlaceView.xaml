@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ProjectGeavanceerde_WPF.Views"
         mc:Ignorable="d"
         x:Name="PlaceWindow"
-        Title="PlaceView" Height="450" Width="800">
+        Title="PlaceView" Height="526.5" Width="1319">
     <Grid ShowGridLines="False">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" MinHeight="40"/>
@@ -24,7 +24,6 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-
         <DataGrid  AutoGenerateColumns="False" Grid.Row="1" Grid.Column="0" 
                   ItemsSource="{Binding Places, ValidatesOnDataErrors=True}"
                   SelectedItem="{Binding SelectedPlace, ValidatesOnDataErrors=True}"
@@ -49,15 +48,16 @@
             <CheckBox Content="Land" FontSize="15"/>
         </StackPanel>
 
-        <Button  Content="Add" Grid.Row="6" Grid.Column="0" BorderBrush="Black" BorderThickness="2" Margin="5" Command="{Binding}" CommandParameter="Toevoegen" Height="Auto"/>
-        <Button  Content="Edit" Grid.Row="6" Grid.Column="1" BorderBrush="Black" BorderThickness="2" Margin="5" Command="{Binding}" CommandParameter="Aanpassen" Height="Auto"/>
-        <Button  Content="Delete" Grid.Row="6" Grid.Column="2" BorderBrush="Black" BorderThickness="2" Margin="5" Height="Auto" Command="{Binding}" CommandParameter="Verwijderen"/>
+        <Button  Content="Nieuwe Affiliation Aanmaken" Grid.Row="4" Grid.Column="4" BorderBrush="Black" BorderThickness="2" Margin="5" Command="{Binding CloseWindowCommandPlaceAdd, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceWindow}" Height="Auto"/>
+        <Button  Content="Affiliation Bewerken" Grid.Row="5" Grid.Column="4" BorderBrush="Black" BorderThickness="2" Margin="5" Command="{Binding CloseWindowCommandPlaceEdit, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceWindow}" Height="Auto"/>
+        <Button  Content="Affiliation Verwijderen" Grid.Row="6" Grid.Column="4" BorderBrush="Black" BorderThickness="2" Margin="5" Height="Auto" Command="{Binding}" CommandParameter="Verwijderen"/>
+        <Label  Content="{Binding Foutmelding}" Grid.Row="6" Grid.ColumnSpan="4" FontSize="30" Margin="0,5" Height="Auto" HorizontalAlignment="Center" Width="1049" />
 
         <Button  Content="Characters" Grid.Row="0" Grid.Column="0"  BorderBrush="Black" BorderThickness="2"  Command="{Binding CloseWindowCommandChar, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
         <Button  Content="Affiliations" Grid.Row="0" Grid.Column="1" BorderBrush="Black" BorderThickness="2"  Command="{Binding CloseWindowCommandAff, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
         <Button  Content="Arcs" Grid.Row="0" Grid.Column="2" BorderBrush="Black" BorderThickness="2"  Command="{Binding CloseWindowCommandArc, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
         <Button  Content="Places" Grid.Row="0" Grid.Column="3" BorderBrush="Black" BorderThickness="2" Command="{Binding CloseWindowCommandPlace, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
         <Button  Content="World Timeline" Grid.Row="0" Grid.Column="4" BorderBrush="Black" BorderThickness="2" Command="{Binding CloseWindowCommandWT, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
-   
+
     </Grid>
 </Window>

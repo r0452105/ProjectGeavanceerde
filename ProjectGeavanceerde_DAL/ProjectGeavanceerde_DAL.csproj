@@ -87,6 +87,7 @@
     <Compile Include="partials\Faction.cs" />
     <Compile Include="partials\Gender.cs" />
     <Compile Include="partials\Haki.cs" />
+    <Compile Include="partials\Place.cs" />
     <Compile Include="partials\Species.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DomainFolders\Species.cs" />

@@ -28,9 +28,6 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             {
                 _selectedPlace = value;
                 PlaceRecordInstellen();
-                //NotifyPropertyChanged("SelectedOrderlijn");
-                //NotifyPropertyChanged(); //omdat er gewerkt wordt met nuget package Propertychanged.Fody hoeft dit niet meer
-
             }
         }
         public PlaceViewModel()
@@ -40,6 +37,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             this.CloseWindowCommandAff = new RelayCommand<Window>(this.CloseWindowAff);
             this.CloseWindowCommandArc = new RelayCommand<Window>(this.CloseWindowArc);
             this.CloseWindowCommandPlace = new RelayCommand<Window>(this.CloseWindowPlace);
+            this.CloseWindowCommandPlaceEdit = new RelayCommand<Window>(this.CloseWindowPlaceEdit);
             this.CloseWindowCommandWT = new RelayCommand<Window>(this.CloseWindowWT);
         }
         public override string this[string columnName]
@@ -151,6 +149,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         public RelayCommand<Window> CloseWindowCommandAff { get; private set; }
         public RelayCommand<Window> CloseWindowCommandArc { get; private set; }
         public RelayCommand<Window> CloseWindowCommandPlace { get; private set; }
+        public RelayCommand<Window> CloseWindowCommandPlaceEdit { get; private set; }
         public RelayCommand<Window> CloseWindowCommandWT { get; private set; }
 
 
@@ -199,6 +198,20 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             PlaceViewModel placeViewModel = new PlaceViewModel();
             placeView.DataContext = placeViewModel;
             placeView.Show();
+
+            if (window != null)
+            {
+                window.Close();
+            }
+        }
+
+        public void CloseWindowPlaceEdit(Window window)
+        {
+            PlaceEditView placeEditView = new PlaceEditView();
+            PlaceEditViewModel placeEditViewModel = new PlaceEditViewModel();
+            placeEditViewModel.SelectedPlace = SelectedPlace;
+            placeEditView.DataContext = placeEditViewModel;
+            placeEditView.Show();
 
             if (window != null)
             {
