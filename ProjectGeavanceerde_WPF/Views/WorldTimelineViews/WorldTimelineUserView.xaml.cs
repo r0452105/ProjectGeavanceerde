@@ -17,9 +17,9 @@ namespace ProjectGeavanceerde_WPF.Views
     /// <summary>
     /// Interaction logic for WorldTimelineView.xaml
     /// </summary>
-    public partial class WorldTimelineView : Window
+    public partial class WorldTimelineUserView : Window
     {
-        public WorldTimelineView()
+        public WorldTimelineUserView()
         {
             InitializeComponent();
         }

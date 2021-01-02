@@ -117,6 +117,9 @@
     <Compile Include="Views\AffiliationViews\AffEditView.xaml.cs">
       <DependentUpon>AffEditView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\AffiliationViews\AffiliationUserView.xaml.cs">
+      <DependentUpon>AffiliationUserView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\AffiliationViews\AffiliationView.xaml.cs">
       <DependentUpon>AffiliationView.xaml</DependentUpon>
     </Compile>
@@ -125,6 +128,9 @@
     </Compile>
     <Compile Include="Views\ArcViews\ArcEditView.xaml.cs">
       <DependentUpon>ArcEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ArcViews\ArcUserView.xaml.cs">
+      <DependentUpon>ArcUserView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ArcViews\ArcView.xaml.cs">
       <DependentUpon>ArcView.xaml</DependentUpon>
@@ -150,8 +156,14 @@
     <Compile Include="Views\PlaceViews\PlaceEditView.xaml.cs">
       <DependentUpon>PlaceEditView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\PlaceViews\PlaceUserView.xaml.cs">
+      <DependentUpon>PlaceUserView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\PlaceViews\PlaceView.xaml.cs">
       <DependentUpon>PlaceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WorldTimelineViews\WorldTimelineUserView.xaml.cs">
+      <DependentUpon>WorldTimelineUserView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\WorldTimelineViews\WTAddView.xaml.cs">
       <DependentUpon>WTAddView.xaml</DependentUpon>
@@ -203,6 +215,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\AffiliationViews\AffiliationUserView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\AffiliationViews\AffiliationView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -214,6 +230,10 @@
     <Page Include="Views\ArcViews\ArcEditView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ArcViews\ArcUserView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\ArcViews\ArcView.xaml">
       <SubType>Designer</SubType>
@@ -247,9 +267,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\PlaceViews\PlaceUserView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\PlaceViews\PlaceView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WorldTimelineViews\WorldTimelineUserView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\WorldTimelineViews\WTAddView.xaml">
       <SubType>Designer</SubType>

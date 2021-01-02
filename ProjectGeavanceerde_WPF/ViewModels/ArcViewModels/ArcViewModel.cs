@@ -156,10 +156,22 @@ namespace ProjectGeavanceerde_WPF.ViewModels
 
         public void CloseWindowChar(Window window)
         {
-            CharacterView characterView = new CharacterView();
-            CharacterViewModel characterViewModel = new CharacterViewModel();
-            characterView.DataContext = characterViewModel;
-            characterView.Show();
+            if (Admincheck)
+            {
+                CharacterView characterView = new CharacterView();
+                CharacterViewModel characterViewModel = new CharacterViewModel();
+                characterView.DataContext = characterViewModel;
+                characterViewModel.Admincheck = Admincheck;
+                characterView.Show();
+            }
+            else
+            {
+                CharacterUserView characterView = new CharacterUserView();
+                CharacterViewModel characterViewModel = new CharacterViewModel();
+                characterView.DataContext = characterViewModel;
+                characterViewModel.Admincheck = Admincheck;
+                characterView.Show();
+            }
 
             if (window != null)
             {
@@ -169,10 +181,22 @@ namespace ProjectGeavanceerde_WPF.ViewModels
 
         public void CloseWindowAff(Window window)
         {
-            AffiliationView affiliationView = new AffiliationView();
-            AffiliationViewModel affiliationViewModel = new AffiliationViewModel();
-            affiliationView.DataContext = affiliationViewModel;
-            affiliationView.Show();
+            if (Admincheck)
+            {
+                AffiliationView affiliationView = new AffiliationView();
+                AffiliationViewModel affiliationViewModel = new AffiliationViewModel();
+                affiliationView.DataContext = affiliationViewModel;
+                affiliationViewModel.Admincheck = Admincheck;
+                affiliationView.Show();
+            }
+            else
+            {
+                AffiliationUserView affiliationView = new AffiliationUserView();
+                AffiliationViewModel affiliationViewModel = new AffiliationViewModel();
+                affiliationView.DataContext = affiliationViewModel;
+                affiliationViewModel.Admincheck = Admincheck;
+                affiliationView.Show();
+            }
 
             if (window != null)
             {
@@ -182,10 +206,25 @@ namespace ProjectGeavanceerde_WPF.ViewModels
 
         public void CloseWindowArc(Window window)
         {
-            ArcView arcView = new ArcView();
-            ArcViewModel arcViewModel = new ArcViewModel();
-            arcView.DataContext = arcViewModel;
-            arcView.Show();
+
+            if (Admincheck)
+            {
+                ArcView arcView = new ArcView();
+                ArcViewModel arcViewModel = new ArcViewModel();
+                arcView.DataContext = arcViewModel;
+                arcViewModel.Admincheck = Admincheck;
+                arcView.Show();
+            }
+            else
+            {
+                ArcUserView arcView = new ArcUserView();
+                ArcViewModel arcViewModel = new ArcViewModel();
+                arcView.DataContext = arcViewModel;
+                arcViewModel.Admincheck = Admincheck;
+                arcView.Show();
+            }
+
+
 
             if (window != null)
             {
@@ -220,10 +259,22 @@ namespace ProjectGeavanceerde_WPF.ViewModels
 
         public void CloseWindowPlace(Window window)
         {
-            PlaceView placeView = new PlaceView();
-            PlaceViewModel placeViewModel = new PlaceViewModel();
-            placeView.DataContext = placeViewModel;
-            placeView.Show();
+            if (Admincheck)
+            {
+                PlaceView placeView = new PlaceView();
+                PlaceViewModel placeViewModel = new PlaceViewModel();
+                placeView.DataContext = placeViewModel;
+                placeViewModel.Admincheck = Admincheck;
+                placeView.Show();
+            }
+            else
+            {
+                PlaceUserView placeView = new PlaceUserView();
+                PlaceViewModel placeViewModel = new PlaceViewModel();
+                placeView.DataContext = placeViewModel;
+                placeViewModel.Admincheck = Admincheck;
+                placeView.Show();
+            }
 
             if (window != null)
             {
@@ -233,10 +284,22 @@ namespace ProjectGeavanceerde_WPF.ViewModels
 
         public void CloseWindowWT(Window window)
         {
-            WorldTimelineView worldTimelineView = new WorldTimelineView();
-            WorldTimelineViewModel worldTimelineViewModel = new WorldTimelineViewModel();
-            worldTimelineView.DataContext = worldTimelineViewModel;
-            worldTimelineView.Show();
+            if (Admincheck)
+            {
+                WorldTimelineView worldTimelineView = new WorldTimelineView();
+                WorldTimelineViewModel worldTimelineViewModel = new WorldTimelineViewModel();
+                worldTimelineViewModel.Admincheck = Admincheck;
+                worldTimelineView.DataContext = worldTimelineViewModel;
+                worldTimelineView.Show();
+            }
+            else
+            {
+                WorldTimelineUserView worldTimelineView = new WorldTimelineUserView();
+                WorldTimelineViewModel worldTimelineViewModel = new WorldTimelineViewModel();
+                worldTimelineViewModel.Admincheck = Admincheck;
+                worldTimelineView.DataContext = worldTimelineViewModel;
+                worldTimelineView.Show();
+            }
 
             if (window != null)
             {

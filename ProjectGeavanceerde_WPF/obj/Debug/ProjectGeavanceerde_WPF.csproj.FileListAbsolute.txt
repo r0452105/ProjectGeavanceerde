@@ -73,3 +73,11 @@ C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\bin\Debug\AutoMapper.dll
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\bin\Debug\AutoMapper.xml
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\CharacterViews\CharacterUserView.baml
+C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\AffiliationViews\AffiliationUserView.g.cs
+C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\ArcViews\ArcUserView.g.cs
+C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\PlaceViews\PlaceUserView.g.cs
+C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\WorldTimelineViews\WorldTimelineUserView.g.cs
+C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\AffiliationViews\AffiliationUserView.baml
+C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\ArcViews\ArcUserView.baml
+C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\PlaceViews\PlaceUserView.baml
+C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\WorldTimelineViews\WorldTimelineUserView.baml

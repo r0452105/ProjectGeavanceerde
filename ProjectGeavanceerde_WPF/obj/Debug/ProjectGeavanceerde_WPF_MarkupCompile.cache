@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\App.xaml
-171138184353
+21-1341200187
 
-381967928596
+42-732044301
 129-818190041
-Views\AffiliationViews\AffAddView.xaml;Views\AffiliationViews\AffEditView.xaml;Views\AffiliationViews\AffiliationView.xaml;Views\ArcViews\ArcAddView.xaml;Views\ArcViews\ArcEditView.xaml;Views\ArcViews\ArcView.xaml;Views\CharacterViews\CharacterUserView.xaml;Views\CharacterViews\CharacterView.xaml;Views\CharacterViews\CharAddView.xaml;Views\CharacterViews\CharEditView.xaml;Views\MainView.xaml;Views\PlaceViews\PlaceAddView.xaml;Views\PlaceViews\PlaceEditView.xaml;Views\PlaceViews\PlaceView.xaml;Views\WorldTimelineViews\WTAddView.xaml;Views\WorldTimelineViews\WTEditView.xaml;Views\WorldTimelineViews\WorldTimelineView.xaml;
+Views\AffiliationViews\AffAddView.xaml;Views\AffiliationViews\AffEditView.xaml;Views\AffiliationViews\AffiliationUserView.xaml;Views\AffiliationViews\AffiliationView.xaml;Views\ArcViews\ArcAddView.xaml;Views\ArcViews\ArcEditView.xaml;Views\ArcViews\ArcUserView.xaml;Views\ArcViews\ArcView.xaml;Views\CharacterViews\CharacterUserView.xaml;Views\CharacterViews\CharacterView.xaml;Views\CharacterViews\CharAddView.xaml;Views\CharacterViews\CharEditView.xaml;Views\MainView.xaml;Views\PlaceViews\PlaceAddView.xaml;Views\PlaceViews\PlaceEditView.xaml;Views\PlaceViews\PlaceUserView.xaml;Views\PlaceViews\PlaceView.xaml;Views\WorldTimelineViews\WorldTimelineUserView.xaml;Views\WorldTimelineViews\WTAddView.xaml;Views\WorldTimelineViews\WTEditView.xaml;Views\WorldTimelineViews\WorldTimelineView.xaml;
 
 False
 

@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace ProjectGeavanceerde_WPF.Views
 {
     /// <summary>
-    /// Interaction logic for WorldTimelineView.xaml
+    /// Interaction logic for PlaceView.xaml
     /// </summary>
-    public partial class WorldTimelineView : Window
+    public partial class PlaceUserView : Window
     {
-        public WorldTimelineView()
+        public PlaceUserView()
         {
             InitializeComponent();
         }
