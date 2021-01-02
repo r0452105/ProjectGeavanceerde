@@ -1,16 +1,31 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
 using ProjectGeavanceerde_WPF.Views;
+using System.Windows.Input;
+using System.ComponentModel;
 
 namespace ProjectGeavanceerde_WPF.ViewModels
 {
-    public class MainViewModel : ICommand
+    public class MainViewModel : ICommand, INotifyPropertyChanged
     {
         public event EventHandler CanExecuteChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private bool _admincheck;
+        public bool Admincheck
+        {
+            get { return _admincheck; }
+            set
+            {
+                _admincheck = value;
+                _admincheck = _admincheck ? value : false;
+                OnPropertyChanged("Admincheck");
+            }
+        }
+        protected void OnPropertyChanged(string name = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        }
+
         public bool CanExecute(object parameter)
         {
             //returnwaarde true -> methode mag uitgevoerd worden
@@ -32,10 +47,21 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         }
         public void OpenCharacters()
         {
-            CharacterView characterView = new CharacterView();
-            CharacterViewModel characterViewModel = new CharacterViewModel();
-            characterView.DataContext = characterViewModel;
-            characterView.Show();
+            if (Admincheck)
+            {
+                CharacterView characterView = new CharacterView();
+                CharacterViewModel characterViewModel = new CharacterViewModel();
+                characterView.DataContext = characterViewModel;
+                characterViewModel.Admincheck = Admincheck;
+                characterView.Show();
+            }
+            else
+            {
+                CharacterUserView characterView = new CharacterUserView();
+                CharacterViewModel characterViewModel = new CharacterViewModel();
+                characterView.DataContext = characterViewModel;
+                characterView.Show();
+            }
         }
     }
 }

@@ -6,11 +6,12 @@
         xmlns:local="clr-namespace:ProjectGeavanceerde_WPF.Views"
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="MainView" Height="927.744" Width="1400">
+        Title="MainView" Height="919.744" Width="1400">
     <Grid>
         <Image Grid.RowSpan="2" Stretch="None" Source="C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_DAL\Images\bg2.jpg" VerticalAlignment="Top" HorizontalAlignment="Center"/>
         <StackPanel VerticalAlignment="Bottom">
-            <Button Content="Let's go to the Database" Margin="20,20" Command="{Binding}" CommandParameter="Characters" Height="80" FontSize="45" Background="SteelBlue" Foreground="Black" BorderBrush="Black" BorderThickness="3"/>
+            <CheckBox x:Name="Admincheck" Content="Are you an admin?" FontSize="30" Foreground="White" HorizontalAlignment="Right" Width="318" Background="SteelBlue" IsChecked="{Binding Admincheck}"></CheckBox>
+            <Button Content="Go to the Database (Check box if you are an admin)" Margin="20,20" Command="{Binding}" CommandParameter="Characters" Height="80" FontSize="45" Background="SteelBlue" Foreground="Black" BorderBrush="Black" BorderThickness="3"/>
         </StackPanel>
     </Grid>
 </Window>

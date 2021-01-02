@@ -17,6 +17,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
     public class AffiliationViewModel : BasisViewModel
     {
         #region getters and setters
+        public bool Admincheck { get; set; }
         public ObservableCollection<Affiliation> Affiliations { get; set; }
         public ObservableCollection<Faction> Factions { get; set; }
         public Affiliation AffiliationRecord { get; set; }

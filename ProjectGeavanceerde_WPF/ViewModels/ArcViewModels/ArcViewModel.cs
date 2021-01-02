@@ -16,6 +16,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
 {
     public class ArcViewModel : BasisViewModel
     {
+        public bool Admincheck { get; set; }
         public ObservableCollection<Arc> Arcs { get; set; }
         public Arc ArcRecord { get; set; }
         public string Foutmelding { get; set; }

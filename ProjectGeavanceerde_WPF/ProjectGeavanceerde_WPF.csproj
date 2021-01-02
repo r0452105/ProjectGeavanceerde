@@ -39,6 +39,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>packages\AutoMapper.10.1.1\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="CommonServiceLocator, Version=2.0.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
       <HintPath>packages\CommonServiceLocator.2.0.2\lib\net47\CommonServiceLocator.dll</HintPath>
     </Reference>
@@ -126,6 +129,9 @@
     <Compile Include="Views\ArcViews\ArcView.xaml.cs">
       <DependentUpon>ArcView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\CharacterViews\CharacterUserView.xaml.cs">
+      <DependentUpon>CharacterUserView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\CharacterViews\CharacterView.xaml.cs">
       <DependentUpon>CharacterView.xaml</DependentUpon>
     </Compile>
@@ -210,6 +216,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ArcViews\ArcView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CharacterViews\CharacterUserView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

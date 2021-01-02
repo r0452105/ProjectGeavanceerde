@@ -17,6 +17,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
     public class CharacterViewModel : BasisViewModel, IDisposable
     {
         #region getters and setters
+        public bool Admincheck { get; set; }
         public bool CharacterIDcheck { get; set; }
         public string visibilitycheck { get; set; }
         public ObservableCollection<Character> Characters { get; set; }

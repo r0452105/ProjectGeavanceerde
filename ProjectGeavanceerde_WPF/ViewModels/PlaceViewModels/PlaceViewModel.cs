@@ -16,6 +16,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
 {
     public class PlaceViewModel : BasisViewModel
     {
+        public bool Admincheck { get; set; }
         public ObservableCollection<Place> Places { get; set; }
 
         public Place PlaceRecord { get; set; }

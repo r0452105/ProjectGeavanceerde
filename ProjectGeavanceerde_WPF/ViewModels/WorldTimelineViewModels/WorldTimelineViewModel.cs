@@ -16,6 +16,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
 {
     public class WorldTimelineViewModel : BasisViewModel, IDisposable
     {
+        public bool Admincheck { get; set; }
         public string Foutmelding { get; set; }
         public ObservableCollection<Event> Events { get; set; }
         public Event EventRecord { get; set; }

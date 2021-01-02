@@ -69,3 +69,7 @@ C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\WorldTimelineViews\WTAddView.baml
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\WorldTimelineViews\WTEditView.baml
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\WorldTimelineViews\WorldTimelineView.baml
+C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\CharacterViews\CharacterUserView.g.cs
+C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\bin\Debug\AutoMapper.dll
+C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\bin\Debug\AutoMapper.xml
+C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\CharacterViews\CharacterUserView.baml
