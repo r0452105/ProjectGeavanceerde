@@ -8,7 +8,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         x:Name="AffAddWindow"
         Title="AffAddView" Height="750" Width="800">
-    <Grid Margin="10">
+    <Grid Margin="0,0,2,-1" Background="LightSeaGreen" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
@@ -34,6 +34,6 @@
                   Style="{StaticResource MaterialDesignFloatingHintComboBox}"
                   Grid.Row="1" Height="50" Margin="0,10"/>
         <Label Content="{Binding Foutmelding}" Grid.Row="7" FontSize="30"></Label>
-        <Button  Content="Affiliation Aanmaken" Grid.Row="8" BorderBrush="Black" BorderThickness="2" Margin="5" Command="{Binding CloseWindowCommandAffAdd, Mode=OneWay}"  CommandParameter="{Binding ElementName=AffAddWindow}" Height="Auto"/>
+        <Button  Content="Affiliation Aanmaken" Background="#00b4d8"  Grid.Row="8" FontSize="30" BorderBrush="Black" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandAffAdd, Mode=OneWay}"  CommandParameter="{Binding ElementName=AffAddWindow}" Height="Auto"/>
     </Grid>
 </Window>

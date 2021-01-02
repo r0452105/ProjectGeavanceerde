@@ -8,7 +8,15 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         x:Name="WTAddWindow"
         Title="WTAddView" Height="750" Width="800">
-    <Grid Margin="10">
+    <Grid Margin="0,0,-2,-1" Background="LightSeaGreen">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="0.023"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
@@ -31,8 +39,8 @@
                  materialDesign:HintAssist.Hint="Date"
                  Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                  Grid.Row="1" Grid.Column="0"  />
-      
+
         <Label Content="{Binding Foutmelding}" Grid.Row="7" FontSize="30"></Label>
-        <Button  Content="Event Aanmaken" Grid.Row="8" BorderBrush="Black" BorderThickness="2" Margin="5" Command="{Binding CloseWindowCommandWTAdd, Mode=OneWay}"  CommandParameter="{Binding ElementName=WTAddWindow}" Height="Auto"/>
+        <Button  Content="Event Aanmaken" Grid.Row="8" Background="#00b4d8" BorderBrush="Black" FontSize="30" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandWTAdd, Mode=OneWay}"  CommandParameter="{Binding ElementName=WTAddWindow}" Height="Auto"/>
     </Grid>
 </Window>

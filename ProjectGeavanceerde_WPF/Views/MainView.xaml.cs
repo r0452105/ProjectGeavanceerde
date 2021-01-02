@@ -23,5 +23,10 @@ namespace ProjectGeavanceerde_WPF.Views
         {
             InitializeComponent();
         }
+
+        private void Button_ColorChanged(object sender, RoutedPropertyChangedEventArgs<Color> e)
+        {
+
+        }
     }
 }

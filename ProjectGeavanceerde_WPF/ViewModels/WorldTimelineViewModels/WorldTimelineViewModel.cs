@@ -44,7 +44,9 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             this.CloseWindowCommandWT = new RelayCommand<Window>(this.CloseWindowWT);
             this.CloseWindowCommandWTEdit = new RelayCommand<Window>(this.CloseWindowWTEdit);
             this.CloseWindowCommandWTAdd = new RelayCommand<Window>(this.CloseWindowWTAdd);
+
         }
+
         public override string this[string columnName]
         {
             get
@@ -172,7 +174,6 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         public RelayCommand<Window> CloseWindowCommandWTEdit { get; private set; }
         public RelayCommand<Window> CloseWindowCommandWTAdd { get; private set; }
 
-
         public void CloseWindowChar(Window window)
         {
             CharacterView characterView = new CharacterView();
@@ -239,15 +240,22 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         }
         public void CloseWindowWTEdit(Window window)
         {
-            WTEditView wTEditView = new WTEditView();
-            WTEditViewModel wTEditViewModel = new WTEditViewModel();
-            wTEditViewModel.SelectedEvent=SelectedEvent;
-            wTEditView.DataContext = wTEditViewModel;
-            wTEditView.Show();
-
-            if (window != null)
+            if (SelectedEvent != null)
             {
-                window.Close();
+                WTEditView wTEditView = new WTEditView();
+                WTEditViewModel wTEditViewModel = new WTEditViewModel();
+                wTEditViewModel.SelectedEvent = SelectedEvent;
+                wTEditView.DataContext = wTEditViewModel;
+                wTEditView.Show();
+
+                if (window != null)
+                {
+                    window.Close();
+                }
+            }
+            else
+            {
+                Foutmelding = "Selecteer een event";
             }
         }
         public void CloseWindowWTAdd(Window window)

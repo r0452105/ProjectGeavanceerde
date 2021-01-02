@@ -8,7 +8,15 @@
         x:Name="CharEditWindow"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="CharEditView" Height="750" Width="800">
-    <Grid Margin="10">
+    <Grid Margin="0,0,-2,0" Background="LightSeaGreen" RenderTransformOrigin="0.5,0.5">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="0.023"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
@@ -65,6 +73,6 @@
                   Style="{StaticResource MaterialDesignFloatingHintComboBox}"
                   Grid.Row="7" Height="50" Margin="0,10"/>
         <Label Content="{Binding Foutmelding}" Grid.Row="8"></Label>
-        <Button  Content="Character Bewerken" Grid.Row="9" BorderBrush="Black" BorderThickness="2" Margin="5" Command="{Binding CloseWindowCommandCharEdit, Mode=OneWay}"  CommandParameter="{Binding ElementName=CharEditWindow}" Height="Auto"/>
+        <Button  Content="Character Bewerken" Grid.Row="9" BorderBrush="Black" Background="#00b4d8" FontSize="30" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandCharEdit, Mode=OneWay}"  CommandParameter="{Binding ElementName=CharEditWindow}" Height="Auto"/>
     </Grid>
 </Window>

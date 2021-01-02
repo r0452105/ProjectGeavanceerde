@@ -8,7 +8,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         x:Name="CharacterWindow"
        Title="CharacterView" Height="526.5" Width="1319">
-    <Grid ShowGridLines="False">
+    <Grid ShowGridLines="False" Background="LightSeaGreen">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" MinHeight="40"/>
             <RowDefinition Height="21*"/>
@@ -57,16 +57,16 @@
             <CheckBox Content="Gender" FontSize="15"/>
         </StackPanel>
 
-        <Button  Content="Nieuw Character Aanmaken" Grid.Row="4" Grid.Column="4" BorderBrush="Black" BorderThickness="2" Margin="5" Command="{Binding CloseWindowCommandCharAdd, Mode=OneWay}"  CommandParameter="{Binding ElementName=CharacterWindow}" Height="Auto"/>
-        <Button  Content="Character Bewerken" Grid.Row="5" Grid.Column="4" BorderBrush="Black" BorderThickness="2" Margin="5" Command="{Binding CloseWindowCommandCharEdit, Mode=OneWay}"  CommandParameter="{Binding ElementName=CharacterWindow}" Height="Auto"/>
-        <Button  Content="Character Verwijderen" Grid.Row="6" Grid.Column="4" BorderBrush="Black" BorderThickness="2" Margin="5" Height="Auto" Command="{Binding}" CommandParameter="Verwijderen"/>
+        <Button  Content="Nieuw Character Aanmaken" Grid.Row="4" Background="#00b4d8" Grid.Column="4" BorderBrush="Black" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandCharAdd, Mode=OneWay}"  CommandParameter="{Binding ElementName=CharacterWindow}" Height="Auto"/>
+        <Button  Content="Character Bewerken" Grid.Row="5" Grid.Column="4" Background="#00b4d8" BorderBrush="Black" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandCharEdit, Mode=OneWay}"  CommandParameter="{Binding ElementName=CharacterWindow}" Height="Auto"/>
+        <Button  Content="Character Verwijderen" Grid.Row="6" Grid.Column="4" Background="#00b4d8" BorderBrush="Black" BorderThickness="3" Margin="5" Height="Auto" Command="{Binding}" CommandParameter="Verwijderen"/>
         <Label  Content="{Binding Foutmelding}" Grid.Row="6" Grid.ColumnSpan="4" FontSize="30" Margin="5" Height="Auto" HorizontalAlignment="Center" />
 
-        <Button  Content="Characters" Grid.Row="0" Grid.Column="0"  BorderBrush="Black" BorderThickness="2"  Command="{Binding CloseWindowCommandChar, Mode=OneWay}"  CommandParameter="{Binding ElementName=CharacterWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
-        <Button  Content="Affiliations" Grid.Row="0" Grid.Column="1" BorderBrush="Black" BorderThickness="2"  Command="{Binding CloseWindowCommandAff, Mode=OneWay}"  CommandParameter="{Binding ElementName=CharacterWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
-        <Button  Content="Arcs" Grid.Row="0" Grid.Column="2" BorderBrush="Black" BorderThickness="2"  Command="{Binding CloseWindowCommandArc, Mode=OneWay}"  CommandParameter="{Binding ElementName=CharacterWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
-        <Button  Content="Places" Grid.Row="0" Grid.Column="3" BorderBrush="Black" BorderThickness="2" Command="{Binding CloseWindowCommandPlace, Mode=OneWay}"  CommandParameter="{Binding ElementName=CharacterWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
-        <Button  Content="World Timeline" Grid.Row="0" Grid.Column="4" BorderBrush="Black" BorderThickness="2" Command="{Binding CloseWindowCommandWT, Mode=OneWay}"  CommandParameter="{Binding ElementName=CharacterWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
-    
+        <Button  Content="Characters" Background="#00b4d8" Foreground="White"  Grid.Row="0" Grid.Column="0"  BorderBrush="Black" BorderThickness="2"  Command="{Binding CloseWindowCommandChar, Mode=OneWay}"  CommandParameter="{Binding ElementName=CharacterWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
+        <Button  Content="Affiliations" Background="#023e8a" Foreground="White" Grid.Row="0" Grid.Column="1" BorderBrush="Black" BorderThickness="2"  Command="{Binding CloseWindowCommandAff, Mode=OneWay}"  CommandParameter="{Binding ElementName=CharacterWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
+        <Button  Content="Arcs" Grid.Row="0" Background="#023e8a" Foreground="White" Grid.Column="2" BorderBrush="Black" BorderThickness="2"  Command="{Binding CloseWindowCommandArc, Mode=OneWay}"  CommandParameter="{Binding ElementName=CharacterWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
+        <Button  Content="Places" Grid.Row="0" Background="#023e8a" Foreground="White" Grid.Column="3" BorderBrush="Black" BorderThickness="2" Command="{Binding CloseWindowCommandPlace, Mode=OneWay}"  CommandParameter="{Binding ElementName=CharacterWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
+        <Button  Content="World Timeline" Background="#023e8a" Foreground="White"  Grid.Row="0" Grid.Column="4" BorderBrush="Black" BorderThickness="2" Command="{Binding CloseWindowCommandWT, Mode=OneWay}"  CommandParameter="{Binding ElementName=CharacterWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
+
     </Grid>
 </Window>

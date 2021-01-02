@@ -26,9 +26,9 @@ namespace ProjectGeavanceerde_DAL
             }
             if (columnName =="SpeciesID" && SpeciesID <= 0)
             {
-                    return "SpeciesID moet een positief getal zijn!";
+                return "SpeciesID moet een positief getal zijn!";
             }
-            return "";
+                return "";
         }
     }
 }

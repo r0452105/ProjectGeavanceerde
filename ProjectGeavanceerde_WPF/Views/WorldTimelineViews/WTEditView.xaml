@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         x:Name="WTEditWindow"
         Title="WTEditView" Height="750" Width="800">
-    <Grid Margin="10">
+    <Grid Margin="0,0,-8,0" Background="LightSeaGreen">
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
@@ -33,6 +33,6 @@
                    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                    Grid.Row="1" Grid.Column="0"  />
 
-        <Button  Content="Place Bewerken" Grid.Row="9" BorderBrush="Black" BorderThickness="2" Margin="5" Command="{Binding CloseWindowCommandWTEdit, Mode=OneWay}"  CommandParameter="{Binding ElementName=WTEditWindow}" Height="Auto"/>
+        <Button  Content="Place Bewerken" Background="#00b4d8" Grid.Row="9" BorderBrush="Black" FontSize="30" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandWTEdit, Mode=OneWay}"  CommandParameter="{Binding ElementName=WTEditWindow}" Height="Auto"/>
     </Grid>
 </Window>

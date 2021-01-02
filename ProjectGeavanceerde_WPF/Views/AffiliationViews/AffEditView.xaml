@@ -8,7 +8,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         x:Name="AffEditWindow"
         Title="AffEditView" Height="750" Width="800">
-    <Grid Margin="10">
+    <Grid Margin="0,0,2,-2" Background="LightSeaGreen">
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
@@ -33,6 +33,6 @@
                   materialDesign:HintAssist.Hint="Faction"
                   Style="{StaticResource MaterialDesignFloatingHintComboBox}"
                   Grid.Row="1" Height="50" Margin="0,10"/>
-        <Button  Content="Affiliation Bewerken" Grid.Row="8" BorderBrush="Black" BorderThickness="2" Margin="5" Command="{Binding CloseWindowCommandAffEdit, Mode=OneWay}"  CommandParameter="{Binding ElementName=AffEditWindow}" Height="Auto"/>
+        <Button  Content="Affiliation Bewerken"  Background="#00b4d8" Grid.Row="8" BorderBrush="Black" FontSize="30" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandAffEdit, Mode=OneWay}"  CommandParameter="{Binding ElementName=AffEditWindow}" Height="Auto"/>
     </Grid>
 </Window>

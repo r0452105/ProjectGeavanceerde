@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\App.xaml
-161891055393
+161729738419
 
-371083796092
+37-1291192362
 128278314210
-Views\AffiliationViews\AffAddView.xaml;Views\AffiliationViews\AffEditView.xaml;Views\AffiliationViews\AffiliationView.xaml;Views\ArcViews\ArcAddView.xaml;Views\ArcViews\ArcEditView.xaml;Views\ArcViews\ArcView.xaml;Views\CharacterViews\CharacterView.xaml;Views\CharacterViews\CharAddView.xaml;Views\CharacterViews\CharEditView.xaml;Views\MainView.xaml;Views\PlaceViews\PlaceAddView.xaml;Views\PlaceViews\PlaceEditView.xaml;Views\PlaceViews\PlaceView.xaml;Views\WTAddView.xaml;Views\WTEditView.xaml;Views\WorldTimelineView.xaml;
+Views\AffiliationViews\AffAddView.xaml;Views\AffiliationViews\AffEditView.xaml;Views\AffiliationViews\AffiliationView.xaml;Views\ArcViews\ArcAddView.xaml;Views\ArcViews\ArcEditView.xaml;Views\ArcViews\ArcView.xaml;Views\CharacterViews\CharacterView.xaml;Views\CharacterViews\CharAddView.xaml;Views\CharacterViews\CharEditView.xaml;Views\MainView.xaml;Views\PlaceViews\PlaceAddView.xaml;Views\PlaceViews\PlaceEditView.xaml;Views\PlaceViews\PlaceView.xaml;Views\WorldTimelineViews\WTAddView.xaml;Views\WorldTimelineViews\WTEditView.xaml;Views\WorldTimelineViews\WorldTimelineView.xaml;
 
 False
 

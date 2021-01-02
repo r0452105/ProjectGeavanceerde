@@ -8,7 +8,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         x:Name="ArcAddWindow"
         Title="ArcAddView" Height="750" Width="800">
-    <Grid Margin="10">
+    <Grid Margin="0,0,-8,1" Background="LightSeaGreen">
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
@@ -36,6 +36,6 @@
                  Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                  Grid.Row="2" Grid.Column="0"  />
         <Label Content="{Binding Foutmelding}" Grid.Row="7" FontSize="30"></Label>
-        <Button  Content="Arc Aanmaken" Grid.Row="8" BorderBrush="Black" BorderThickness="2" Margin="5" Command="{Binding CloseWindowCommandArcAdd, Mode=OneWay}"  CommandParameter="{Binding ElementName=ArcAddWindow}" Height="Auto"/>
+        <Button  Content="Arc Aanmaken" Background="#00b4d8" Grid.Row="8" BorderBrush="Black" FontSize="30"   BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandArcAdd, Mode=OneWay}"  CommandParameter="{Binding ElementName=ArcAddWindow}" Height="Auto"/>
     </Grid>
 </Window>

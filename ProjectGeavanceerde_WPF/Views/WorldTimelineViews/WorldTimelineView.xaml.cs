@@ -28,5 +28,10 @@ namespace ProjectGeavanceerde_WPF.Views
         {
 
         }
+
+        private void datagridEvents_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

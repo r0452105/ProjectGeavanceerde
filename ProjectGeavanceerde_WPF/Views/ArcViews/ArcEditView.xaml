@@ -8,7 +8,7 @@
         x:Name="ArcEditWindow"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="ArcEditView" Height="750" Width="800">
-    <Grid Margin="10">
+    <Grid Margin="0,0,2,1" Background="LightSeaGreen">
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
@@ -37,6 +37,6 @@
                    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                    Grid.Row="2" Grid.Column="0"  />
 
-        <Button  Content="Arc Bewerken" Grid.Row="9" BorderBrush="Black" BorderThickness="2" Margin="5" Command="{Binding CloseWindowCommandArcEdit, Mode=OneWay}"  CommandParameter="{Binding ElementName=ArcEditWindow}" Height="Auto"/>
+        <Button  Content="Arc Bewerken" Background="#00b4d8" Grid.Row="9" BorderBrush="Black" FontSize="30" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandArcEdit, Mode=OneWay}"  CommandParameter="{Binding ElementName=ArcEditWindow}" Height="Auto"/>
     </Grid>
 </Window>

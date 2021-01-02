@@ -105,9 +105,9 @@
     <Compile Include="ViewModels\PlaceViewModels\PlaceAddViewModel.cs" />
     <Compile Include="ViewModels\PlaceViewModels\PlaceEditViewModel.cs" />
     <Compile Include="ViewModels\PlaceViewModels\PlaceViewModel.cs" />
-    <Compile Include="ViewModels\WorldTimelineViewModel.cs" />
-    <Compile Include="ViewModels\WTAddViewModel.cs" />
-    <Compile Include="ViewModels\WTEditViewModel.cs" />
+    <Compile Include="ViewModels\WorldTimelineViewModels\WorldTimelineViewModel.cs" />
+    <Compile Include="ViewModels\WorldTimelineViewModels\WTAddViewModel.cs" />
+    <Compile Include="ViewModels\WorldTimelineViewModels\WTEditViewModel.cs" />
     <Compile Include="Views\AffiliationViews\AffAddView.xaml.cs">
       <DependentUpon>AffAddView.xaml</DependentUpon>
     </Compile>
@@ -147,13 +147,13 @@
     <Compile Include="Views\PlaceViews\PlaceView.xaml.cs">
       <DependentUpon>PlaceView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\WTAddView.xaml.cs">
+    <Compile Include="Views\WorldTimelineViews\WTAddView.xaml.cs">
       <DependentUpon>WTAddView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\WTEditView.xaml.cs">
+    <Compile Include="Views\WorldTimelineViews\WTEditView.xaml.cs">
       <DependentUpon>WTEditView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\WorldTimelineView.xaml.cs">
+    <Compile Include="Views\WorldTimelineViews\WorldTimelineView.xaml.cs">
       <DependentUpon>WorldTimelineView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -241,15 +241,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\WTAddView.xaml">
+    <Page Include="Views\WorldTimelineViews\WTAddView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\WTEditView.xaml">
+    <Page Include="Views\WorldTimelineViews\WTEditView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\WorldTimelineView.xaml">
+    <Page Include="Views\WorldTimelineViews\WorldTimelineView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

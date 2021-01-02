@@ -8,7 +8,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         x:Name="PlaceAddWindow"
         Title="PlaceAddView" Height="750" Width="800">
-    <Grid Margin="10">
+    <Grid Margin="0,0,-8,-3" Background="LightSeaGreen">
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
@@ -40,6 +40,6 @@
                  Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                  Grid.Row="3" Grid.Column="0"  />
         <Label Content="{Binding Foutmelding}" Grid.Row="7" FontSize="30"></Label>
-        <Button  Content="Place Aanmaken" Grid.Row="8" BorderBrush="Black" BorderThickness="2" Margin="5" Command="{Binding CloseWindowCommandPlaceAdd, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceAddWindow}" Height="Auto"/>
+        <Button  Content="Place Aanmaken" Grid.Row="8" BorderBrush="Black" FontSize="30" Background="#00b4d8" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandPlaceAdd, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceAddWindow}" Height="Auto"/>
     </Grid>
 </Window>
