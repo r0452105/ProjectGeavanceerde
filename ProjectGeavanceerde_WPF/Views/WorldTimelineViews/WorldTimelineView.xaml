@@ -24,7 +24,7 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="datagridEvents" AutoGenerateColumns="False" Grid.Row="1" Grid.Column="0" 
+        <DataGrid x:Name="datagridEvents" AutoGenerateColumns="False" Grid.Row="1" Grid.Column="0" Background="#B2EFE8"
                   ItemsSource="{Binding Events, ValidatesOnDataErrors=True}"
                   SelectedItem="{Binding SelectedEvent, ValidatesOnDataErrors=True}"
                   IsReadOnly="true"

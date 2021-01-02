@@ -25,7 +25,7 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <DataGrid  AutoGenerateColumns="False" Grid.Row="1" Grid.Column="0" 
+        <DataGrid  AutoGenerateColumns="False" Grid.Row="1" Grid.Column="0" Background="#B2EFE8"
                   ItemsSource="{Binding Affiliations, ValidatesOnDataErrors=True}"
                   SelectedItem="{Binding SelectedAffiliation, ValidatesOnDataErrors=True}"
                   IsReadOnly="true"
