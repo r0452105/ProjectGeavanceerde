@@ -12,6 +12,14 @@ namespace ProjectGeavanceerde_DAL
         {
             get
             {
+                if (columnName == "Omschrijving" && string.IsNullOrWhiteSpace(Omschrijving))
+                {
+                    return "Omschrijving moet ingevuld zijn";
+                }
+                if (columnName == "EventID" && EventID <= 0)
+                {
+                    return "EventID moet een positief getal zijn!";
+                }
                 return "";
             }
         }

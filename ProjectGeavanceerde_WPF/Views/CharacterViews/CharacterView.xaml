@@ -45,22 +45,10 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <StackPanel Orientation="Vertical" Grid.Column="4" Grid.Row="1" Grid.RowSpan="5">
-            <CheckBox Content="CharacterID" FontSize="15" IsChecked="{Binding CharacterIDcheck}"/>
-            <CheckBox Content="Naam" FontSize="15"/>
-            <CheckBox Content="Bounty" FontSize="15"/>
-            <CheckBox Content="Soort" FontSize="15"/>
-            <CheckBox Content="Bloedgroep" FontSize="15"/>
-            <CheckBox Content="Birthday" FontSize="15"/>
-            <CheckBox Content="Haki" FontSize="15"/>
-            <CheckBox Content="Devilfruit" FontSize="15"/>
-            <CheckBox Content="Gender" FontSize="15"/>
-        </StackPanel>
-
-        <Button Content="Nieuw Character Aanmaken" Grid.Row="4" Background="#00b4d8" Grid.Column="4" BorderBrush="Black" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandCharAdd, Mode=OneWay}"  CommandParameter="{Binding ElementName=CharacterWindow}" Height="Auto"/>
-        <Button  Content="Character Bewerken" Grid.Row="5" Grid.Column="4" Background="#00b4d8" BorderBrush="Black" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandCharEdit, Mode=OneWay}"  CommandParameter="{Binding ElementName=CharacterWindow}" Height="Auto"/>
-        <Button  Content="Character Verwijderen" Grid.Row="6" Grid.Column="4" Background="#00b4d8" BorderBrush="Black" BorderThickness="3" Margin="5" Height="Auto" Command="{Binding}" CommandParameter="Verwijderen"/>
-        <Label  Content="{Binding Foutmelding}" Grid.Row="6" Grid.ColumnSpan="4" FontSize="30" Margin="5" Height="Auto" HorizontalAlignment="Center" />
+        <Button Content="Nieuw Character Aanmaken" Grid.Row="1" Background="#00b4d8" Grid.Column="4" BorderBrush="Black" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandCharAdd, Mode=OneWay}"  CommandParameter="{Binding ElementName=CharacterWindow}" Height="Auto"/>
+        <Button  Content="Character Bewerken" Grid.Row="2" Grid.Column="4" Background="#00b4d8" BorderBrush="Black" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandCharEdit, Mode=OneWay}"  CommandParameter="{Binding ElementName=CharacterWindow}" Height="Auto"/>
+        <Button  Content="Character Verwijderen" Grid.Row="3" Grid.Column="4" Background="#00b4d8" BorderBrush="Black" BorderThickness="3" Margin="5" Height="Auto" Command="{Binding}" CommandParameter="Verwijderen"/>
+        <Label  Content="{Binding Foutmelding}" Background="Aquamarine" Grid.Row="6" Grid.ColumnSpan="4" FontSize="30" Margin="10,5" Height="Auto" HorizontalAlignment="Center" Width="1029" />
 
         <Button  Content="Characters" Background="#00b4d8" Foreground="White"  Grid.Row="0" Grid.Column="0"  BorderBrush="Black" BorderThickness="2"  Command="{Binding CloseWindowCommandChar, Mode=OneWay}"  CommandParameter="{Binding ElementName=CharacterWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
         <Button  Content="Affiliations" Background="#023e8a" Foreground="White" Grid.Row="0" Grid.Column="1" BorderBrush="Black" BorderThickness="2"  Command="{Binding CloseWindowCommandAff, Mode=OneWay}"  CommandParameter="{Binding ElementName=CharacterWindow}" Height="Auto" HorizontalContentAlignment="Center"/>

@@ -9,16 +9,10 @@
         x:Name="WTAddWindow"
         Title="WTAddView" Height="750" Width="800">
     <Grid Margin="0,0,-2,-1" Background="LightSeaGreen">
-        <Grid.RenderTransform>
-            <TransformGroup>
-                <ScaleTransform/>
-                <SkewTransform/>
-                <RotateTransform Angle="0.023"/>
-                <TranslateTransform/>
-            </TransformGroup>
-        </Grid.RenderTransform>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition />
+            <ColumnDefinition Width="10*" />
+            <ColumnDefinition Width="50*" />
+            <ColumnDefinition Width="10*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="50*" />
@@ -34,13 +28,14 @@
         <TextBox Text="{Binding Omschrijving, ValidatesOnDataErrors=True}"
                  materialDesign:HintAssist.Hint="Omschrijving"
                  Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                 Grid.Row="0" Grid.Column="0"  />
+                 Grid.Row="0"  Grid.Column="1" />
         <TextBox Text="{Binding Date, ValidatesOnDataErrors=True}"
                  materialDesign:HintAssist.Hint="Date"
                  Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                 Grid.Row="1" Grid.Column="0"  />
+                 Grid.Row="1" Grid.Column="1"/>
 
-        <Label Content="{Binding Foutmelding}" Grid.Row="7" FontSize="30"></Label>
-        <Button  Content="Event Aanmaken" Grid.Row="8" Background="#00b4d8" BorderBrush="Black" FontSize="30" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandWTAdd, Mode=OneWay}"  CommandParameter="{Binding ElementName=WTAddWindow}" Height="Auto"/>
+        <Label  Content="{Binding Foutmelding}" Background="Aquamarine" Grid.Column="1" Grid.Row="6" FontSize="30" HorizontalAlignment="Center" Width="552" Margin="10" />
+        <Button  Content="Event Aanmaken" Grid.Row="7" Grid.Column="1" Background="#00b4d8" BorderBrush="Black" FontSize="30" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandWTAdd, Mode=OneWay}"  CommandParameter="{Binding ElementName=WTAddWindow}" Height="Auto"/>
+        <Button  Content="Terug naar Events" Grid.Row="8" Grid.Column="1" Background="#00b4d8" BorderBrush="Black" FontSize="30" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandWTAddBack, Mode=OneWay}"  CommandParameter="{Binding ElementName=WTAddWindow}" Height="Auto"/>
     </Grid>
 </Window>

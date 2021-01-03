@@ -17,6 +17,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
     public class PlaceAddViewModel : BasisViewModel, IDisposable
     {
         #region getters and setters
+        public bool Admincheck { get; set; }
         public ObservableCollection<Place> Places { get; set; }
         public Place PlaceRecord = new Place();
         public string Foutmelding { get; set; }
@@ -92,6 +93,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         }
 
         public RelayCommand<Window> CloseWindowCommandPlaceAdd { get; private set; }
+        public RelayCommand<Window> CloseWindowCommandPlaceAddBack { get; private set; }
 
         public void CloseWindowPlaceAdd(Window window)
         {
@@ -100,7 +102,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             PlaceRecord.Location = Location;
             PlaceRecord.Country = Country;
 
-            if (PlaceRecord.IsGeldig()) //problem needs to be solved
+            if (!PlaceRecord.IsGeldig()) //problem needs to be solved
             {
                 Foutmelding = "no work?";
                 unitOfWork.PlaceRepo.Toevoegen(PlaceRecord);
@@ -112,6 +114,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
                     PlaceView placeView = new PlaceView();
                     PlaceViewModel placeViewModel = new PlaceViewModel();
                     placeView.DataContext = placeViewModel;
+                    placeViewModel.Admincheck = Admincheck;
                     placeView.Show();
                     window.Close();
                 }
@@ -121,9 +124,21 @@ namespace ProjectGeavanceerde_WPF.ViewModels
                 Foutmelding = "Record is niet geldig";
             }
         }
+        public void CloseWindowPlaceAddBack(Window window)
+        {
+                if (window != null)
+                {
+                    PlaceView placeView = new PlaceView();
+                    PlaceViewModel placeViewModel = new PlaceViewModel();
+                    placeView.DataContext = placeViewModel;
+                    placeViewModel.Admincheck = Admincheck;
+                    placeView.Show();
+                    window.Close();
+                }
+        }
         public void WindowCommanding()
         {
-            this.CloseWindowCommandPlaceAdd = new RelayCommand<Window>(this.CloseWindowPlaceAdd);
+            this.CloseWindowCommandPlaceAddBack = new RelayCommand<Window>(this.CloseWindowPlaceAddBack);
         }
     }
 }

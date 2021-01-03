@@ -10,7 +10,9 @@
         Title="ArcEditView" Height="750" Width="800">
     <Grid Margin="0,0,2,1" Background="LightSeaGreen">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition />
+            <ColumnDefinition Width="10*" />
+            <ColumnDefinition Width="50*" />
+            <ColumnDefinition Width="10*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="56*" />
@@ -27,16 +29,17 @@
         <TextBox Text="{Binding SelectedArc.Name, ValidatesOnDataErrors=True}"
                    materialDesign:HintAssist.Hint="Naam"
                    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                   Grid.Row="0" Grid.Column="0"  />
+                   Grid.Row="0" Grid.Column="1" />
         <TextBox Text="{Binding SelectedArc.Startingchapter, ValidatesOnDataErrors=True}"
                    materialDesign:HintAssist.Hint="Starting Chapter"
                    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                   Grid.Row="1" Grid.Column="0"  />
+                   Grid.Row="1" Grid.Column="1"  />
         <TextBox Text="{Binding SelectedArc.Endingchapter, ValidatesOnDataErrors=True}"
                    materialDesign:HintAssist.Hint="Ending Chapter"
                    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                   Grid.Row="2" Grid.Column="0"  />
-
-        <Button  Content="Arc Bewerken" Background="#00b4d8" Grid.Row="9" BorderBrush="Black" FontSize="30" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandArcEdit, Mode=OneWay}"  CommandParameter="{Binding ElementName=ArcEditWindow}" Height="Auto"/>
+                   Grid.Row="2" Grid.Column="1"  />
+        <Label  Content="{Binding Foutmelding}" Background="Aquamarine" Grid.Column="1" Grid.Row="7" FontSize="30" HorizontalAlignment="Center" Width="552" Margin="10" />
+        <Button  Content="Arc Bewerken"  Grid.Column="1" Background="#00b4d8" Grid.Row="8" BorderBrush="Black" FontSize="30" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandArcEdit, Mode=OneWay}"  CommandParameter="{Binding ElementName=ArcEditWindow}" Height="Auto"/>
+        <Button  Content="Terug naar Arcs"  Grid.Column="1" Background="#00b4d8" Grid.Row="9" BorderBrush="Black" FontSize="30" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandArcEditBack, Mode=OneWay}"  CommandParameter="{Binding ElementName=ArcEditWindow}" Height="Auto"/>
     </Grid>
 </Window>

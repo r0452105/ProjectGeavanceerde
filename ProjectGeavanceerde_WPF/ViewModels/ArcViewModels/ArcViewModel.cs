@@ -233,15 +233,23 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         }
         public void CloseWindowArcEdit(Window window)
         {
-            ArcEditView arcEditView = new ArcEditView();
-            ArcEditViewModel arcEditViewModel = new ArcEditViewModel();
-            arcEditViewModel.SelectedArc = SelectedArc;
-            arcEditView.DataContext = arcEditViewModel;
-            arcEditView.Show();
-
-            if (window != null)
+            if (SelectedArc != null)
             {
-                window.Close();
+                ArcEditView arcEditView = new ArcEditView();
+                ArcEditViewModel arcEditViewModel = new ArcEditViewModel();
+                arcEditViewModel.SelectedArc = SelectedArc;
+                arcEditView.DataContext = arcEditViewModel;
+                arcEditViewModel.Admincheck = Admincheck;
+                arcEditView.Show();
+
+                if (window != null)
+                {
+                    window.Close();
+                }
+            }
+            else
+            {
+                Foutmelding = "Selecteer een Arc !";
             }
         }
         public void CloseWindowArcAdd(Window window)
@@ -249,6 +257,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             ArcAddView arcAddView = new ArcAddView();
             ArcAddViewModel arcAddViewModel = new ArcAddViewModel();
             arcAddView.DataContext = arcAddViewModel;
+            arcAddViewModel.Admincheck = Admincheck;
             arcAddView.Show();
 
             if (window != null)

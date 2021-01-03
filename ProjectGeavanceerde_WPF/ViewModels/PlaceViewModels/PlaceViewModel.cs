@@ -258,22 +258,32 @@ namespace ProjectGeavanceerde_WPF.ViewModels
 
         public void CloseWindowPlaceEdit(Window window)
         {
-            PlaceEditView placeEditView = new PlaceEditView();
-            PlaceEditViewModel placeEditViewModel = new PlaceEditViewModel();
-            placeEditViewModel.SelectedPlace = SelectedPlace;
-            placeEditView.DataContext = placeEditViewModel;
-            placeEditView.Show();
-
-            if (window != null)
+            if (SelectedPlace != null)
             {
-                window.Close();
+                PlaceEditView placeEditView = new PlaceEditView();
+                PlaceEditViewModel placeEditViewModel = new PlaceEditViewModel();
+                placeEditViewModel.SelectedPlace = SelectedPlace;
+                placeEditView.DataContext = placeEditViewModel;
+                placeEditViewModel.Admincheck = Admincheck;
+                placeEditView.Show();
+
+                if (window != null)
+                {
+                    window.Close();
+                }
             }
+            else
+            {
+                Foutmelding = "Eerst Place selecteren";
+            }
+
         }
         public void CloseWindowPlaceAdd(Window window)
         {
             PlaceAddView placeAddView = new PlaceAddView();
             PlaceAddViewModel placeAddViewModel = new PlaceAddViewModel();
             placeAddView.DataContext = placeAddViewModel;
+            placeAddViewModel.Admincheck = Admincheck;
             placeAddView.Show();
 
             if (window != null)

@@ -16,6 +16,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
 {
     class WTEditViewModel : BasisViewModel, IDisposable
     {
+        public bool Admincheck { get; set; }
         public string Foutmelding { get; set; }
         public ObservableCollection<Event> Events { get; set; }
         public Event EventRecord { get; set; }
@@ -38,6 +39,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             EventRecordInstellen();
 
             this.CloseWindowCommandWTEdit = new RelayCommand<Window>(this.CloseWindowWTEdit);
+            this.CloseWindowCommandWTEditBack = new RelayCommand<Window>(this.CloseWindowWTEditBack);
         }
         public override string this[string columnName]
         {
@@ -122,6 +124,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         #region WindowCommands
 
         public RelayCommand<Window> CloseWindowCommandWTEdit { get; private set; }
+        public RelayCommand<Window> CloseWindowCommandWTEditBack { get; private set; }
 
         public void CloseWindowWTEdit(Window window)
         {
@@ -136,6 +139,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
                     WorldTimelineView worldTimelineView = new WorldTimelineView();
                     WorldTimelineViewModel worldTimelineViewModel = new WorldTimelineViewModel();
                     worldTimelineView.DataContext = worldTimelineViewModel;
+                    worldTimelineViewModel.Admincheck = Admincheck;
                     worldTimelineView.Show();
                     window.Close();
                 }
@@ -145,6 +149,18 @@ namespace ProjectGeavanceerde_WPF.ViewModels
                 Foutmelding = "Selecteer een Event!";
             }
 
+        }
+        public void CloseWindowWTEditBack(Window window)
+        {
+                if (window != null)
+                {
+                    WorldTimelineView worldTimelineView = new WorldTimelineView();
+                    WorldTimelineViewModel worldTimelineViewModel = new WorldTimelineViewModel();
+                    worldTimelineView.DataContext = worldTimelineViewModel;
+                    worldTimelineViewModel.Admincheck = Admincheck;
+                    worldTimelineView.Show();
+                    window.Close();
+                }
         }
         #endregion
     }

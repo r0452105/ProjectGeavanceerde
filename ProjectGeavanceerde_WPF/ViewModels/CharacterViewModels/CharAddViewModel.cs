@@ -17,6 +17,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
     public class CharAddViewModel : BasisViewModel, IDisposable
     {
         #region getters and setters
+    public bool Admincheck { get; set; }
     public ObservableCollection<Character> Characters { get; set; }
     public ObservableCollection<Species> Soorten { get; set; }
     public ObservableCollection<Bloodtype> Bloodtypes { get; set; }
@@ -50,6 +51,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
 
     private void RefreshCharacters()
     {
+        this.CloseWindowCommandCharBack = new RelayCommand<Window>(this.CloseWindowCharBack);
         this.CloseWindowCommandCharAdd = new RelayCommand<Window>(this.CloseWindowCharAdd);
         List<Character> listCharacters = unitOfWork.CharacterRepo.Ophalen().ToList();
         Characters = new ObservableCollection<Character>(listCharacters);
@@ -109,6 +111,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
     }
 
     public RelayCommand<Window> CloseWindowCommandCharAdd { get; private set; }
+    public RelayCommand<Window> CloseWindowCommandCharBack { get; private set; }
 
         public void CloseWindowCharAdd(Window window)
         {
@@ -133,6 +136,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
                         CharacterView characterView = new CharacterView();
                         CharacterViewModel characterViewModel = new CharacterViewModel();
                         characterView.DataContext = characterViewModel;
+                        characterViewModel.Admincheck = Admincheck;
                         characterView.Show();
                         window.Close();
                     }
@@ -141,6 +145,18 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             {
                 Foutmelding = "Record is niet geldig";
             }
-        }  
+        }
+        public void CloseWindowCharBack(Window window)
+        {
+                if (window != null)
+                {
+                    CharacterView characterView = new CharacterView();
+                    CharacterViewModel characterViewModel = new CharacterViewModel();
+                    characterView.DataContext = characterViewModel;
+                    characterViewModel.Admincheck = Admincheck;
+                    characterView.Show();
+                    window.Close();
+                }
+        }
     }
 }

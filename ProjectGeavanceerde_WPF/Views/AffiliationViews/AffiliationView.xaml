@@ -37,16 +37,11 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <StackPanel Orientation="Vertical" Grid.Column="4" Grid.Row="1" Grid.RowSpan="5">
-            <CheckBox Content="ID" FontSize="15"/>
-            <CheckBox Content="Naam" FontSize="15"/>
-            <CheckBox Content="Faction" FontSize="15"/>
-        </StackPanel>
 
-        <Button  Content="Nieuwe Affiliation Aanmaken" Background="#00b4d8" Grid.Row="4" Grid.Column="4" BorderBrush="Black" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandAffAdd, Mode=OneWay}"  CommandParameter="{Binding ElementName=AffiliationWindow}" Height="Auto"/>
-        <Button  Content="Affiliation Bewerken"  Background="#00b4d8" Grid.Row="5" Grid.Column="4" BorderBrush="Black" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandAffEdit, Mode=OneWay}"  CommandParameter="{Binding ElementName=AffiliationWindow}" Height="Auto"/>
-        <Button  Content="Affiliation Verwijderen" Background="#00b4d8"  Grid.Row="6" Grid.Column="4" BorderBrush="Black" BorderThickness="3" Margin="5" Height="Auto" Command="{Binding}" CommandParameter="Verwijderen"/>
-        <Label  Content="{Binding Foutmelding}" Grid.Row="6" Grid.ColumnSpan="4" FontSize="30" Margin="0,5,1,5" Height="Auto" HorizontalAlignment="Center" Width="1048" />
+        <Button  Content="Nieuwe Affiliation Aanmaken" Background="#00b4d8" Grid.Row="1" Grid.Column="4" BorderBrush="Black" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandAffAdd, Mode=OneWay}"  CommandParameter="{Binding ElementName=AffiliationWindow}" Height="Auto"/>
+        <Button  Content="Affiliation Bewerken"  Background="#00b4d8" Grid.Row="2" Grid.Column="4" BorderBrush="Black" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandAffEdit, Mode=OneWay}"  CommandParameter="{Binding ElementName=AffiliationWindow}" Height="Auto"/>
+        <Button  Content="Affiliation Verwijderen" Background="#00b4d8"  Grid.Row="3" Grid.Column="4" BorderBrush="Black" BorderThickness="3" Margin="5" Height="Auto" Command="{Binding}" CommandParameter="Verwijderen"/>
+        <Label  Content="{Binding Foutmelding}" Background="Aquamarine" Grid.Row="6" Grid.ColumnSpan="4" FontSize="30" Margin="0,5,1,5" Height="Auto" HorizontalAlignment="Center" Width="1048" />
 
         <Button  Content="Characters" Background="#023e8a" Foreground="White"  Grid.Row="0" Grid.Column="0"  BorderBrush="Black" BorderThickness="2"  Command="{Binding CloseWindowCommandChar, Mode=OneWay}"  CommandParameter="{Binding ElementName=AffiliationWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
         <Button  Content="Affiliations" Background="#00b4d8" Foreground="White" Grid.Row="0" Grid.Column="1" BorderBrush="Black" BorderThickness="2"  Command="{Binding CloseWindowCommandAff, Mode=OneWay}"  CommandParameter="{Binding ElementName=AffiliationWindow}" Height="Auto" HorizontalContentAlignment="Center"/>

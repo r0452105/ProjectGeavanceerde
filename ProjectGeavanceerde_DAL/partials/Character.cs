@@ -18,15 +18,23 @@ namespace ProjectGeavanceerde_DAL
             }
             if (columnName == "Bounty" && Bounty <= 0)
             {
-                return "Hoeveelheid moet een positief getal zijn!";
+                return "Bounty moet een positief getal zijn!";
             }
             if (columnName == "Name" && string.IsNullOrWhiteSpace(Name))       
             {
                 return "Naam moet ingevuld zijn";
             }
-            if (columnName =="SpeciesID" && SpeciesID <= 0)
+            if (columnName =="GenderID" && GenderID <= 0)
             {
-                return "SpeciesID moet een positief getal zijn!";
+                return "Selecteer een geslacht.";
+            }
+            if (columnName == "BloodtypeID" && BloodtypeID <= 0)
+            {
+                return "Selecteer een bloedgroep.";
+            }
+            if (columnName == "SpeciesID" && SpeciesID <= 0)
+            {
+                return "Selecteer een soort.";
             }
                 return "";
         }

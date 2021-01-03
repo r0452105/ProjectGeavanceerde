@@ -36,16 +36,16 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <Button  Content="Nieuw Event Aanmaken" Background="#00b4d8" Grid.Row="4" Grid.Column="4" BorderBrush="Black" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandWTAdd, Mode=OneWay}"  CommandParameter="{Binding ElementName=WTWindow}" Height="Auto"/>
-        <Button  Content="Event Bewerken" Background="#00b4d8" Grid.Row="5" Grid.Column="4" BorderBrush="Black" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandWTEdit, Mode=OneWay}"  CommandParameter="{Binding ElementName=WTWindow}" Height="Auto"/>
-        <Button  Content="Event Verwijderen" Background="#00b4d8" Grid.Row="6" Grid.Column="4" BorderBrush="Black" BorderThickness="3" Margin="5" Height="Auto" Command="{Binding}" CommandParameter="Verwijderen"/>
-        <Label  Content="{Binding Foutmelding}" Grid.Row="6" Grid.ColumnSpan="4" FontSize="30" Margin="0,5" Height="Auto" HorizontalAlignment="Center" Width="1049" />
+        <Button  Content="Nieuw Event Aanmaken" Background="#00b4d8" Grid.Row="1" Grid.Column="4" BorderBrush="Black" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandWTAdd, Mode=OneWay}"  CommandParameter="{Binding ElementName=WTWindow}" Height="Auto"/>
+        <Button  Content="Event Bewerken" Background="#00b4d8" Grid.Row="2" Grid.Column="4" BorderBrush="Black" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandWTEdit, Mode=OneWay}"  CommandParameter="{Binding ElementName=WTWindow}" Height="Auto"/>
+        <Button  Content="Event Verwijderen" Background="#00b4d8" Grid.Row="3" Grid.Column="4" BorderBrush="Black" BorderThickness="3" Margin="5" Height="Auto" Command="{Binding}" CommandParameter="Verwijderen"/>
+        <Label  Content="{Binding Foutmelding}" Background="Aquamarine" Grid.Row="6" Grid.ColumnSpan="4" FontSize="30" Margin="5,5,5,10" Height="Auto" HorizontalAlignment="Center" Width="1039" />
 
-        <Button  Content="Characters" Background="#023e8a" Foreground="White"  Grid.Row="0" Grid.Column="0"  BorderBrush="Black" BorderThickness="2"  Command="{Binding CloseWindowCommandChar, Mode=OneWay}"  CommandParameter="{Binding ElementName=WTWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
-        <Button  Content="Affiliations" Background="#023e8a" Foreground="White" Grid.Row="0" Grid.Column="1" BorderBrush="Black" BorderThickness="2"  Command="{Binding CloseWindowCommandAff, Mode=OneWay}"  CommandParameter="{Binding ElementName=WTWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
-        <Button  Content="Arcs" Grid.Row="0" Background="#023e8a" Foreground="White" Grid.Column="2" BorderBrush="Black" BorderThickness="2"  Command="{Binding CloseWindowCommandArc, Mode=OneWay}"  CommandParameter="{Binding ElementName=WTWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
-        <Button  Content="Places" Grid.Row="0" Background="#023e8a" Foreground="White" Grid.Column="3" BorderBrush="Black" BorderThickness="2" Command="{Binding CloseWindowCommandPlace, Mode=OneWay}"  CommandParameter="{Binding ElementName=WTWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
-        <Button  Content="World Timeline" Background="#00b4d8" Foreground="White"  Grid.Row="0" Grid.Column="4" BorderBrush="Black" BorderThickness="2" Command="{Binding CloseWindowCommandWT, Mode=OneWay}"  CommandParameter="{Binding ElementName=WTWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
+        <Button  Content="Characters" Background="#023e8a" Foreground="White"  Grid.Row="0" Grid.Column="0"  BorderBrush="Black" BorderThickness="3"  Command="{Binding CloseWindowCommandChar, Mode=OneWay}"  CommandParameter="{Binding ElementName=WTWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
+        <Button  Content="Affiliations" Background="#023e8a" Foreground="White" Grid.Row="0" Grid.Column="1" BorderBrush="Black" BorderThickness="3"  Command="{Binding CloseWindowCommandAff, Mode=OneWay}"  CommandParameter="{Binding ElementName=WTWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
+        <Button  Content="Arcs" Grid.Row="0" Background="#023e8a" Foreground="White" Grid.Column="2" BorderBrush="Black" BorderThickness="3"  Command="{Binding CloseWindowCommandArc, Mode=OneWay}"  CommandParameter="{Binding ElementName=WTWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
+        <Button  Content="Places" Grid.Row="0" Background="#023e8a" Foreground="White" Grid.Column="3" BorderBrush="Black" BorderThickness="3" Command="{Binding CloseWindowCommandPlace, Mode=OneWay}"  CommandParameter="{Binding ElementName=WTWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
+        <Button  Content="World Timeline" Background="#00b4d8" Foreground="White"  Grid.Row="0" Grid.Column="4" BorderBrush="Black" BorderThickness="3" Command="{Binding CloseWindowCommandWT, Mode=OneWay}"  CommandParameter="{Binding ElementName=WTWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
 
     </Grid>
 </Window>

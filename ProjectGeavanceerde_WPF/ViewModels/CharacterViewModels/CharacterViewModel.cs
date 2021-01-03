@@ -19,7 +19,6 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         #region getters and setters
         public bool Admincheck { get; set; }
         public bool CharacterIDcheck { get; set; }
-        public string visibilitycheck { get; set; }
         public ObservableCollection<Character> Characters { get; set; }
         public ObservableCollection<Species> Soorten { get; set; }
         public ObservableCollection<Bloodtype> Bloodtypes { get; set; }
@@ -295,6 +294,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
                 CharEditView charEditView = new CharEditView();
                 CharEditViewModel charEditViewModel = new CharEditViewModel();
                 charEditViewModel.SelectedCharacter = SelectedCharacter;
+                charEditViewModel.Admincheck = Admincheck;
                 charEditView.DataContext = charEditViewModel;
                 charEditView.Show();
 
@@ -314,6 +314,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
                 CharAddView charAddView = new CharAddView();
                 CharAddViewModel charAddViewModel = new CharAddViewModel();
                 charAddView.DataContext = charAddViewModel;
+                charAddViewModel.Admincheck = Admincheck;
                 charAddView.Show();
 
                 if (window != null)

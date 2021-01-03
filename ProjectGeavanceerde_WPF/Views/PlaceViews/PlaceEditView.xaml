@@ -8,9 +8,11 @@
         x:Name="PlaceEditWindow"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="PlaceEditView" Height="750" Width="800">
-    <Grid Margin="0,0,-8,-1" Background="LightSeaGreen">
+    <Grid Margin="0,0,2,1" Background="LightSeaGreen">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition />
+            <ColumnDefinition Width="10*" />
+            <ColumnDefinition Width="50*" />
+            <ColumnDefinition Width="10*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="56*" />
@@ -19,7 +21,7 @@
             <RowDefinition Height="56*" />
             <RowDefinition Height="56*" />
             <RowDefinition Height="56*" />
-            <RowDefinition Height="56*" />
+ 
             <RowDefinition Height="56*" />
             <RowDefinition Height="56*" />
             <RowDefinition Height="56*" />
@@ -27,20 +29,21 @@
         <TextBox Text="{Binding SelectedPlace.Name, ValidatesOnDataErrors=True}"
                    materialDesign:HintAssist.Hint="Naam"
                    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                   Grid.Row="0" Grid.Column="0"  />
+                   Grid.Row="0" Grid.Column="1"  />
         <TextBox Text="{Binding SelectedPlace.Ruler, ValidatesOnDataErrors=True}"
                    materialDesign:HintAssist.Hint="Ruler"
                    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                   Grid.Row="1" Grid.Column="0"  />
+                   Grid.Row="1" Grid.Column="1"  />
         <TextBox Text="{Binding SelectedPlace.Location, ValidatesOnDataErrors=True}"
                    materialDesign:HintAssist.Hint="Location"
                    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                   Grid.Row="2" Grid.Column="0"  />
+                   Grid.Row="2" Grid.Column="1"  />
         <TextBox Text="{Binding SelectedPlace.Country, ValidatesOnDataErrors=True}"
                    materialDesign:HintAssist.Hint="Country"
                    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                   Grid.Row="3" Grid.Column="0"  />
-
-        <Button  Content="Place Bewerken" Grid.Row="9" Background="#00b4d8" BorderBrush="Black" FontSize="30" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandPlaceEdit, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceEditWindow}" Height="Auto"/>
+                   Grid.Row="3" Grid.Column="1"  />
+        <Label Content="{Binding Foutmelding}" Grid.Row="6" Grid.Column="1" Background="Aquamarine"  FontSize="30" Margin="10"></Label>
+        <Button  Content="Place Bewerken" Grid.Row="7" Grid.Column="1" Background="#00b4d8" BorderBrush="Black" FontSize="30" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandPlaceEdit, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceEditWindow}" Height="Auto"/>
+        <Button  Content="Terug naar Places" Grid.Row="8" Grid.Column="1" Background="#00b4d8" BorderBrush="Black" FontSize="30" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandPlaceEditBack, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceEditWindow}" Height="Auto"/>
     </Grid>
 </Window>

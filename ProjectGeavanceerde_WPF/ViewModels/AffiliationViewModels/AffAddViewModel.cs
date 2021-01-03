@@ -17,6 +17,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
     public class AffAddViewModel : BasisViewModel, IDisposable
     {
         #region getters and setters
+        public bool Admincheck { get; set; }
         public ObservableCollection<Faction> Factions { get; set; }
         public ObservableCollection<Affiliation> Affiliations { get; set; }
         public Affiliation AffiliationRecord = new Affiliation();
@@ -94,24 +95,28 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         }
 
         public RelayCommand<Window> CloseWindowCommandAffAdd { get; private set; }
+        public RelayCommand<Window> CloseWindowCommandAffAddBack { get; private set; }
 
         public void CloseWindowAffAdd(Window window)
         {
             AffiliationRecord.Name = Name;
             AffiliationRecord.FactionID = FactionID;
 
-            if (AffiliationRecord.IsGeldig()) //problem needs to be solved
+            if (!AffiliationRecord.IsGeldig()) //problem needs to be solved
             {
                 unitOfWork.AffiliationRepo.Toevoegen(AffiliationRecord);
                 int ok = unitOfWork.Save();
                 FoutmeldingInstellenNaSave(ok, "Affiliation is niet toegevoegd");
 
+                AffiliationView affiliationView = new AffiliationView();
+                AffiliationViewModel affiliationViewModel = new AffiliationViewModel();
+                affiliationView.DataContext = affiliationViewModel;
+                affiliationViewModel.Admincheck = Admincheck;
+                affiliationView.Show();
+
                 if (window != null)
                 {
-                    AffiliationView affiliationView = new AffiliationView();
-                    AffiliationViewModel affiliationViewModel = new AffiliationViewModel();
-                    affiliationView.DataContext = affiliationViewModel;
-                    affiliationView.Show();
+
                     window.Close();
                 }
             }
@@ -120,9 +125,26 @@ namespace ProjectGeavanceerde_WPF.ViewModels
                 Foutmelding = "Record is niet geldig";
             }
         }
+
+        public void CloseWindowAffAddBack(Window window)
+        {
+                AffiliationView affiliationView = new AffiliationView();
+                AffiliationViewModel affiliationViewModel = new AffiliationViewModel();
+                affiliationView.DataContext = affiliationViewModel;
+                affiliationViewModel.Admincheck = Admincheck;
+                affiliationView.Show();
+
+                if (window != null)
+                {
+                    window.Close();
+                }
+        }
+
+
         public void WindowCommanding()
         {
             this.CloseWindowCommandAffAdd = new RelayCommand<Window>(this.CloseWindowAffAdd);
+            this.CloseWindowCommandAffAddBack = new RelayCommand<Window>(this.CloseWindowAffAddBack);
         }
     }
 }

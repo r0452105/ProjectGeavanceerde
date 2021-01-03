@@ -15,30 +15,22 @@ namespace ProjectGeavanceerde_DAL
         public bool IsGeldig()
         {
             return string.IsNullOrWhiteSpace(Error);
-
         }
         public string Error
         {
             get
             {
                 string foutmeldingen = "";
-
                 foreach (var item in this.GetType().GetProperties()) //reflection 
                 {
-
                     string fout = this[item.Name];
                     if (!string.IsNullOrWhiteSpace(fout))
                     {
                         foutmeldingen += fout + Environment.NewLine;
                     }
-
                 }
                 return foutmeldingen;
             }
         }
-
-
-
-
     }
 }

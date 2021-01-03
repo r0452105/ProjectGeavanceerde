@@ -16,7 +16,8 @@ namespace ProjectGeavanceerde_WPF.ViewModels
 {
     class PlaceEditViewModel : BasisViewModel, IDisposable
     {
-        public ObservableCollection<Place> Places{ get; set; }
+    public bool Admincheck { get; set; }
+    public ObservableCollection<Place> Places{ get; set; }
     public Place PlaceRecord { get; set; }
     public string Foutmelding { get; set; }
 
@@ -34,6 +35,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
     {
         RefreshPlaces();
         this.CloseWindowCommandPlaceEdit = new RelayCommand<Window>(this.CloseWindowPlaceEdit);
+        this.CloseWindowCommandPlaceEditBack = new RelayCommand<Window>(this.CloseWindowPlaceEditBack);
     }
     public override string this[string columnName]
     {
@@ -100,8 +102,8 @@ namespace ProjectGeavanceerde_WPF.ViewModels
     }
     #region WindowCommands
 
-    public RelayCommand<Window> CloseWindowCommandPlaceEdit { get; private set; }
-
+    public RelayCommand<Window> CloseWindowCommandPlaceEdit { get; private set; }    
+    public RelayCommand<Window> CloseWindowCommandPlaceEditBack { get; private set; }
     public void CloseWindowPlaceEdit(Window window)
     {
         if (SelectedPlace != null)
@@ -115,6 +117,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
                 PlaceView placeView = new PlaceView();
                 PlaceViewModel placeViewModel = new PlaceViewModel();
                 placeView.DataContext = placeViewModel;
+                placeViewModel.Admincheck = Admincheck;
                 placeView.Show();
                 window.Close();
             }
@@ -123,8 +126,19 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         {
             Foutmelding = "Selecteer een character!";
         }
-
     }
-    #endregion
-}
+        public void CloseWindowPlaceEditBack(Window window)
+        {
+                if (window != null)
+                {
+                    PlaceView placeView = new PlaceView();
+                    PlaceViewModel placeViewModel = new PlaceViewModel();
+                    placeView.DataContext = placeViewModel;
+                    placeViewModel.Admincheck = Admincheck;
+                    placeView.Show();
+                    window.Close();
+                }
+        }
+        #endregion
+    }
 }

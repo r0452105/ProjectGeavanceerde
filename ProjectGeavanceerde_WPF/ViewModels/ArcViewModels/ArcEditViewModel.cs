@@ -16,6 +16,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
 {
     class ArcEditViewModel : BasisViewModel, IDisposable
     {
+        public bool Admincheck { get; set; }
         public ObservableCollection<Arc> Arcs { get; set; }
         public Arc ArcRecord { get; set; }
         public string Foutmelding { get; set; }
@@ -34,6 +35,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         {
             RefreshArcs();
             this.CloseWindowCommandArcEdit = new RelayCommand<Window>(this.CloseWindowArcEdit);
+            this.CloseWindowCommandArcEditBack = new RelayCommand<Window>(this.CloseWindowArcEditBack);
 
         }
         public override string this[string columnName]
@@ -102,6 +104,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         #region WindowCommands
 
         public RelayCommand<Window> CloseWindowCommandArcEdit { get; private set; }
+        public RelayCommand<Window> CloseWindowCommandArcEditBack { get; private set; }
 
         public void CloseWindowArcEdit(Window window)
         {
@@ -116,6 +119,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
                     ArcView arcView = new ArcView();
                     ArcViewModel arcViewModel = new ArcViewModel();
                     arcView.DataContext = arcViewModel;
+                    arcViewModel.Admincheck = Admincheck;
                     arcView.Show();
                     window.Close();
                 }
@@ -125,6 +129,18 @@ namespace ProjectGeavanceerde_WPF.ViewModels
                 Foutmelding = "Selecteer een character!";
             }
 
+        }
+        public void CloseWindowArcEditBack(Window window)
+        {
+                if (window != null)
+                {
+                    ArcView arcView = new ArcView();
+                    ArcViewModel arcViewModel = new ArcViewModel();
+                    arcView.DataContext = arcViewModel;
+                    arcViewModel.Admincheck = Admincheck;
+                    arcView.Show();
+                    window.Close();
+                }
         }
         #endregion
     }

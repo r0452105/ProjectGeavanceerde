@@ -17,6 +17,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
     public class ArcAddViewModel : BasisViewModel, IDisposable
     {
         #region getters and setters
+        public bool Admincheck { get; set; }
         public ObservableCollection<Arc> Arcs { get; set; }
         public Arc ArcRecord = new Arc();
         public string Foutmelding { get; set; }
@@ -91,6 +92,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         }
 
         public RelayCommand<Window> CloseWindowCommandArcAdd { get; private set; }
+        public RelayCommand<Window> CloseWindowCommandArcAddBack { get; private set; }
 
         public void CloseWindowArcAdd(Window window)
         {
@@ -109,6 +111,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
                     ArcView arcView = new ArcView();
                     ArcViewModel arcViewModel = new ArcViewModel();
                     arcView.DataContext = arcViewModel;
+                    arcViewModel.Admincheck = Admincheck;
                     arcView.Show();
                     window.Close();
                 }
@@ -118,9 +121,22 @@ namespace ProjectGeavanceerde_WPF.ViewModels
                 Foutmelding = "Record is niet geldig";
             }
         }
+        public void CloseWindowArcAddBack(Window window)
+        {
+                if (window != null)
+                {
+                    ArcView arcView = new ArcView();
+                    ArcViewModel arcViewModel = new ArcViewModel();
+                    arcView.DataContext = arcViewModel;
+                    arcViewModel.Admincheck = Admincheck;
+                    arcView.Show();
+                    window.Close();
+                }
+        }
         public void WindowCommanding()
         {
             this.CloseWindowCommandArcAdd = new RelayCommand<Window>(this.CloseWindowArcAdd);
+            this.CloseWindowCommandArcAddBack = new RelayCommand<Window>(this.CloseWindowArcAddBack);
         }
     }
 }

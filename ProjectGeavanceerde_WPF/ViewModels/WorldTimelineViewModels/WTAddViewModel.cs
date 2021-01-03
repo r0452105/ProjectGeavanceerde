@@ -17,6 +17,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
     public class WTAddViewModel : BasisViewModel, IDisposable
     {
         #region getters and setters
+        public bool Admincheck { get; set; }
         public ObservableCollection<Event> Events { get; set; }
         public Event EventRecord = new Event();
         public string Foutmelding { get; set; }
@@ -89,6 +90,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         }
 
         public RelayCommand<Window> CloseWindowCommandWTAdd { get; private set; }
+        public RelayCommand<Window> CloseWindowCommandWTAddBack { get; private set; }
 
         public void CloseWindowWTAdd(Window window)
         {
@@ -107,6 +109,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
                     WorldTimelineView worldTimelineView = new WorldTimelineView();
                     WorldTimelineViewModel worldTimelineViewModel = new WorldTimelineViewModel();
                     worldTimelineView.DataContext = worldTimelineViewModel;
+                    worldTimelineViewModel.Admincheck = Admincheck;
                     worldTimelineView.Show();
                     window.Close();
                 }
@@ -116,9 +119,22 @@ namespace ProjectGeavanceerde_WPF.ViewModels
                 Foutmelding = "Record is niet geldig";
             }
         }
+
+        public void CloseWindowWTAddBack(Window window)
+        {
+                if (window != null)
+                {
+                    WorldTimelineView worldTimelineView = new WorldTimelineView();
+                    WorldTimelineViewModel worldTimelineViewModel = new WorldTimelineViewModel();
+                    worldTimelineView.DataContext = worldTimelineViewModel;
+                    worldTimelineViewModel.Admincheck = Admincheck;
+                    worldTimelineView.Show();
+                    window.Close();
+                }
+        }
         public void WindowCommanding()
         {
-            this.CloseWindowCommandWTAdd = new RelayCommand<Window>(this.CloseWindowWTAdd);
+            this.CloseWindowCommandWTAddBack = new RelayCommand<Window>(this.CloseWindowWTAddBack);
         }
     }
 }

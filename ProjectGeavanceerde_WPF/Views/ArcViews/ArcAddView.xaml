@@ -7,10 +7,12 @@
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         x:Name="ArcAddWindow"
-        Title="ArcAddView" Height="750" Width="800">
-    <Grid Margin="0,0,-8,1" Background="LightSeaGreen">
+        Title="ArcAddView" Height="800" Width="800">
+    <Grid Margin="0,0,2,1" Background="LightSeaGreen">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition />
+            <ColumnDefinition Width="10*" />
+            <ColumnDefinition Width="50*" />
+            <ColumnDefinition Width="10*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="50*" />
@@ -26,16 +28,17 @@
         <TextBox Text="{Binding Name, ValidatesOnDataErrors=True}"
                  materialDesign:HintAssist.Hint="Naam"
                  Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                 Grid.Row="0" Grid.Column="0"  />
+                 Grid.Row="0" Grid.Column="1"  />
         <TextBox Text="{Binding Startingchapter, ValidatesOnDataErrors=True}"
                  materialDesign:HintAssist.Hint="Starting Chapter"
                  Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                 Grid.Row="1" Grid.Column="0"  />
+                 Grid.Row="1" Grid.Column="1"  />
         <TextBox Text="{Binding Endingchapter, ValidatesOnDataErrors=True}"
                  materialDesign:HintAssist.Hint="Ending Chapter"
                  Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                 Grid.Row="2" Grid.Column="0"  />
-        <Label Content="{Binding Foutmelding}" Grid.Row="7" FontSize="30"></Label>
-        <Button  Content="Arc Aanmaken" Background="#00b4d8" Grid.Row="8" BorderBrush="Black" FontSize="30"   BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandArcAdd, Mode=OneWay}"  CommandParameter="{Binding ElementName=ArcAddWindow}" Height="Auto"/>
+                 Grid.Row="2" Grid.Column="1"  />
+        <Label Content="{Binding Foutmelding}" Grid.Column="1" Background="Aquamarine" Grid.Row="6" FontSize="30" Margin="10"></Label>
+        <Button  Content="Arc Aanmaken" Background="#00b4d8" Grid.Column="1"  Grid.Row="7" BorderBrush="Black" FontSize="30"   BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandArcAdd, Mode=OneWay}"  CommandParameter="{Binding ElementName=ArcAddWindow}" Height="Auto"/>
+        <Button  Content="Terug naar Arcs" Background="#00b4d8" Grid.Column="1"  Grid.Row="8" BorderBrush="Black" FontSize="30"   BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandArcAddBack, Mode=OneWay}"  CommandParameter="{Binding ElementName=ArcAddWindow}" Height="Auto"/>
     </Grid>
 </Window>

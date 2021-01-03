@@ -40,18 +40,10 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <StackPanel Orientation="Vertical" Grid.Column="4" Grid.Row="1" Grid.RowSpan="5">
-            <CheckBox Content="ID" FontSize="15"/>
-            <CheckBox Content="Ruler" FontSize="15"/>
-            <CheckBox Content="Naam" FontSize="15"/>
-            <CheckBox Content="Locatie" FontSize="15"/>
-            <CheckBox Content="Land" FontSize="15"/>
-        </StackPanel>
-
-        <Button  Content="Nieuwe Place Aanmaken" Background="#00b4d8" Grid.Row="4" Grid.Column="4" BorderBrush="Black" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandPlaceAdd, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceWindow}" Height="Auto"/>
-        <Button  Content="Place Bewerken" Background="#00b4d8" Grid.Row="5" Grid.Column="4" BorderBrush="Black" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandPlaceEdit, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceWindow}" Height="Auto"/>
-        <Button  Content="Place Verwijderen" Background="#00b4d8" Grid.Row="6" Grid.Column="4" BorderBrush="Black" BorderThickness="3" Margin="5" Height="Auto" Command="{Binding}" CommandParameter="Verwijderen"/>
-        <Label  Content="{Binding Foutmelding}" Grid.Row="6" Grid.ColumnSpan="4" FontSize="30" Margin="0,5" Height="Auto" HorizontalAlignment="Center" Width="1049" />
+        <Button  Content="Nieuwe Place Aanmaken" Background="#00b4d8" Grid.Row="1" Grid.Column="4" BorderBrush="Black" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandPlaceAdd, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceWindow}" Height="Auto"/>
+        <Button  Content="Place Bewerken" Background="#00b4d8" Grid.Row="2" Grid.Column="4" BorderBrush="Black" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandPlaceEdit, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceWindow}" Height="Auto"/>
+        <Button  Content="Place Verwijderen" Background="#00b4d8" Grid.Row="3" Grid.Column="4" BorderBrush="Black" BorderThickness="3" Margin="5" Height="Auto" Command="{Binding}" CommandParameter="Verwijderen"/>
+        <Label  Content="{Binding Foutmelding}" Background="Aquamarine" Grid.Row="6" Grid.ColumnSpan="4" FontSize="30" Margin="5" Height="Auto" HorizontalAlignment="Center" Width="1039" />
 
         <Button  Content="Characters" Background="#023e8a" Foreground="White"  Grid.Row="0" Grid.Column="0"  BorderBrush="Black" BorderThickness="2"  Command="{Binding CloseWindowCommandChar, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceWindow}" Height="Auto" HorizontalContentAlignment="Center"/>
         <Button  Content="Affiliations" Background="#023e8a" Foreground="White" Grid.Row="0" Grid.Column="1" BorderBrush="Black" BorderThickness="2"  Command="{Binding CloseWindowCommandAff, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceWindow}" Height="Auto" HorizontalContentAlignment="Center"/>

@@ -17,6 +17,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
     public class AffEditViewModel : BasisViewModel, IDisposable
     {
         #region getters and setters
+        public bool Admincheck { get; set; }
         public ObservableCollection<Affiliation> Affiliations { get; set; }
         public ObservableCollection<Faction> Factions { get; set; }
         public Affiliation AffiliationRecord { get; set; }
@@ -119,6 +120,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
 
         #region WindowCommands
         public RelayCommand<Window> CloseWindowCommandAffEdit { get; private set; }
+        public RelayCommand<Window> CloseWindowCommandAffEditBack { get; private set; }
 
         public void CloseWindowAffEdit(Window window)
         {
@@ -134,6 +136,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
                     AffiliationView affiliationView = new AffiliationView();
                     AffiliationViewModel affiliationViewModel = new AffiliationViewModel();
                     affiliationView.DataContext = affiliationViewModel;
+                    affiliationViewModel.Admincheck = Admincheck;
                     affiliationView.Show();
                     window.Close();
                 }
@@ -143,10 +146,24 @@ namespace ProjectGeavanceerde_WPF.ViewModels
                 Foutmelding = "Selecteer een character!";
             }
         }
+        public void CloseWindowAffEditBack(Window window)
+        {
+            AffiliationView affiliationView = new AffiliationView();
+            AffiliationViewModel affiliationViewModel = new AffiliationViewModel();
+            affiliationView.DataContext = affiliationViewModel;
+            affiliationViewModel.Admincheck = Admincheck;
+            affiliationView.Show();
+
+            if (window != null)
+            {
+                window.Close();
+            }
+        }
 
         public void WindowCommanding()
         {
             this.CloseWindowCommandAffEdit = new RelayCommand<Window>(this.CloseWindowAffEdit);
+            this.CloseWindowCommandAffEditBack = new RelayCommand<Window>(this.CloseWindowAffEditBack);
         }
 
         #endregion

@@ -10,9 +10,12 @@
         Title="CharAddView" Height="750" Width="800">
     <Grid Margin="0,0,-8,0" Background="LightSeaGreen">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition />
+            <ColumnDefinition Width="10*" />
+            <ColumnDefinition Width="50*" />
+            <ColumnDefinition Width="10*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="56*" />
             <RowDefinition Height="56*" />
             <RowDefinition Height="56*" />
             <RowDefinition Height="56*" />
@@ -27,45 +30,48 @@
         <TextBox Text="{Binding Name, ValidatesOnDataErrors=True}"
                    materialDesign:HintAssist.Hint="Naam"
                    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                   Grid.Row="0" Grid.Column="0"  />
+                   Grid.Row="0" Grid.Column="1"  />
         <ComboBox ItemsSource="{Binding Genders, ValidatesOnDataErrors=True}"
                   SelectedValue="{Binding GenderID, ValidatesOnDataErrors=True}" 
                   SelectedValuePath="GenderID"
                   materialDesign:HintAssist.Hint="Gender"
+                   Grid.Column="1"
                   Style="{StaticResource MaterialDesignFloatingHintComboBox}"
                   Grid.Row="1" Height="50" Margin="0,10"/>
         <TextBox Text="{Binding Birthday, StringFormat='m', ValidatesOnDataErrors=True}"
                    materialDesign:HintAssist.Hint="Verjaardag"
                    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                   Grid.Row="2" Grid.Column="0" />
+                   Grid.Row="2" Grid.Column="1" />
         <TextBox Text="{Binding Bounty, StringFormat={}{0:N0}, ValidatesOnDataErrors=True}"
                    materialDesign:HintAssist.Hint="Bounty"
                    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                   Grid.Row="3" Grid.Column="0"  />
+                   Grid.Row="3" Grid.Column="1"  />
         <TextBox Text="{Binding DevilFruit, StringFormat='m', ValidatesOnDataErrors=True}"
                    materialDesign:HintAssist.Hint="DevilFruit"
                    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                   Grid.Row="4" Grid.Column="0" />
+                   Grid.Row="4" Grid.Column="1" />
         <ComboBox ItemsSource="{Binding Hakis, ValidatesOnDataErrors=True}"
                   SelectedValue="{Binding HakiID, ValidatesOnDataErrors=True}" 
                   SelectedValuePath="HakiID"
                   materialDesign:HintAssist.Hint="Haki"
                   Style="{StaticResource MaterialDesignFloatingHintComboBox}"
-                  Grid.Row="5" Height="50" Margin="0,10"/>
+                  Grid.Row="5" Grid.Column="1" Height="50" Margin="0,10"/>
         <ComboBox ItemsSource="{Binding Bloodtypes, ValidatesOnDataErrors=True}"
                   SelectedValue="{Binding BloodtypeID, ValidatesOnDataErrors=True}" 
                   SelectedValuePath="BloodtypeID"
                   materialDesign:HintAssist.Hint="Bloodtype"
                   Style="{StaticResource MaterialDesignFloatingHintComboBox}"
-                  Grid.Row="6" Height="50" Margin="0,10"/>
+                  Grid.Row="6" Grid.Column="1" Height="50" Margin="0,10"/>
         <ComboBox ItemsSource="{Binding Soorten, ValidatesOnDataErrors=True}"
                   SelectedValue="{Binding SpeciesID, ValidatesOnDataErrors=True}" 
                   SelectedValuePath="SpeciesID"
                   materialDesign:HintAssist.Hint="Species"
                   Style="{StaticResource MaterialDesignFloatingHintComboBox}"
-                  Grid.Row="7" Height="50" Margin="0,10"/>
-        <Label  Content="{Binding Foutmelding}" Grid.Row="8" FontSize="30" HorizontalAlignment="Center" Width="772" />
+                  Grid.Row="7" Height="50" Grid.Column="1" Margin="0,10"/>
+        <Label  Content="{Binding Foutmelding}" Background="Aquamarine" Grid.Column="1" Grid.Row="8" FontSize="30" HorizontalAlignment="Center" Width="552" Margin="10" />
 
-        <Button  Content="Character Aanmaken" Grid.Row="9" BorderBrush="Black" Background="#00b4d8" FontSize="30" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandCharAdd, Mode=OneWay}"  CommandParameter="{Binding ElementName=CharAddWindow}" Height="Auto"/>
+        <Button  Content="Character Aanmaken" Grid.Column="1" Grid.Row="9" BorderBrush="Black" Background="#00b4d8" FontSize="30" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandCharAdd, Mode=OneWay}"  CommandParameter="{Binding ElementName=CharAddWindow}" Height="Auto"/>
+        <Button  Content="Back to Characters" Grid.Column="1" Grid.Row="10" BorderBrush="Black" Background="#00b4d8" FontSize="30" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandCharBack, Mode=OneWay}"  CommandParameter="{Binding ElementName=CharAddWindow}" Height="Auto"/>
+
     </Grid>
 </Window>

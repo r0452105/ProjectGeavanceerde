@@ -308,6 +308,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
                 WTEditViewModel wTEditViewModel = new WTEditViewModel();
                 wTEditViewModel.SelectedEvent = SelectedEvent;
                 wTEditView.DataContext = wTEditViewModel;
+                wTEditViewModel.Admincheck = Admincheck;
                 wTEditView.Show();
 
                 if (window != null)
@@ -325,6 +326,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             WTAddView wTAddView = new WTAddView();
             WTAddViewModel wTAddViewModel = new WTAddViewModel();
             wTAddView.DataContext = wTAddViewModel;
+            wTAddViewModel.Admincheck = Admincheck;
             wTAddView.Show();
 
             if (window != null)

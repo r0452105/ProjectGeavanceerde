@@ -206,6 +206,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
                 AffEditViewModel affEditViewModel = new AffEditViewModel();
                 affEditViewModel.SelectedAffiliation = SelectedAffiliation;
                 affEditView.DataContext = affEditViewModel;
+                affEditViewModel.Admincheck = Admincheck;
                 affEditView.Show();
 
                 if (window != null)
@@ -223,6 +224,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
                 AffAddView affAddView = new AffAddView();
                 AffAddViewModel affAddViewModel = new AffAddViewModel();
                 affAddView.DataContext = affAddViewModel;
+                affAddViewModel.Admincheck = Admincheck;
                 affAddView.Show();
 
                 if (window != null)
