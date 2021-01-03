@@ -46,25 +46,13 @@ namespace ProjectGeavanceerde_WPF.ViewModels
                 return "";
             }
         }
-        public void Aanpassen()
-        {
-            if (SelectedAffiliation != null)
-            {
-                unitOfWork.AffiliationRepo.ToevoegenOfAanpassen(AffiliationRecord);
-                int ok = unitOfWork.Save();
-                FoutmeldingInstellenNaSave(ok, "Affiliation is niet aangepast");
-            }
-            else
-            {
-                Foutmelding = "Selecteer een affiliation!";
-            }
-        }
         private void RefreshAffiliations()
         {
             List<Faction> listFactions = unitOfWork.FactionRepo.Ophalen().ToList();
             List<Affiliation> listAffiliations = unitOfWork.AffiliationRepo.Ophalen().ToList();
             Affiliations = new ObservableCollection<Affiliation>(listAffiliations);
         }
+        #region Controle
         private void FoutmeldingInstellenNaSave(int ok, string melding)
         {
             if (ok > 0)
@@ -120,7 +108,6 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             switch (parameter.ToString())
             {
                 case "Verwijderen": return true;
-                case "Aanpassen": return true;
             }
             return true;
         }
@@ -129,14 +116,13 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             switch (parameter.ToString())
             {
                 case "Verwijderen": Verwijderen(); break;
-                case "Aanpassen": Aanpassen(); break;
             }
         }
         public void Dispose()
         {
             unitOfWork?.Dispose();
         }
-
+        #endregion
         #region WindowCommands
         public RelayCommand<Window> CloseWindowCommandChar { get; private set; }
         public RelayCommand<Window> CloseWindowCommandAff { get; private set; }

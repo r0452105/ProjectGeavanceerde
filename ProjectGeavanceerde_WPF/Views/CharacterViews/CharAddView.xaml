@@ -68,10 +68,10 @@
                   materialDesign:HintAssist.Hint="Species"
                   Style="{StaticResource MaterialDesignFloatingHintComboBox}"
                   Grid.Row="7" Height="50" Grid.Column="1" Margin="0,10"/>
-        <Label  Content="{Binding Foutmelding}" Background="Aquamarine" Grid.Column="1" Grid.Row="8" FontSize="30" HorizontalAlignment="Center" Width="552" Margin="10" />
+        <Label  Content="{Binding Foutmelding}" Background="Aquamarine" Grid.Column="1" Grid.Row="8" FontSize="20" HorizontalAlignment="Center" Width="552" Margin="10" />
 
         <Button  Content="Character Aanmaken" Grid.Column="1" Grid.Row="9" BorderBrush="Black" Background="#00b4d8" FontSize="30" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandCharAdd, Mode=OneWay}"  CommandParameter="{Binding ElementName=CharAddWindow}" Height="Auto"/>
-        <Button  Content="Back to Characters" Grid.Column="1" Grid.Row="10" BorderBrush="Black" Background="#00b4d8" FontSize="30" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandCharBack, Mode=OneWay}"  CommandParameter="{Binding ElementName=CharAddWindow}" Height="Auto"/>
+        <Button  Content="Terug naar Characters" Grid.Column="1" Grid.Row="10" BorderBrush="Black" Background="#00b4d8" FontSize="30" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandCharBack, Mode=OneWay}"  CommandParameter="{Binding ElementName=CharAddWindow}" Height="Auto"/>
 
     </Grid>
 </Window>

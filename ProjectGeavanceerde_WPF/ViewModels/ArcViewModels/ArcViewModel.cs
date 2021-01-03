@@ -16,6 +16,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
 {
     public class ArcViewModel : BasisViewModel
     {
+        #region getters and setters
         public bool Admincheck { get; set; }
         public ObservableCollection<Arc> Arcs { get; set; }
         public Arc ArcRecord { get; set; }
@@ -31,16 +32,11 @@ namespace ProjectGeavanceerde_WPF.ViewModels
 
             }
         }
+        #endregion
         public ArcViewModel()
         {
             RefreshArcs();
-            this.CloseWindowCommandChar = new RelayCommand<Window>(this.CloseWindowChar);
-            this.CloseWindowCommandAff = new RelayCommand<Window>(this.CloseWindowAff);
-            this.CloseWindowCommandArc = new RelayCommand<Window>(this.CloseWindowArc);
-            this.CloseWindowCommandArcEdit = new RelayCommand<Window>(this.CloseWindowArcEdit);
-            this.CloseWindowCommandArcAdd = new RelayCommand<Window>(this.CloseWindowArcAdd);
-            this.CloseWindowCommandPlace = new RelayCommand<Window>(this.CloseWindowPlace);
-            this.CloseWindowCommandWT = new RelayCommand<Window>(this.CloseWindowWT);
+            WindowCommanding();
         }
         public override string this[string columnName]
         {
@@ -49,28 +45,12 @@ namespace ProjectGeavanceerde_WPF.ViewModels
                 return "";
             }
         }
-        public void Aanpassen()
-        {
-            if (SelectedArc != null)
-            {
-                unitOfWork.ArcRepo.ToevoegenOfAanpassen(ArcRecord);
-
-                int ok = unitOfWork.Save();
-                RefreshArcs();
-
-                FoutmeldingInstellenNaSave(ok, "Orderlijn is niet aangepast");
-            }
-            else
-            {
-                Foutmelding = "Selecteer een orderlijn!";
-                NotifyPropertyChanged("Foutmelding");
-            }
-        }
         private void RefreshArcs()
         {
             List<Arc> listArc = unitOfWork.ArcRepo.Ophalen().ToList();
             Arcs = new ObservableCollection<Arc>(listArc);
         }
+        #region Controle en functies
         private void FoutmeldingInstellenNaSave(int ok, string melding)
         {
             if (ok > 0)
@@ -100,16 +80,14 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         {
             if (SelectedArc != null)
             {
-                Foutmelding = "We zitten al iere";
                 unitOfWork.ArcRepo.Verwijderen(SelectedArc.ArcID);
                 int ok = unitOfWork.Save();
                 NotifyPropertyChanged("Foutmelding");
-                FoutmeldingInstellenNaSave(ok, "Orderlijn is niet verwijderd");
+                FoutmeldingInstellenNaSave(ok, "Arc is niet verwijderd");
             }
             else
             {
-                Foutmelding = "Eerst Orderlijn selecteren";
-                NotifyPropertyChanged("Foutmelding");
+                Foutmelding = "Eerst een Arc selecteren";
             }
         }
         private void ArcRecordInstellen()
@@ -128,7 +106,6 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             switch (parameter.ToString())
             {
                 case "Verwijderen": return true;
-                case "Aanpassen": return true;
             }
             return true;
         }
@@ -137,13 +114,13 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             switch (parameter.ToString())
             {
                 case "Verwijderen": Verwijderen(); break;
-                case "Aanpassen": Aanpassen(); break;
             }
         }
         public void Dispose()
         {
             unitOfWork?.Dispose();
         }
+        #endregion
         #region WindowCommands
         public RelayCommand<Window> CloseWindowCommandChar { get; private set; }
         public RelayCommand<Window> CloseWindowCommandAff { get; private set; }
@@ -314,6 +291,17 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             {
                 window.Close();
             }
+        }
+
+        public void WindowCommanding()
+        {
+            this.CloseWindowCommandChar = new RelayCommand<Window>(this.CloseWindowChar);
+            this.CloseWindowCommandAff = new RelayCommand<Window>(this.CloseWindowAff);
+            this.CloseWindowCommandArc = new RelayCommand<Window>(this.CloseWindowArc);
+            this.CloseWindowCommandArcEdit = new RelayCommand<Window>(this.CloseWindowArcEdit);
+            this.CloseWindowCommandArcAdd = new RelayCommand<Window>(this.CloseWindowArcAdd);
+            this.CloseWindowCommandPlace = new RelayCommand<Window>(this.CloseWindowPlace);
+            this.CloseWindowCommandWT = new RelayCommand<Window>(this.CloseWindowWT);
         }
         #endregion
 

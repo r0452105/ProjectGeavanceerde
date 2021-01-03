@@ -12,10 +12,6 @@ namespace ProjectGeavanceerde_DAL
     {
         get
         {
-            if (columnName == "CharacterID" && CharacterID <= 0)
-            {
-                return "CharacterID moet een positief getal zijn!";
-            }
             if (columnName == "Bounty" && Bounty <= 0)
             {
                 return "Bounty moet een positief getal zijn!";

@@ -16,10 +16,6 @@ namespace ProjectGeavanceerde_DAL
                 {
                     return "Naam moet ingevuld zijn";
                 }
-                if (columnName == "PlaceID" && PlaceID <= 0)
-                {
-                    return "PlaceID moet een positief getal zijn!";
-                }
                 if (columnName == "Location" && string.IsNullOrWhiteSpace(Name))
                 {
                     return "Location moet ingevuld zijn";

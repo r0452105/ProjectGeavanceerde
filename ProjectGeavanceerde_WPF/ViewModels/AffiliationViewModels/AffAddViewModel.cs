@@ -48,6 +48,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             List<Affiliation> listAffiliations = unitOfWork.AffiliationRepo.Ophalen().ToList();
             Affiliations = new ObservableCollection<Affiliation>(listAffiliations);
         }
+        #region Controle
         private void FoutmeldingInstellenNaSave(int ok, string melding)
         {
             if (ok > 0)
@@ -94,6 +95,8 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             unitOfWork?.Dispose();
         }
 
+        #endregion
+        #region WindowCommands
         public RelayCommand<Window> CloseWindowCommandAffAdd { get; private set; }
         public RelayCommand<Window> CloseWindowCommandAffAddBack { get; private set; }
 
@@ -102,7 +105,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             AffiliationRecord.Name = Name;
             AffiliationRecord.FactionID = FactionID;
 
-            if (!AffiliationRecord.IsGeldig()) //problem needs to be solved
+            if (AffiliationRecord.IsGeldig()) //problem needs to be solved
             {
                 unitOfWork.AffiliationRepo.Toevoegen(AffiliationRecord);
                 int ok = unitOfWork.Save();
@@ -122,7 +125,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             }
             else
             {
-                Foutmelding = "Record is niet geldig";
+                Foutmelding = "Vul alle gegevens in.";
             }
         }
 
@@ -148,3 +151,4 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         }
     }
 }
+#endregion

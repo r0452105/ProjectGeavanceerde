@@ -42,8 +42,8 @@
                    materialDesign:HintAssist.Hint="Country"
                    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                    Grid.Row="3" Grid.Column="1"  />
-        <Label Content="{Binding Foutmelding}" Grid.Row="6" Grid.Column="1" Background="Aquamarine"  FontSize="30" Margin="10"></Label>
-        <Button  Content="Place Bewerken" Grid.Row="7" Grid.Column="1" Background="#00b4d8" BorderBrush="Black" FontSize="30" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandPlaceEdit, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceEditWindow}" Height="Auto"/>
-        <Button  Content="Terug naar Places" Grid.Row="8" Grid.Column="1" Background="#00b4d8" BorderBrush="Black" FontSize="30" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandPlaceEditBack, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceEditWindow}" Height="Auto"/>
+        <Label Content="{Binding Foutmelding}" Grid.Row="6" Grid.Column="1" Background="Aquamarine"  FontSize="20" Margin="10"></Label>
+        <Button  Content="Plaats Bewerken" Grid.Row="7" Grid.Column="1" Background="#00b4d8" BorderBrush="Black" FontSize="30" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandPlaceEdit, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceEditWindow}" Height="Auto"/>
+        <Button  Content="Terug naar Plaatsen" Grid.Row="8" Grid.Column="1" Background="#00b4d8" BorderBrush="Black" FontSize="30" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandPlaceEditBack, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceEditWindow}" Height="Auto"/>
     </Grid>
 </Window>

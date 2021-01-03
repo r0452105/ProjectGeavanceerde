@@ -24,6 +24,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         public string Omschrijving { get; set; }
         public int Date { get; set; }
         #endregion
+        #region Controle en Functies
         public WTAddViewModel()
         {
             RefreshEvents();
@@ -88,6 +89,8 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         {
             unitOfWork?.Dispose();
         }
+        #endregion
+        #region Window Commanding
 
         public RelayCommand<Window> CloseWindowCommandWTAdd { get; private set; }
         public RelayCommand<Window> CloseWindowCommandWTAddBack { get; private set; }
@@ -135,6 +138,8 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         public void WindowCommanding()
         {
             this.CloseWindowCommandWTAddBack = new RelayCommand<Window>(this.CloseWindowWTAddBack);
+            this.CloseWindowCommandWTAdd = new RelayCommand<Window>(this.CloseWindowWTAdd);
         }
+        #endregion
     }
 }

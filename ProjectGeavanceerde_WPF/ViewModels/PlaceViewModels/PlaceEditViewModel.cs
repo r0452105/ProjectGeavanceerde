@@ -16,7 +16,8 @@ namespace ProjectGeavanceerde_WPF.ViewModels
 {
     class PlaceEditViewModel : BasisViewModel, IDisposable
     {
-    public bool Admincheck { get; set; }
+        #region getters en setters
+        public bool Admincheck { get; set; }
     public ObservableCollection<Place> Places{ get; set; }
     public Place PlaceRecord { get; set; }
     public string Foutmelding { get; set; }
@@ -31,7 +32,10 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             PlaceRecordInstellen();
         }
     }
-    public PlaceEditViewModel()
+
+        #endregion
+        #region Controle en Functies
+        public PlaceEditViewModel()
     {
         RefreshPlaces();
         this.CloseWindowCommandPlaceEdit = new RelayCommand<Window>(this.CloseWindowPlaceEdit);
@@ -100,9 +104,10 @@ namespace ProjectGeavanceerde_WPF.ViewModels
     {
         unitOfWork?.Dispose();
     }
-    #region WindowCommands
+        #endregion
+        #region WindowCommands
 
-    public RelayCommand<Window> CloseWindowCommandPlaceEdit { get; private set; }    
+        public RelayCommand<Window> CloseWindowCommandPlaceEdit { get; private set; }    
     public RelayCommand<Window> CloseWindowCommandPlaceEditBack { get; private set; }
     public void CloseWindowPlaceEdit(Window window)
     {

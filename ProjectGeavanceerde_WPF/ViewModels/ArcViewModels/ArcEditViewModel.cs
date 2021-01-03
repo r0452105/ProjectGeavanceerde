@@ -16,6 +16,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
 {
     class ArcEditViewModel : BasisViewModel, IDisposable
     {
+        #region getters en setters
         public bool Admincheck { get; set; }
         public ObservableCollection<Arc> Arcs { get; set; }
         public Arc ArcRecord { get; set; }
@@ -31,6 +32,8 @@ namespace ProjectGeavanceerde_WPF.ViewModels
                 ArcRecordInstellen();
             }
         }
+
+        #endregion
         public ArcEditViewModel()
         {
             RefreshArcs();
@@ -50,6 +53,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             List<Arc> listArc = unitOfWork.ArcRepo.Ophalen().ToList();
             Arcs = new ObservableCollection<Arc>(listArc);
         }
+        #region Controle
         private void FoutmeldingInstellenNaSave(int ok, string melding)
         {
             if (ok > 0)
@@ -101,6 +105,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         {
             unitOfWork?.Dispose();
         }
+        #endregion
         #region WindowCommands
 
         public RelayCommand<Window> CloseWindowCommandArcEdit { get; private set; }
@@ -126,7 +131,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             }
             else
             {
-                Foutmelding = "Selecteer een character!";
+                Foutmelding = "Vul alle gegevens in!";
             }
 
         }

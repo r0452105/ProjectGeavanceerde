@@ -41,6 +41,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             }
         }
 
+        #region Controle en Functies
         private void RefreshPlaces()
         {
             List<Place> listPlaces = unitOfWork.PlaceRepo.Ophalen().ToList();
@@ -91,6 +92,8 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         {
             unitOfWork?.Dispose();
         }
+        #endregion
+        #region Window Commanding
 
         public RelayCommand<Window> CloseWindowCommandPlaceAdd { get; private set; }
         public RelayCommand<Window> CloseWindowCommandPlaceAddBack { get; private set; }
@@ -102,12 +105,11 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             PlaceRecord.Location = Location;
             PlaceRecord.Country = Country;
 
-            if (!PlaceRecord.IsGeldig()) //problem needs to be solved
+            if (PlaceRecord.IsGeldig()) //problem needs to be solved
             {
-                Foutmelding = "no work?";
                 unitOfWork.PlaceRepo.Toevoegen(PlaceRecord);
                 int ok = unitOfWork.Save();
-                FoutmeldingInstellenNaSave(ok, "Place is niet toegevoegd");
+                FoutmeldingInstellenNaSave(ok, "Plaats is niet toegevoegd");
 
                 if (window != null)
                 {
@@ -121,7 +123,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             }
             else
             {
-                Foutmelding = "Record is niet geldig";
+                Foutmelding = "Vul alle gegevens in.";
             }
         }
         public void CloseWindowPlaceAddBack(Window window)
@@ -138,7 +140,9 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         }
         public void WindowCommanding()
         {
+            this.CloseWindowCommandPlaceAdd = new RelayCommand<Window>(this.CloseWindowPlaceAdd);
             this.CloseWindowCommandPlaceAddBack = new RelayCommand<Window>(this.CloseWindowPlaceAddBack);
         }
+        #endregion
     }
 }

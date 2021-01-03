@@ -38,6 +38,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         }
 
         #endregion
+        #region Controle en Functies
         public CharacterViewModel()
         {
             RefreshCharacters();
@@ -133,8 +134,6 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             switch (parameter.ToString())
             {
                 case "Verwijderen": return true;
-                case "Aanpassen": return true;//hmmmm
-                case "Toevoegen": return true;
             }
             return true;
         }
@@ -143,15 +142,13 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             switch (parameter.ToString())
             {
                 case "Verwijderen": Verwijderen(); break;
-                //case "Aanpassen": Aanpassen(); break;
-                //case "Toevoegen": ToevoegenInAnderScherm(); break;
             }
         }
         public void Dispose()
         {
             unitOfWork?.Dispose();
         }
-
+        #endregion
         #region WindowCommands
         public RelayCommand<Window> CloseWindowCommandChar { get; private set; }
         public RelayCommand<Window> CloseWindowCommandCharEdit { get; private set; }

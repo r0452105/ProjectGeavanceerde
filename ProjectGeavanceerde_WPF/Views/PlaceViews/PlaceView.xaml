@@ -40,9 +40,9 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <Button  Content="Nieuwe Place Aanmaken" Background="#00b4d8" Grid.Row="1" Grid.Column="4" BorderBrush="Black" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandPlaceAdd, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceWindow}" Height="Auto"/>
-        <Button  Content="Place Bewerken" Background="#00b4d8" Grid.Row="2" Grid.Column="4" BorderBrush="Black" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandPlaceEdit, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceWindow}" Height="Auto"/>
-        <Button  Content="Place Verwijderen" Background="#00b4d8" Grid.Row="3" Grid.Column="4" BorderBrush="Black" BorderThickness="3" Margin="5" Height="Auto" Command="{Binding}" CommandParameter="Verwijderen"/>
+        <Button  Content="Nieuwe Plaats Aanmaken" Background="#00b4d8" Grid.Row="1" Grid.Column="4" BorderBrush="Black" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandPlaceAdd, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceWindow}" Height="Auto"/>
+        <Button  Content="Plaats Bewerken" Background="#00b4d8" Grid.Row="2" Grid.Column="4" BorderBrush="Black" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandPlaceEdit, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceWindow}" Height="Auto"/>
+        <Button  Content="Plaats Verwijderen" Background="#00b4d8" Grid.Row="3" Grid.Column="4" BorderBrush="Black" BorderThickness="3" Margin="5" Height="Auto" Command="{Binding}" CommandParameter="Verwijderen"/>
         <Label  Content="{Binding Foutmelding}" Background="Aquamarine" Grid.Row="6" Grid.ColumnSpan="4" FontSize="30" Margin="5" Height="Auto" HorizontalAlignment="Center" Width="1039" />
 
         <Button  Content="Characters" Background="#023e8a" Foreground="White"  Grid.Row="0" Grid.Column="0"  BorderBrush="Black" BorderThickness="2"  Command="{Binding CloseWindowCommandChar, Mode=OneWay}"  CommandParameter="{Binding ElementName=PlaceWindow}" Height="Auto" HorizontalContentAlignment="Center"/>

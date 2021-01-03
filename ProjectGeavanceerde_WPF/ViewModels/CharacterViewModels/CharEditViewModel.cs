@@ -37,6 +37,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         }
 
         #endregion
+        #region Controle en Functies
         public CharEditViewModel()
         {
             RefreshCharacters();
@@ -118,7 +119,8 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         {
             unitOfWork?.Dispose();
         }
-
+        #endregion
+        #region Window Commanding
         public RelayCommand<Window> CloseWindowCommandCharEdit { get; private set; }
         public RelayCommand<Window> CloseWindowCommandCharBack { get; private set; }
 
@@ -142,7 +144,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             }
             else
             {
-                Foutmelding = "Selecteer een character!";
+                Foutmelding = "Vul alle gegevens in.";
             }
             
         }
@@ -158,5 +160,6 @@ namespace ProjectGeavanceerde_WPF.ViewModels
                 window.Close();
             }
         }
+        #endregion
     }
 }

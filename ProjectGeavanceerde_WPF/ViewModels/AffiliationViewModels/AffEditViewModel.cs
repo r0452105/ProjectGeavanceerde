@@ -46,19 +46,6 @@ namespace ProjectGeavanceerde_WPF.ViewModels
                 return "";
             }
         }
-        public void Aanpassen()
-        {
-            if (SelectedAffiliation != null)
-            {
-                unitOfWork.AffiliationRepo.ToevoegenOfAanpassen(AffiliationRecord);
-                int ok = unitOfWork.Save();
-                FoutmeldingInstellenNaSave(ok, "Affiliation is niet aangepast");
-            }
-            else
-            {
-                Foutmelding = "Selecteer een affiliation!";
-            }
-        }
         private void RefreshAffiliations()
         {
             List<Faction> listFactions = unitOfWork.FactionRepo.Ophalen().ToList();
@@ -66,6 +53,8 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             List<Affiliation> listAffiliations = unitOfWork.AffiliationRepo.Ophalen().ToList();
             Affiliations = new ObservableCollection<Affiliation>(listAffiliations);
         }
+
+        #region Controle
         private void FoutmeldingInstellenNaSave(int ok, string melding)
         {
             if (ok > 0)
@@ -104,10 +93,6 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         }
         public override bool CanExecute(object parameter)
         {
-            switch (parameter.ToString())
-            {
-                case "Aanpassen": return true;
-            }
             return true;
         }
         public override void Execute(object parameter)
@@ -118,6 +103,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             unitOfWork?.Dispose();
         }
 
+        #endregion
         #region WindowCommands
         public RelayCommand<Window> CloseWindowCommandAffEdit { get; private set; }
         public RelayCommand<Window> CloseWindowCommandAffEditBack { get; private set; }
@@ -130,7 +116,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
                 if (AffiliationRecord.IsGeldig())
                     unitOfWork.AffiliationRepo.ToevoegenOfAanpassen(AffiliationRecord);
                 int ok = unitOfWork.Save();
-                FoutmeldingInstellenNaSave(ok, "Character is niet aangepast");
+                FoutmeldingInstellenNaSave(ok, "Affiliation is niet aangepast");
                 if (window != null && ok > 0)
                 {
                     AffiliationView affiliationView = new AffiliationView();

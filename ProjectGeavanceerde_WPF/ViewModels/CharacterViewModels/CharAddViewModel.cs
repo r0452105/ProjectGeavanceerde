@@ -35,6 +35,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
     public int SpeciesID { get; set; }
 
         #endregion
+        #region Controle en Functies
         public CharAddViewModel()
     {
             Birthday = new DateTime(2020, 1, 1);
@@ -109,8 +110,9 @@ namespace ProjectGeavanceerde_WPF.ViewModels
     {
         unitOfWork?.Dispose();
     }
-
-    public RelayCommand<Window> CloseWindowCommandCharAdd { get; private set; }
+        #endregion
+        #region Window Commanding
+        public RelayCommand<Window> CloseWindowCommandCharAdd { get; private set; }
     public RelayCommand<Window> CloseWindowCommandCharBack { get; private set; }
 
         public void CloseWindowCharAdd(Window window)
@@ -124,7 +126,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             CharacterRecord.HakiID = HakiID;
             CharacterRecord.SpeciesID = SpeciesID;
 
-            if (!CharacterRecord.IsGeldig()) //problem needs to be solved
+            if (CharacterRecord.IsGeldig()) //problem needs to be solved
             {
 
                 unitOfWork.CharacterRepo.Toevoegen(CharacterRecord);
@@ -143,7 +145,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             }
             else
             {
-                Foutmelding = "Record is niet geldig";
+                Foutmelding = "Record is niet geldig, vul alle gegevens in.";
             }
         }
         public void CloseWindowCharBack(Window window)
@@ -158,5 +160,6 @@ namespace ProjectGeavanceerde_WPF.ViewModels
                     window.Close();
                 }
         }
+        #endregion
     }
 }

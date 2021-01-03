@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectGeavanceerde_WPF", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectGeavanceerde_DAL", "..\ProjectGeavanceerde_DAL\ProjectGeavanceerde_DAL.csproj", "{122CFB46-17B0-4689-B5BF-798F0296762D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectGeavanceerde_Models", "..\ProjectGeavanceerde_Models\ProjectGeavanceerde_Models.csproj", "{5616BD0E-D9BB-4B4E-B63F-F5E9BC147F11}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{122CFB46-17B0-4689-B5BF-798F0296762D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{122CFB46-17B0-4689-B5BF-798F0296762D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{122CFB46-17B0-4689-B5BF-798F0296762D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5616BD0E-D9BB-4B4E-B63F-F5E9BC147F11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5616BD0E-D9BB-4B4E-B63F-F5E9BC147F11}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5616BD0E-D9BB-4B4E-B63F-F5E9BC147F11}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5616BD0E-D9BB-4B4E-B63F-F5E9BC147F11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

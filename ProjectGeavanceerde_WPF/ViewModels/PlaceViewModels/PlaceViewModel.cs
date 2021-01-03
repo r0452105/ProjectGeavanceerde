@@ -16,6 +16,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
 {
     public class PlaceViewModel : BasisViewModel
     {
+        #region getters en setters
         public bool Admincheck { get; set; }
         public ObservableCollection<Place> Places { get; set; }
 
@@ -31,16 +32,12 @@ namespace ProjectGeavanceerde_WPF.ViewModels
                 PlaceRecordInstellen();
             }
         }
+        #endregion
+        #region Controle en Functies
         public PlaceViewModel()
         {
             RefreshPlaces();
-            this.CloseWindowCommandChar = new RelayCommand<Window>(this.CloseWindowChar);
-            this.CloseWindowCommandAff = new RelayCommand<Window>(this.CloseWindowAff);
-            this.CloseWindowCommandArc = new RelayCommand<Window>(this.CloseWindowArc);
-            this.CloseWindowCommandPlace = new RelayCommand<Window>(this.CloseWindowPlace);
-            this.CloseWindowCommandPlaceEdit = new RelayCommand<Window>(this.CloseWindowPlaceEdit);
-            this.CloseWindowCommandPlaceAdd = new RelayCommand<Window>(this.CloseWindowPlaceAdd);
-            this.CloseWindowCommandWT = new RelayCommand<Window>(this.CloseWindowWT);
+            WindowCommanding();
         }
         public override string this[string columnName]
         {
@@ -145,7 +142,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         {
             unitOfWork?.Dispose();
         }
-
+        #endregion
         #region WindowCommands
         public RelayCommand<Window> CloseWindowCommandChar { get; private set; }
         public RelayCommand<Window> CloseWindowCommandAff { get; private set; }
@@ -316,6 +313,16 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             {
                 window.Close();
             }
+        }
+        public void WindowCommanding()
+        {
+            this.CloseWindowCommandChar = new RelayCommand<Window>(this.CloseWindowChar);
+            this.CloseWindowCommandAff = new RelayCommand<Window>(this.CloseWindowAff);
+            this.CloseWindowCommandArc = new RelayCommand<Window>(this.CloseWindowArc);
+            this.CloseWindowCommandPlace = new RelayCommand<Window>(this.CloseWindowPlace);
+            this.CloseWindowCommandPlaceEdit = new RelayCommand<Window>(this.CloseWindowPlaceEdit);
+            this.CloseWindowCommandPlaceAdd = new RelayCommand<Window>(this.CloseWindowPlaceAdd);
+            this.CloseWindowCommandWT = new RelayCommand<Window>(this.CloseWindowWT);
         }
         #endregion
 

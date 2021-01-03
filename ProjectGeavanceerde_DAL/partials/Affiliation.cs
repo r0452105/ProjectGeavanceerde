@@ -12,10 +12,6 @@ namespace ProjectGeavanceerde_DAL
         {
             get
             {
-                if (columnName == "AffiliationID" && AffiliationID <= 0)
-                {
-                    return "AffiliationID moet een positief getal zijn!";
-                }
                 if (columnName == "Name" && string.IsNullOrWhiteSpace(Name))
                 {
                     return "Naam moet ingevuld zijn";

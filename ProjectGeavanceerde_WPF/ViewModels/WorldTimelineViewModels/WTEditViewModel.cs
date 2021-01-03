@@ -16,6 +16,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
 {
     class WTEditViewModel : BasisViewModel, IDisposable
     {
+        #region getters en setters
         public bool Admincheck { get; set; }
         public string Foutmelding { get; set; }
         public ObservableCollection<Event> Events { get; set; }
@@ -33,6 +34,8 @@ namespace ProjectGeavanceerde_WPF.ViewModels
 
             }
         }
+        #endregion
+        #region Controle en Functies
         public WTEditViewModel()
         {
             RefreshEvents();
@@ -121,6 +124,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         {
             unitOfWork?.Dispose();
         }
+        #endregion
         #region WindowCommands
 
         public RelayCommand<Window> CloseWindowCommandWTEdit { get; private set; }

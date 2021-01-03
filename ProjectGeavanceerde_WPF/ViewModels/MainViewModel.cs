@@ -7,9 +7,9 @@ namespace ProjectGeavanceerde_WPF.ViewModels
 {
     public class MainViewModel : ICommand, INotifyPropertyChanged
     {
+        #region getters en setters
         public event EventHandler CanExecuteChanged;
         public event PropertyChangedEventHandler PropertyChanged;
-
         private bool _admincheck;
         public bool Admincheck
         {
@@ -21,6 +21,9 @@ namespace ProjectGeavanceerde_WPF.ViewModels
                 OnPropertyChanged("Admincheck");
             }
         }
+
+        #endregion
+        #region Controle
         protected void OnPropertyChanged(string name = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
@@ -45,6 +48,8 @@ namespace ProjectGeavanceerde_WPF.ViewModels
                 case "Characters": OpenCharacters(); break;
             }
         }
+        #endregion
+        #region to database
         public void OpenCharacters()
         {
             if (Admincheck)
@@ -65,4 +70,4 @@ namespace ProjectGeavanceerde_WPF.ViewModels
         }
     }
 }
-
+#endregion

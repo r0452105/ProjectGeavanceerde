@@ -14,6 +14,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
 {
     public abstract class BasisViewModel : IDataErrorInfo, INotifyPropertyChanged, ICommand
     {
+
         public IUnitOfWork unitOfWork = new UnitOfWork(new OnePieceEntities());
 
         #region ICommand

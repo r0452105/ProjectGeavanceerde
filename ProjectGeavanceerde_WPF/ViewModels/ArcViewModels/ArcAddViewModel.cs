@@ -45,6 +45,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             List<Arc> listArcs = unitOfWork.ArcRepo.Ophalen().ToList();
             Arcs = new ObservableCollection<Arc>(listArcs);
         }
+        #region Controle
         private void FoutmeldingInstellenNaSave(int ok, string melding)
         {
             if (ok > 0)
@@ -76,20 +77,17 @@ namespace ProjectGeavanceerde_WPF.ViewModels
 
         public override bool CanExecute(object parameter)
         {
-            switch (parameter.ToString())
-            {
-                case "Aanpassen": return true;
-            }
             return true;
         }
         public override void Execute(object parameter)
         {
-
         }
         public void Dispose()
         {
             unitOfWork?.Dispose();
         }
+        #endregion
+        #region Window Commanding
 
         public RelayCommand<Window> CloseWindowCommandArcAdd { get; private set; }
         public RelayCommand<Window> CloseWindowCommandArcAddBack { get; private set; }
@@ -118,7 +116,7 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             }
             else
             {
-                Foutmelding = "Record is niet geldig";
+                Foutmelding = "Vul alle gegevens in.";
             }
         }
         public void CloseWindowArcAddBack(Window window)
@@ -138,5 +136,6 @@ namespace ProjectGeavanceerde_WPF.ViewModels
             this.CloseWindowCommandArcAdd = new RelayCommand<Window>(this.CloseWindowArcAdd);
             this.CloseWindowCommandArcAddBack = new RelayCommand<Window>(this.CloseWindowArcAddBack);
         }
+        #endregion
     }
 }

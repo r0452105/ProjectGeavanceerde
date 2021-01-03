@@ -69,7 +69,7 @@
                   materialDesign:HintAssist.Hint="Species"
                   Style="{StaticResource MaterialDesignFloatingHintComboBox}"
                   Grid.Row="7" Grid.Column="1" Height="50" Margin="0,10"/>
-        <Label Content="{Binding Foutmelding}" Background="Aquamarine" Grid.Row="8" Grid.Column="1" Margin="10"></Label>
+        <Label Content="{Binding Foutmelding}" FontSize="20" Background="Aquamarine" Grid.Row="8" Grid.Column="1" Margin="10"></Label>
         <Button  Content="Character Bewerken" Grid.Row="9" Grid.Column="1" BorderBrush="Black" Background="#00b4d8" FontSize="30" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandCharEdit, Mode=OneWay}"  CommandParameter="{Binding ElementName=CharEditWindow}" Height="Auto"/>
         <Button  Content="Terug naar Characters" Grid.Row="10" Grid.Column="1" BorderBrush="Black" Background="#00b4d8" FontSize="30" BorderThickness="3" Margin="5" Command="{Binding CloseWindowCommandCharBack, Mode=OneWay}"  CommandParameter="{Binding ElementName=CharEditWindow}" Height="Auto"/>
 </Grid>
