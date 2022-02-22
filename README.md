@@ -12,3 +12,5 @@ Mijn eindproject voor gevorderde programmeertechnieken
 2) Startpagina
 3) Problemen met databasefuncties
 
+- debugging februari 2022
+
