@@ -23,7 +23,6 @@ C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\MainView.baml
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\ProjectGeavanceerde_WPF.csproj.CopyComplete
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\App.baml
-C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\ProjectGeavanceerde_WPF.csprojAssemblyReference.cache
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\bin\Debug\ProjectGeavanceerde_DAL.dll
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\bin\Debug\ProjectGeavanceerde_DAL.pdb
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\bin\Debug\ProjectGeavanceerde_DAL.dll.config
@@ -81,3 +80,5 @@ C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\ArcViews\ArcUserView.baml
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\PlaceViews\PlaceUserView.baml
 C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\Views\WorldTimelineViews\WorldTimelineUserView.baml
+C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\ProjectGeavanceerde_WPF.csproj.AssemblyReference.cache
+C:\Users\Gebruiker\Documents\GitHub\ProjectGeavanceerde\ProjectGeavanceerde_WPF\obj\Debug\ProjectGeavanceerde_WPF.csproj.SuggestedBindingRedirects.cache
